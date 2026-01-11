@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import partnerLogo1 from '../assets/images/partner-images/partner-logo-1.svg';
 import partnerLogo2 from '../assets/images/partner-images/partner-logo-2.svg';
 import partnerLogo3 from '../assets/images/partner-images/partner-logo-3.svg';
@@ -7,6 +7,29 @@ import partnerLogo5 from '../assets/images/partner-images/partner-logo-5.svg';
 
 const Partners = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   // Partner logos array
   const logos = [
@@ -22,7 +45,12 @@ const Partners = () => {
 
   return (
     <section id="partners" className="bg-black py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+      <div
+        ref={sectionRef}
+        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         {/* Title */}
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white">
           Partners
