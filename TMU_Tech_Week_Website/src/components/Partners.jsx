@@ -73,7 +73,7 @@ const Partners = () => {
                 key={`${logo.id}-${index}`}
                 className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[2px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
               >
-                <div className="w-80 h-48 md:w-96 md:h-56 bg-black hover:rounded-lg flex items-center justify-center p-4">
+                <div className="w-56 h-32 md:w-96 md:h-56 bg-black hover:rounded-lg flex items-center justify-center p-4">
                   <img
                     src={logo.src}
                     alt={logo.alt}
