@@ -1,4 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Stack Sans Fonts */
+@font-face {
+  font-family: 'Stack Sans Text';
+  src: url('/src/assets/fonts/StackSansText-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stack Sans Headline';
+  src: url('/src/assets/fonts/StackSansHeadline-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stack Sans Notch';
+  src: url('/src/assets/fonts/StackSansNotch-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -7,9 +27,11 @@
 @layer base {
   body {
     @apply bg-ttw-navy text-white antialiased;
+    font-family: 'Stack Sans Text', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Stack Sans Headline', 'Stack Sans Text', system-ui, sans-serif;
     @apply font-semibold;
   }
 }
@@ -21,5 +43,17 @@
 
   .gradient-text {
     @apply bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue bg-clip-text text-transparent;
+  }
+
+  .font-notch {
+    font-family: 'Stack Sans Notch', system-ui, sans-serif;
+  }
+
+  .font-headline {
+    font-family: 'Stack Sans Headline', 'Stack Sans Text', system-ui, sans-serif;
+  }
+
+  .font-text {
+    font-family: 'Stack Sans Text', system-ui, sans-serif;
   }
 }

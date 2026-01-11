@@ -16,7 +16,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        text: ['"Stack Sans Text"', 'system-ui', 'sans-serif'],
+        headline: ['"Stack Sans Headline"', '"Stack Sans Text"', 'system-ui', 'sans-serif'],
+        notch: ['"Stack Sans Notch"', 'system-ui', 'sans-serif'],
       },
     },
   },
