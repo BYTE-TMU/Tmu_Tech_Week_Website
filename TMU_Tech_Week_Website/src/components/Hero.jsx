@@ -3,7 +3,7 @@ import { FaChevronDown } from 'react-icons/fa';
 const Hero = () => {
   return (
     <section className="relative h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
-      /* Circular Gradient - partially off screen */}
+      /* Circular Gradient - partially off screen */
         <div className="absolute top-[-25%] right-[0%] w-[100vw] h-[100vw] max-w-[900px] max-h-[900px] pointer-events-none opacity-60 rotate-180">
           <img
             src="/src/assets/images/circular-gradient.png"
