@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ttw: {
+          orange: '#ff8c00',
+          blue: '#0060c3',
+          navy: '#072b39',
+          fuchsia: '#e70059',
+          pink: '#ff69c7',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

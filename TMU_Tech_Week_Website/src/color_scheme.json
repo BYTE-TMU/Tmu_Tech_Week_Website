@@ -1,0 +1,13 @@
+{
+  "ttw": {
+    "orange": "#ff8c00",
+    "blue": "#0060c3",
+    "navy": "#072b39",
+    "fuchsia": "#e70059",
+    "pink": "#ff69c7"
+  },
+  "fonts": {
+    "primary": "Inter, system-ui, sans-serif",
+    "display": "Inter, system-ui, sans-serif"
+  }
+}
