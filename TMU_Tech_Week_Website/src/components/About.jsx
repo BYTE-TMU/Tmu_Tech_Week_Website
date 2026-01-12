@@ -1,9 +1,30 @@
 const About = () => {
   return (
-    <section id="about" className="py-24">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">What Is TMU Tech Week?</h2>
-        <p className="text-xl text-white/60">About Section Content</p>
+    <section id="about" className="relative min-h-screen bg-ttw-navy flex items-center px-6 md:px-12 py-20">
+      {/* Content Container */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Left: Door to Success Image */}
+        <div className="flex items-center justify-center order-1">
+          <img
+            src="/src/assets/images/door-to-success.png"
+            alt="Door to Success"
+            className="w-full max-w-md h-auto"
+          />
+        </div>
+
+        {/* Right: Text Content */}
+        <div className="flex flex-col items-end text-right order-2">
+          <div className="relative">
+            <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-2">
+              What is TMU Tech Week?
+            </h2>
+            {/* Gradient underline */}
+            <div className="h-1 w-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full mt-2" />
+          </div>
+          <p className="font-text text-lg md:text-xl text-white/70 leading-relaxed mt-6">
+            A campus-wide celebration of technology, innovation, and creativity where <span className="font-bold text-white">student groups</span>, <span className="font-bold text-white">startups</span>, and <span className="font-bold text-white">industry leaders</span> come together to connect, collaborate, and create.
+          </p>
+        </div>
       </div>
     </section>
   );
