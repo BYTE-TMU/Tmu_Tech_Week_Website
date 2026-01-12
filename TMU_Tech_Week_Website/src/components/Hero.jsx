@@ -3,39 +3,41 @@ import { FaChevronDown } from 'react-icons/fa';
 const Hero = () => {
   return (
     <section className="relative h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
-      /* Circular Gradient - partially off screen */
-        <div className="absolute top-[-25%] right-[0%] w-[100vw] h-[100vw] max-w-[900px] max-h-[900px] pointer-events-none opacity-60 rotate-180">
-          <img
-            src="/src/assets/images/circular-gradient.png"
-            alt=""
-            className="w-full h-full object-contain"
-          />
-        </div>
-
-        {/* Top Section: Icon + TMU Tech Week */}
-      <div className="relative z-10 flex items-center justify-center gap-3 md:gap-4 mt-4">
+      /* Circular Gradient - centered */
+      <div className="absolute top-[-40%] left-[50%] -translate-x-1/2 w-[100vw] h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-45 rotate-180">
         <img
-          src="/src/assets/images/logo-transparent.png"
-          alt="TMU Tech Week Logo"
-          className="h-32 md:h-40 lg:h-48 w-auto"
+          src="/src/assets/images/circular-gradient.png"
+          alt=""
+          className="w-full h-full object-contain"
         />
-        <div className="flex flex-col leading-none">
-          <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-            TMU
-          </span>
-          <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-            Tech
-          </span>
-          <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-            Week
-          </span>
-        </div>
       </div>
 
-      {/* Tagline */}
-      <p className="relative z-10 font-text text-base md:text-lg text-white/80">
-        Innovation lives here.
-      </p>
+      {/* Top Section: Icon + TMU Tech Week + Tagline */}
+      <div className="relative z-10 flex flex-col items-center gap-4 -mt-32">
+        <div className="flex items-center justify-center gap-3 md:gap-4">
+          <img
+            src="/src/assets/images/logo-transparent.png"
+            alt="TMU Tech Week Logo"
+            className="h-32 md:h-40 lg:h-48 w-auto"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+              TMU
+            </span>
+            <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+              Tech
+            </span>
+            <span className="font-notch text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
+              Week
+            </span>
+          </div>
+        </div>
+
+        {/* Tagline */}
+        <p className="font-text text-xl md:text-2xl lg:text-3xl text-white/80">
+          Innovation lives here.
+        </p>
+      </div>
 
       {/* Star Beam Section with "Do you?" inside */}
       <div className="relative z-10 flex flex-col items-center">
