@@ -34,14 +34,14 @@ const Footer = () => {
     <footer
       id="footer"
       className={`
-        bg-black text-white transition-all duration-800 ease-out
+        bg-black text-white transition-all duration-1000 ease-out
         ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}
       `}
     >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-20 md:py-24">
         {/* Desktop: 3 columns | Mobile: Stacked */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-20 lg:gap-32 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 md:gap-32 lg:gap-40 items-center">
 
           {/* Left: Logo + Text side by side */}
           <div className="flex items-center gap-8 justify-center md:justify-start">
