@@ -80,7 +80,7 @@ const Header = () => {
             <div className="flex items-center gap-4 md:gap-6">
               {/* Instagram */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tmutechweek/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-white transition-colors"
@@ -91,7 +91,7 @@ const Header = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/tmu-tech-week"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-white transition-colors"
