@@ -57,7 +57,7 @@ const Hero = () => {
 
   return (
     <section className="relative h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
-      <div className="absolute top-[-43%] left-[49%] -translate-x-1/2 w-[100vw] h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-50 rotate-180">
+      <div className="absolute top-[-43%] left-[49%] -translate-x-1/2 w-[100vw] h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-40 rotate-180">
         <img
           src="/src/assets/images/circular-gradient.png"
           alt=""
