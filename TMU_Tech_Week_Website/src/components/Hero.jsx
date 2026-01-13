@@ -134,13 +134,13 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-40 py-7 mt-4 mb-8 transition-all duration-1000 ease-out ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-40 py-7 mt-4 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}
-        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-40 blur-xl"></div>
+        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-40 blur-xl group-hover:opacity-70 group-hover:blur-2xl transition-all duration-300"></div>
         {/* Gradient border */}
-        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 group-hover:opacity-100 transition-opacity"></div>
+        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 transition-opacity duration-300"></div>
         {/* Inner black rectangle */}
         <div className="absolute inset-[1.5px] rounded-md bg-black flex items-center justify-center">
           <span className="font-text text-white text-2xl md:text-3xl whitespace-nowrap">
@@ -152,15 +152,15 @@ const Hero = () => {
       {/* Scroll Indicator at very bottom */}
       <div
         ref={scrollRef}
-        className={`relative z-10 flex flex-col items-center gap-1 text-white/50 transition-all duration-1000 ease-out ${isScrollVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center gap-1 text-white transition-all duration-1000 ease-out ${isScrollVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
-        <FaChevronDown className="w-4 h-4 animate-bounce" />
-        <span className="font-text text-xs uppercase tracking-widest">Scroll</span>
+        <FaChevronDown className="w-6 h-6 animate-bounce" />
+        <span className="font-text text-sm uppercase tracking-widest">Scroll</span>
       </div>
 
       {/* Fade at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-ttw-navy to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </section>
   );
 };
