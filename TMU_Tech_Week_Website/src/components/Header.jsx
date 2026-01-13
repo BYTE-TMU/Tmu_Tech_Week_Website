@@ -117,47 +117,45 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu - Dropdown from header, left-aligned links */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden bg-black border-t border-white/10">
-            <nav className="px-4 py-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
-                  className="block py-3 text-lg text-white/80 hover:text-white transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+        <div className={`md:hidden bg-black border-t border-white/10 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 border-t-0'}`}>
+          <nav className="px-4 py-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
+                className="block py-3 text-lg text-white/80 hover:text-white transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
 
-              {/* Social Media Links in Mobile Menu */}
-              <div className="flex items-center gap-6 pt-6 mt-6 border-t border-white/10">
-                <a
-                  href="https://www.instagram.com/tmutechweek/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white transition-colors"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram className="w-6 h-6" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/tmu-tech-week"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/70 hover:text-white transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <FaLinkedinIn className="w-6 h-6" />
-                </a>
-              </div>
-            </nav>
-          </div>
-        )}
+            {/* Social Media Links in Mobile Menu */}
+            <div className="flex items-center gap-6 pt-6 mt-6 border-t border-white/10">
+              <a
+                href="https://www.instagram.com/tmutechweek/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/tmu-tech-week"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/70 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn className="w-6 h-6" />
+              </a>
+            </div>
+          </nav>
+        </div>
       </header>
     </>
   );

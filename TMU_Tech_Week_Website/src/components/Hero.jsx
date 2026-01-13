@@ -68,30 +68,30 @@ const Hero = () => {
       {/* Top Section: Icon + TMU Tech Week + Tagline */}
       <div
         ref={topRef}
-        className={`relative z-10 flex flex-col items-center gap-4 mt-20 transition-all duration-1000 ease-out ${isTopVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center gap-2 mt-12 transition-all duration-1000 ease-out ${isTopVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         <div className="flex items-center justify-center gap-3 md:gap-4">
           <img
             src="/src/assets/images/logo-transparent.png"
             alt="TMU Tech Week Logo"
-            className="h-56 md:h-40 lg:h-48 w-auto"
+            className="h-40 md:h-40 lg:h-48 w-auto"
           />
           <div className="flex flex-col leading-none">
-            <span className="font-notch text-4xl sm:text-3xl md:text-4xl font-semibold text-white">
+            <span className="font-notch text-3xl sm:text-3xl md:text-4xl font-semibold text-white">
               TMU
             </span>
-            <span className="font-notch text-4xl sm:text-3xl md:text-4xl font-semibold text-white">
+            <span className="font-notch text-3xl sm:text-3xl md:text-4xl font-semibold text-white">
               Tech
             </span>
-            <span className="font-notch text-4xl sm:text-3xl md:text-4xl font-semibold text-white">
+            <span className="font-notch text-3xl sm:text-3xl md:text-4xl font-semibold text-white">
               Week
             </span>
           </div>
         </div>
 
         {/* Tagline */}
-        <p className="font-text text-4xl md:text-2xl lg:text-3xl text-white/80">
+        <p className="font-text text-2xl md:text-2xl lg:text-3xl text-white/80">
           Innovation lives here.
         </p>
       </div>
@@ -99,19 +99,19 @@ const Hero = () => {
       {/* Star Beam Section with "Do you?" inside */}
       <div
         ref={starRef}
-        className={`relative z-10 flex flex-col items-center mt-16 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center mt-4 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Star image */}
-        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[32rem] md:min-h-80">
+        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[36rem] md:min-h-80">
           <img
             src="/src/assets/images/star-beam.png"
             alt=""
-            className="w-full h-full object-contain opacity-80 scale-150 md:scale-100"
+            className="w-full h-full object-contain opacity-80 scale-[1.75] md:scale-100"
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}
-        <p className="absolute top-[55%] font-text text-5xl md:text-2.5xl lg:text-3xl text-white">
+        <p className="absolute top-[55%] font-text text-4xl md:text-2.5xl lg:text-3xl text-white">
           Do you?
         </p>
       </div>
@@ -122,10 +122,10 @@ const Hero = () => {
         className={`relative z-10 flex flex-col items-center gap-2 text-center transition-all duration-1000 ease-out ${isDatesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
-        <p className="font-text text-5xl md:text-3xl lg:text-4xl text-white font-medium">
+        <p className="font-text text-4xl md:text-3xl lg:text-4xl text-white font-medium">
           February 15-22, 2026
         </p>
-        <p className="font-text text-2xl md:text-xl lg:text-2xl text-white/70">
+        <p className="font-text text-xl md:text-xl lg:text-2xl text-white/70">
           Toronto Metropolitan University
         </p>
       </div>
@@ -134,7 +134,7 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-40 py-10 md:px-40 md:py-7 mt-4 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-40 py-10 md:px-40 md:py-7 mt-1 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}

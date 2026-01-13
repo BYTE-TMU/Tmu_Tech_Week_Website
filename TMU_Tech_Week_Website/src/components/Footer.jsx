@@ -48,9 +48,9 @@ const Footer = () => {
             <img
               src="/src/assets/images/logo-transparent.png"
               alt="TMU Tech Week Logo"
-              className="h-32 md:h-28 lg:h-32 w-auto flex-shrink-0"
+              className="h-28 md:h-28 lg:h-32 w-auto flex-shrink-0"
             />
-            <div className="flex flex-col font-notch text-white text-5xl md:text-4xl lg:text-5xl font-bold leading-none">
+            <div className="flex flex-col font-notch text-white text-4xl md:text-4xl lg:text-5xl font-bold leading-none">
               <span>TMU</span>
               <span>Tech</span>
               <span>Week</span>
@@ -59,23 +59,23 @@ const Footer = () => {
 
           {/* Center: Contact Us */}
           <div className="text-center space-y-5">
-            <h3 className="text-white font-medium text-3xl md:text-2xl">Contact Us</h3>
+            <h3 className="text-white font-medium text-2xl md:text-2xl">Contact Us</h3>
             <a
               href="mailto:tmutechweek@gmail.com"
-              className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors group relative text-xl md:text-lg"
+              className="inline-flex items-center gap-2 text-white/90 hover:text-white transition-colors group relative text-lg md:text-lg"
             >
               <span className="relative">
                 tmutechweek@gmail.com
                 {/* Gradient underline */}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 via-fuchsia-500 to-orange-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
               </span>
-              <HiArrowUpRight className="w-6 h-6 md:w-5 md:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <HiArrowUpRight className="w-5 h-5 md:w-5 md:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
           </div>
 
           {/* Right: Follow Us - Social Icons */}
           <div className="flex flex-col items-center md:items-end gap-5">
-            <h3 className="text-white font-medium text-3xl md:text-2xl">Follow Us</h3>
+            <h3 className="text-white font-medium text-2xl md:text-2xl">Follow Us</h3>
             <div className="flex gap-8">
               {/* Instagram */}
               <a
@@ -85,7 +85,7 @@ const Footer = () => {
                 className="text-white/80 hover:text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110"
                 aria-label="Instagram"
               >
-                <FaInstagram className="w-10 h-10 md:w-9 md:h-9" />
+                <FaInstagram className="w-8 h-8 md:w-9 md:h-9" />
               </a>
 
               {/* LinkedIn */}
@@ -96,7 +96,7 @@ const Footer = () => {
                 className="text-white/80 hover:text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110"
                 aria-label="LinkedIn"
               >
-                <FaLinkedinIn className="w-10 h-10 md:w-9 md:h-9" />
+                <FaLinkedinIn className="w-8 h-8 md:w-9 md:h-9" />
               </a>
             </div>
           </div>
