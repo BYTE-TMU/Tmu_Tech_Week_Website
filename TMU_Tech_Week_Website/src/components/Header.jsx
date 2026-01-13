@@ -83,7 +83,7 @@ const Header = () => {
                 href="https://www.instagram.com/tmutechweek/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className="hidden md:block text-white/70 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <FaInstagram className="w-5 h-5" />
@@ -94,7 +94,7 @@ const Header = () => {
                 href="https://www.linkedin.com/company/tmu-tech-week"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/70 hover:text-white transition-colors"
+                className="hidden md:block text-white/70 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
                 <FaLinkedinIn className="w-5 h-5" />
@@ -133,6 +133,28 @@ const Header = () => {
                   {link.name}
                 </a>
               ))}
+
+              {/* Social Media Links in Mobile Menu */}
+              <div className="flex items-center gap-6 pt-6 mt-6 border-t border-white/10">
+                <a
+                  href="https://www.instagram.com/tmutechweek/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/tmu-tech-week"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-white transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn className="w-6 h-6" />
+                </a>
+              </div>
             </nav>
           </div>
         )}

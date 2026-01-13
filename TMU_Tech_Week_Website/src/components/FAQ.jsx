@@ -62,7 +62,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           {/* Gradient underline */}
-          <div className="h-1 w-[41rem] mx-auto bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full" />
+          <div className="h-1 w-[80%] md:w-[90%] lg:w-[41rem] mx-auto bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full" />
         </div>
 
         {/* FAQ Items */}
@@ -84,18 +84,18 @@ const FAQ = () => {
                   <img
                     src={`/src/assets/images/${item.bullet}.png`}
                     alt="star"
-                    width="24"
-                    height="24"
+                    width="28"
+                    height="28"
                   />
                 </div>
 
                 {/* Question and Icon */}
                 <div className="flex-1 flex items-center justify-between">
-                  <h3 className="text-lg md:text-xl font-semibold text-white">
+                  <h3 className="text-xl md:text-xl lg:text-2xl font-semibold text-white">
                     {item.question}
                   </h3>
                   <svg
-                    className={`flex-shrink-0 w-6 h-6 text-white/60 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''
+                    className={`flex-shrink-0 w-7 h-7 md:w-6 md:h-6 text-white/60 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''
                       }`}
                     fill="none"
                     stroke="currentColor"
@@ -117,7 +117,7 @@ const FAQ = () => {
                   }`}
               >
                 <div className="px-6 pb-6 text-white/70 border-t border-white/10 pt-6">
-                  <p className="text-lg leading-relaxed animate-fade-in">{item.answer}</p>
+                  <p className="text-xl md:text-lg lg:text-xl leading-relaxed animate-fade-in">{item.answer}</p>
                 </div>
               </div>
             </div>

@@ -92,7 +92,7 @@ const Partners = () => {
         >
           <div
             ref={carouselRef}
-            className="flex gap-8 md:gap-10 transition-transform"
+            className="flex gap-6 md:gap-10 transition-transform"
             style={{
               transform: `translateX(-${scrollPosition}px)`,
             }}
@@ -100,9 +100,9 @@ const Partners = () => {
             {duplicatedLogos.map((logo, index) => (
               <div
                 key={`${logo.id}-${index}`}
-                className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[2px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
+                className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[1px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
               >
-                <div className="w-56 h-32 md:w-96 md:h-56 bg-black hover:rounded-lg flex items-center justify-center p-4">
+                <div className="w-80 h-50 md:w-96 md:h-56 bg-[#2a2a2a] hover:rounded-lg rounded-lg flex items-center justify-center px-4 py-2">
                   <img
                     src={logo.src}
                     alt={logo.alt}
