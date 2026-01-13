@@ -8,7 +8,9 @@ import partnerLogo5 from '../assets/images/partner-images/partner-logo-5.svg';
 const Partners = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const sectionRef = useRef(null);
+  const carouselRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,6 +33,30 @@ const Partners = () => {
     };
   }, []);
 
+  // Infinite scroll animation
+  useEffect(() => {
+    if (!isVisible || isPaused) return;
+
+    const interval = setInterval(() => {
+      setScrollPosition((prev) => {
+        const newPosition = prev + 2;
+        if (carouselRef.current) {
+          const maxScroll = carouselRef.current.scrollWidth / 2;
+          return newPosition >= maxScroll ? 0 : newPosition;
+        }
+        return newPosition;
+      });
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [isVisible, isPaused]);
+
+  useEffect(() => {
+    if (carouselRef.current) {
+      carouselRef.current.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+  }, [scrollPosition]);
+
   // Partner logos array
   const logos = [
     { id: 1, src: partnerLogo1, alt: 'Partner 1' },
@@ -41,7 +67,7 @@ const Partners = () => {
   ];
 
   // Duplicate logos for seamless infinite scroll
-  const duplicatedLogos = [...logos, ...logos, ...logos];
+  const duplicatedLogos = Array.from({ length: 20 }, (_, i) => logos[i % logos.length]);
 
   return (
     <section id="partners" className="bg-black py-24 overflow-hidden">
@@ -63,9 +89,10 @@ const Partners = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           <div
-            className="flex gap-8 md:gap-10 animate-scroll"
+            ref={carouselRef}
+            className="flex gap-8 md:gap-10 transition-transform"
             style={{
-              animationPlayState: isPaused ? 'paused' : 'running',
+              transform: `translateX(-${scrollPosition}px)`,
             }}
           >
             {duplicatedLogos.map((logo, index) => (
