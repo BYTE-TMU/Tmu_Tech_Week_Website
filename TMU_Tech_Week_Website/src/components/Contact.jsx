@@ -1,4 +1,30 @@
+import { useState, useEffect, useRef } from 'react';
+
 const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.45 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="contact" className="relative min-h-screen bg-black overflow-hidden">
       {/* Background Image */}
@@ -17,7 +43,11 @@ const Contact = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-12 py-20 text-center">
+      <div
+        ref={sectionRef}
+        className={`relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-12 py-20 text-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+      >
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
           Let's connect.
         </h2>

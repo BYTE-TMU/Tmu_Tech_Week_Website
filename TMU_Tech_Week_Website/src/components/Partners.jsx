@@ -19,7 +19,7 @@ const Partners = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.45 }
     );
 
     if (sectionRef.current) {
@@ -73,12 +73,11 @@ const Partners = () => {
     <section id="partners" className="bg-black py-24 overflow-hidden">
       <div
         ref={sectionRef}
-        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         {/* Title */}
-        <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+        <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white underline underline-offset-8 decoration-4">
           Partners
         </h2>
 

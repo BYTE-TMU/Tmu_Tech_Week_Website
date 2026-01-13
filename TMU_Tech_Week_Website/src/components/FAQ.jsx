@@ -1,7 +1,30 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const FAQ = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.45 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   const faqItems = [
     {
@@ -28,7 +51,11 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="relative min-h-screen bg-black flex items-center px-6 md:px-12 py-20">
-      <div className="max-w-4xl mx-auto w-full">
+      <div
+        ref={sectionRef}
+        className={`max-w-4xl mx-auto w-full transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
+      >
         {/* Title with gradient underline */}
         <div className="relative mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -41,10 +68,16 @@ const FAQ = () => {
         {/* FAQ Items */}
         <div className="space-y-4">
           {faqItems.map((item, index) => (
-            <div key={index} className="border border-white/10 rounded-lg overflow-hidden hover:border-white/20 transition-colors">
+            <div
+              key={index}
+              className={`border rounded-lg overflow-hidden transition-all duration-500 ${expandedIndex === index
+                ? 'border-white/20 scale-[1.02]'
+                : 'border-white/10 hover:border-white/20'
+                }`}
+            >
               <button
                 onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                className="w-full flex items-start gap-4 p-6 text-left hover:bg-white/5 transition-colors"
+                className="w-full flex items-start gap-4 p-6 text-left hover:bg-white/5 transition-all duration-300 active:scale-[0.99]"
               >
                 {/* Gradient Star Bullet */}
                 <div className="flex-shrink-0 mt-1">
@@ -62,9 +95,8 @@ const FAQ = () => {
                     {item.question}
                   </h3>
                   <svg
-                    className={`flex-shrink-0 w-6 h-6 text-white/60 transition-transform duration-300 ${
-                      expandedIndex === index ? 'rotate-180' : ''
-                    }`}
+                    className={`flex-shrink-0 w-6 h-6 text-white/60 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''
+                      }`}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,11 +112,14 @@ const FAQ = () => {
               </button>
 
               {/* Answer */}
-              {expandedIndex === index && (
+              <div
+                className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+              >
                 <div className="px-6 pb-6 text-white/70 border-t border-white/10 pt-6">
-                  <p className="text-lg leading-relaxed">{item.answer}</p>
+                  <p className="text-lg leading-relaxed animate-fade-in">{item.answer}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
