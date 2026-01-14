@@ -8,9 +8,7 @@ import partnerLogo5 from '../assets/images/partner-images/partner-logo-5.svg';
 const Partners = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const sectionRef = useRef(null);
-  const carouselRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,30 +31,6 @@ const Partners = () => {
     };
   }, []);
 
-  // Infinite scroll animation
-  useEffect(() => {
-    if (!isVisible || isPaused) return;
-
-    const interval = setInterval(() => {
-      setScrollPosition((prev) => {
-        const newPosition = prev + 2;
-        if (carouselRef.current) {
-          const maxScroll = carouselRef.current.scrollWidth / 2;
-          return newPosition >= maxScroll ? 0 : newPosition;
-        }
-        return newPosition;
-      });
-    }, 30);
-
-    return () => clearInterval(interval);
-  }, [isVisible, isPaused]);
-
-  useEffect(() => {
-    if (carouselRef.current) {
-      carouselRef.current.style.transform = `translateX(-${scrollPosition}px)`;
-    }
-  }, [scrollPosition]);
-
   // Partner logos array
   const logos = [
     { id: 1, src: partnerLogo1, alt: 'Partner 1' },
@@ -66,15 +40,34 @@ const Partners = () => {
     { id: 5, src: partnerLogo5, alt: 'Partner 5' },
   ];
 
-  // Duplicate logos for seamless infinite scroll
-  const duplicatedLogos = Array.from({ length: 20 }, (_, i) => logos[i % logos.length]);
-
   return (
     <section id="partners" className="bg-black py-24 overflow-hidden">
+      <style>
+        {`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-100% / 2));
+            }
+          }
+
+          .animate-scroll {
+            animation: scroll 45s linear infinite;
+            will-change: transform;
+          }
+
+          .animate-scroll.paused {
+            animation-play-state: paused;
+          }
+        `}
+      </style>
       <div
         ref={sectionRef}
-        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
-          }`}
+        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${
+          isVisible ? 'opacity-100' : 'opacity-0'
+        }`}
       >
         {/* Title */}
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white relative inline-block w-full">
@@ -90,27 +83,30 @@ const Partners = () => {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div
-            ref={carouselRef}
-            className="flex gap-6 md:gap-10 transition-transform"
-            style={{
-              transform: `translateX(-${scrollPosition}px)`,
-            }}
-          >
-            {duplicatedLogos.map((logo, index) => (
-              <div
-                key={`${logo.id}-${index}`}
-                className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[1px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
-              >
-                <div className="w-80 h-50 md:w-96 md:h-56 bg-[#2a2a2a] hover:rounded-lg rounded-lg flex items-center justify-center px-4 py-2">
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="flex">
+            <div
+              className={`flex gap-6 md:gap-10 ${
+                isPaused ? 'animate-scroll paused' : 'animate-scroll'
+              }`}
+            >
+              {/* Multiple sets of logos for seamless infinite scroll */}
+              {[...Array(6)].map((_, setIndex) =>
+                logos.map((logo) => (
+                  <div
+                    key={`set-${setIndex}-${logo.id}`}
+                    className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[1px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
+                  >
+                    <div className="w-80 h-50 md:w-96 md:h-56 bg-[#2a2a2a] hover:rounded-lg rounded-lg flex items-center justify-center px-4 py-2">
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>
