@@ -65,9 +65,8 @@ const Partners = () => {
       </style>
       <div
         ref={sectionRef}
-        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         {/* Title */}
         <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white relative inline-block w-full">
@@ -85,16 +84,15 @@ const Partners = () => {
         >
           <div className="flex">
             <div
-              className={`flex gap-6 md:gap-10 ${
-                isPaused ? 'animate-scroll paused' : 'animate-scroll'
-              }`}
+              className={`flex gap-6 md:gap-10 ${isPaused ? 'animate-scroll paused' : 'animate-scroll'
+                }`}
             >
               {/* Multiple sets of logos for seamless infinite scroll */}
               {[...Array(6)].map((_, setIndex) =>
                 logos.map((logo) => (
                   <div
                     key={`set-${setIndex}-${logo.id}`}
-                    className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[1px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-lg"
+                    className="flex-shrink-0 transition-all duration-300 hover:scale-110 hover:p-[3px] hover:bg-gradient-to-r hover:from-ttw-blue hover:via-ttw-fuchsia hover:to-ttw-orange hover:rounded-xl"
                   >
                     <div className="w-80 h-50 md:w-96 md:h-56 bg-[#2a2a2a] hover:rounded-lg rounded-lg flex items-center justify-center px-4 py-2">
                       <img

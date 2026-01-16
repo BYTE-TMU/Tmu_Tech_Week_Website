@@ -134,7 +134,7 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-40 py-10 md:px-40 md:py-7 mt-1 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-1 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}
@@ -143,7 +143,7 @@ const Hero = () => {
         <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 transition-opacity duration-300"></div>
         {/* Inner black rectangle */}
         <div className="absolute inset-[1.5px] rounded-md bg-black flex items-center justify-center">
-          <span className="font-text text-white text-3xl md:text-2xl lg:text-3xl whitespace-nowrap">
+          <span className="font-text text-white text-2xl md:text-xl lg:text-2xl whitespace-nowrap">
             View the Calendar
           </span>
         </div>
