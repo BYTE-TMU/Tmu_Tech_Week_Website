@@ -48,9 +48,9 @@ const Footer = () => {
             <img
               src="/src/assets/images/logo-transparent.png"
               alt="TMU Tech Week Logo"
-              className="h-28 md:h-28 lg:h-32 w-auto flex-shrink-0"
+              className="h-20 md:h-20 lg:h-24 w-auto flex-shrink-0"
             />
-            <div className="flex flex-col font-notch text-white text-4xl md:text-4xl lg:text-5xl font-bold leading-none">
+            <div className="flex flex-col font-notch text-white text-3xl md:text-3xl lg:text-4xl font-bold leading-none">
               <span>TMU</span>
               <span>Tech</span>
               <span>Week</span>

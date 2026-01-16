@@ -26,7 +26,7 @@
 
 @layer base {
   body {
-    @apply bg-ttw-navy text-white antialiased;
+    @apply bg-black text-white antialiased;
     font-family: 'Stack Sans Text', system-ui, sans-serif;
   }
 
