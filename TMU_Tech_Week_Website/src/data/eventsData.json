@@ -1,0 +1,70 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "clubName": "TMU AIMLA",
+      "eventName": "Coding Competition",
+      "date": "2026-02-17",
+      "time": "6:00 PM",
+      "venue": "ENG Building",
+      "types": ["Workshops"],
+      "poster": "/src/assets/images/event-placeholder.png",
+      "lumaLink": "",
+      "description": "Coding Competition",
+      "expectedAttendance": 30
+    },
+    {
+      "id": 2,
+      "clubName": "Metropolitan Data Science Association",
+      "eventName": "DataDash Conference",
+      "date": "2026-02-21",
+      "endDate": "2026-02-22",
+      "time": "Day 1: 9:30 AM - 5:00 PM | Day 2: 10:00 AM - 7:00 PM",
+      "venue": "Ted Rogers School of Management",
+      "types": ["Conferences", "Workshops"],
+      "poster": "/src/assets/images/event-placeholder.png",
+      "lumaLink": "",
+      "description": "MDSA's DataDash Conference makes its third annual return, dedicated to the intersection of data visualization and analytics within the film and entertainment industry. DataDash will include hands-on workshops covering data visualization and analytics tools, the art of pitching solutions and foundational project management skills.",
+      "expectedAttendance": 70
+    },
+    {
+      "id": 3,
+      "clubName": "TMU STEM Fellowship",
+      "eventName": "Python Workshop",
+      "date": "2026-02-17",
+      "time": "3:00 PM - 5:00 PM",
+      "venue": "TBD",
+      "types": ["Workshops"],
+      "poster": "/src/assets/images/event-placeholder.png",
+      "lumaLink": "",
+      "description": "Python Workshop aims to teach students regardless of program the general basics of python with tips and tricks so that they can add it to their skillset.",
+      "expectedAttendance": 30
+    },
+    {
+      "id": 4,
+      "clubName": "AWS Cloud Club",
+      "eventName": "Getting Started with AWS Lambda",
+      "date": "2026-02-17",
+      "time": "6:00 PM - 8:30 PM",
+      "venue": "DCC First Floor Lecture Hall",
+      "types": ["Workshops", "Networking"],
+      "poster": "/src/assets/images/event-placeholder.png",
+      "lumaLink": "",
+      "description": "A workshop on the popular service, AWS Lambda known for its capabilities in supporting serverless computation. The workshop will walk attendees through how they can setup a Lambda function via the AWS Management Console, how Lambda works, use cases, and more. After the workshop, we plan to cater food from Scotty Bons Caribbean Grill and allow some time for networking.",
+      "expectedAttendance": 35
+    },
+    {
+      "id": 5,
+      "clubName": "TMU Blueprint",
+      "eventName": "Resume Roast",
+      "date": "2026-02-18",
+      "time": "2:00 PM - 3:00 PM",
+      "venue": "SLC 4th Floor",
+      "types": ["Panels", "Networking"],
+      "poster": "/src/assets/images/event-placeholder.png",
+      "lumaLink": "",
+      "description": "Resume Roast - People submit their resumes via google form before the event. Introductions have a panel at the start explaining how to write a good resume, followed by a 'resume roast' with Q&A. Speakers include industry professionals in tech HR and co-op advisors.",
+      "expectedAttendance": 30
+    }
+  ]
+}

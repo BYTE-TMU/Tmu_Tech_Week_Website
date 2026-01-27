@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaChevronRight, FaClock } from 'react-icons/fa';
+import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
   const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Conferences', 'Showcases'];
@@ -16,81 +17,20 @@ const EventCalendar = () => {
     { label: 'Feb 22', value: '2026-02-22' },
   ];
 
-  // Sample event data
-  const allEvents = [
-    {
-      id: 1,
-      name: 'Opening Ceremony & Keynote',
-      date: '2026-02-15',
-      time: '10:00 AM',
-      types: ['Conferences'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-1' // Replace with actual Luma link
-    },
-    {
-      id: 2,
-      name: 'AI/ML Workshop',
-      date: '2026-02-16',
-      time: '2:00 PM',
-      types: ['Workshops'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-2' // Replace with actual Luma link
-    },
-    {
-      id: 3,
-      name: 'Startup Panel Discussion',
-      date: '2026-02-17',
-      time: '3:00 PM',
-      types: ['Panels', 'Networking'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-3' // Replace with actual Luma link
-    },
-    {
-      id: 4,
-      name: '24-Hour Hackathon Kickoff',
-      date: '2026-02-18',
-      time: '9:00 AM',
-      types: ['Hackathons'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-4' // Replace with actual Luma link
-    },
-    {
-      id: 5,
-      name: 'Web Development Workshop',
-      date: '2026-02-18',
-      time: '1:00 PM',
-      types: ['Workshops'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-5' // Replace with actual Luma link
-    },
-    {
-      id: 6,
-      name: 'Tech Career Fair',
-      date: '2026-02-19',
-      time: '11:00 AM',
-      types: ['Networking', 'Conferences'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-6' // Replace with actual Luma link
-    },
-    {
-      id: 7,
-      name: 'Project Showcase',
-      date: '2026-02-21',
-      time: '4:00 PM',
-      types: ['Showcases'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-7' // Replace with actual Luma link
-    },
-    {
-      id: 8,
-      name: 'Closing Ceremony',
-      date: '2026-02-22',
-      time: '6:00 PM',
-      types: ['Conferences'],
-      poster: '/src/assets/images/event-placeholder.png',
-      lumaLink: 'https://lu.ma/your-event-link-8' // Replace with actual Luma link
-    },
-  ];
+  // Map events from JSON to the expected format
+  const allEvents = eventsData.events.map(event => ({
+    id: event.id,
+    name: event.eventName,
+    clubName: event.clubName,
+    date: event.date,
+    endDate: event.endDate || null,
+    time: event.time,
+    venue: event.venue,
+    types: event.types,
+    poster: event.poster,
+    lumaLink: event.lumaLink || '',
+    description: event.description
+  }));
 
   const [selectedType, setSelectedType] = useState('All');
   const [selectedDay, setSelectedDay] = useState('all');
@@ -104,7 +44,18 @@ const EventCalendar = () => {
   // Filter events based on selected type and day
   const filteredEvents = allEvents.filter(event => {
     const typeMatch = selectedType === 'All' || event.types.includes(selectedType);
-    const dayMatch = selectedDay === 'all' || event.date === selectedDay;
+
+    // Handle multi-day events
+    let dayMatch = selectedDay === 'all';
+    if (!dayMatch) {
+      if (event.endDate) {
+        // For multi-day events, check if selected day falls within the range
+        dayMatch = selectedDay >= event.date && selectedDay <= event.endDate;
+      } else {
+        dayMatch = event.date === selectedDay;
+      }
+    }
+
     return typeMatch && dayMatch;
   });
 
@@ -301,6 +252,9 @@ const EventCalendar = () => {
 
                     {/* Event Details */}
                     <div className="flex-grow min-w-0">
+                      <p className="text-xs md:text-sm font-text text-ttw-fuchsia mb-0.5 md:mb-1 truncate">
+                        {event.clubName}
+                      </p>
                       <h3 className="text-base md:text-3xl font-bold font-headline text-white mb-1 md:mb-2 line-clamp-2">
                         {event.name}
                       </h3>
