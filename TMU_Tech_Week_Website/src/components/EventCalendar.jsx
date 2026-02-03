@@ -254,15 +254,15 @@ const EventCalendar = () => {
 
                     {/* Event Details */}
                     <div className="flex-grow min-w-0">
-                      <p className="text-xs md:text-sm font-text text-ttw-fuchsia mb-0.5 md:mb-1 truncate">
+                      <p className="text-sm md:text-sm font-text text-ttw-fuchsia mb-0.5 md:mb-1 truncate">
                         {event.clubName}
                       </p>
-                      <h3 className="text-base md:text-3xl font-bold font-headline text-white mb-1 md:mb-2 line-clamp-2">
+                      <h3 className="text-lg md:text-3xl font-bold font-headline text-white mb-1 md:mb-2 line-clamp-2">
                         {event.name}
                       </h3>
                       <div className="flex items-center gap-1.5 md:gap-2 text-white/70 mb-2 md:mb-3">
                         <FaClock className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
-                        <span className="font-text text-xs md:text-lg truncate">
+                        <span className="font-text text-sm md:text-lg truncate">
                           {formatDate(event.date)}, {event.time}
                         </span>
                       </div>

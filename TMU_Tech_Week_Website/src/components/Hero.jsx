@@ -56,8 +56,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
-      <div className="absolute top-[-37%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[150vw] h-[150vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-50 md:opacity-40 rotate-180">
+    <section className="relative h-[180vh] md:h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
+      <div className="absolute top-[-29%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[200vw] h-[200vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-60 md:opacity-40 rotate-180">
         <img
           src="/images/circular-gradient.png"
           alt=""
@@ -119,7 +119,7 @@ const Hero = () => {
       {/* Dates and Location */}
       <div
         ref={datesRef}
-        className={`relative z-10 flex flex-col items-center gap-2 text-center transition-all duration-1000 ease-out ${isDatesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center gap-2 text-center mt-8 md:mt-0 mb-8 md:mb-0 transition-all duration-1000 ease-out ${isDatesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         <p className="font-text text-4xl md:text-3xl lg:text-4xl text-white font-medium">
@@ -134,7 +134,7 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-1 mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-4 md:mt-1 mb-8 md:mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}

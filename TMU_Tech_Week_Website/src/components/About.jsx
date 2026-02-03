@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="relative min-h-screen bg-black flex items-center px-6 md:px-12 py-20">
+    <section id="about" className="relative bg-black flex items-center px-6 md:px-12 py-16 md:py-20 md:min-h-screen">
       {/* Content Container */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left: Door to Success Image */}
@@ -15,7 +15,7 @@ const About = () => {
         {/* Right: Text Content */}
         <div className="flex flex-col items-end text-right order-2">
           <div className="relative">
-            <h2 className="text-5xl md:text-4xl lg:text-6xl font-bold text-white mb-2 whitespace-nowrap">What is TMU Tech Week?</h2>
+            <h2 className="text-6xl sm:text-6xl md:text-4xl lg:text-6xl font-bold text-white mb-2 md:whitespace-nowrap">What is TMU Tech Week?</h2>
             {/* Gradient underline */}
             <div className="h-1 w-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full mt-2" />
           </div>
