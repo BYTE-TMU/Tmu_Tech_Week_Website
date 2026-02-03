@@ -23,7 +23,7 @@
       "time": "10:30 - 2:30",
       "venue": "Stalom Office",
       "types": [
-        "Networking"
+        "Networking", "Office Tours"
       ],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -37,7 +37,7 @@
       "time": "3:00 - 5:00",
       "venue": "TBD",
       "types": [
-        "Workshops"
+        "Workshops", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -51,7 +51,7 @@
       "time": "06:00 - 8:30",
       "venue": "DCC First Floor Lecture Hall",
       "types": [
-        "Workshops"
+        "Workshops", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -78,7 +78,7 @@
       "endDate": "",
       "time": "2:00 - 3:00",
       "venue": "SLC 6TH FLOOR",
-      "types": [],
+      "types": ["Networking", "Resume Reviews"],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
     },
