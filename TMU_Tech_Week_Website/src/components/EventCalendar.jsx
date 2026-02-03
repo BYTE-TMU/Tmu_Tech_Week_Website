@@ -3,7 +3,7 @@ import { FaChevronRight, FaClock } from 'react-icons/fa';
 import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
-  const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Conferences', 'Showcases'];
+  const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Office Tours', 'Resume Reviews', 'Conferences', 'Showcases'];
 
   const days = [
     { label: 'All Days', value: 'all' },
@@ -101,13 +101,42 @@ const EventCalendar = () => {
     setShowAll(!showAll);
   };
 
-  // Format date for display
+  // Format single date for display (preserves weekday)
   const formatDate = (dateString) => {
-    // Parse the date string to avoid timezone issues
+    if (!dateString) return '';
     const [year, month, day] = dateString.split('-').map(Number);
     const date = new Date(year, month - 1, day); // month is 0-indexed
     const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
     return date.toLocaleDateString('en-US', options);
+  };
+
+  // Format date range for multi-day events
+  const formatDateRange = (startDateStr, endDateStr) => {
+    if (!startDateStr) return '';
+    if (!endDateStr) return formatDate(startDateStr);
+
+    const [sy, sm, sd] = startDateStr.split('-').map(Number);
+    const [ey, em, ed] = endDateStr.split('-').map(Number);
+    const s = new Date(sy, sm - 1, sd);
+    const e = new Date(ey, em - 1, ed);
+
+    // Same month & year: 'Month start–end, Year' e.g., 'February 18–19, 2026'
+    if (sy === ey && sm === em) {
+      const monthName = s.toLocaleDateString('en-US', { month: 'long' });
+      return `${monthName} ${s.getDate()}–${e.getDate()}, ${sy}`;
+    }
+
+    // Same year: 'Month day – Month day, Year'
+    if (sy === ey) {
+      const sFmt = s.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+      const eFmt = e.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+      return `${sFmt} – ${eFmt}, ${sy}`;
+    }
+
+    // Different years: include full dates
+    const sFmt = s.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    const eFmt = e.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+    return `${sFmt} – ${eFmt}`;
   };
 
   // Get tag color based on event type
@@ -117,6 +146,8 @@ const EventCalendar = () => {
       'Workshops': 'bg-ttw-fuchsia/20 text-ttw-fuchsia border-ttw-fuchsia/40',
       'Panels': 'bg-ttw-pink/20 text-ttw-pink border-ttw-pink/40',
       'Networking': 'bg-ttw-orange/20 text-ttw-orange border-ttw-orange/40',
+      'Office Tours': 'bg-ttw-blue/20 text-ttw-blue border-ttw-blue/40',
+      'Resume Reviews': 'bg-ttw-orange/20 text-ttw-orange border-ttw-orange/40',
       'Conferences': 'bg-ttw-blue/20 text-ttw-blue border-ttw-blue/40',
       'Showcases': 'bg-ttw-fuchsia/20 text-ttw-fuchsia border-ttw-fuchsia/40',
     };
@@ -263,7 +294,7 @@ const EventCalendar = () => {
                       <div className="flex items-center gap-1.5 md:gap-2 text-white/70 mb-2 md:mb-3">
                         <FaClock className="w-3 h-3 md:w-4 md:h-4 flex-shrink-0" />
                         <span className="font-text text-sm md:text-lg truncate">
-                          {formatDate(event.date)}, {event.time}
+                          {event.endDate ? formatDateRange(event.date, event.endDate) : formatDate(event.date)}, {event.time}
                         </span>
                       </div>
                       <div className="flex flex-wrap gap-1.5 md:gap-2">

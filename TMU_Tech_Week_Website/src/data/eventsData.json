@@ -2,82 +2,225 @@
   "events": [
     {
       "id": 1,
-      "clubName": "TMU AIMLA",
-      "eventName": "Coding Competition",
-      "date": "2026-02-17",
-      "time": "6:00 PM",
-      "venue": "ENG Building",
+      "clubName": "BYTE",
+      "eventName": "Opening Ceremony",
+      "date": "2026-02-15",
+      "endDate": "",
+      "time": "12:30 - 4:00",
+      "venue": "SLC 8TH FLOOR",
       "types": [
-        "Workshops"
+        "Showcases", "Panels", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Coding Competition",
-      "expectedAttendance": 30
+      "lumaLink": ""
     },
     {
       "id": 2,
-      "clubName": "Metropolitan Data Science Association",
-      "eventName": "DataDash Conference",
-      "date": "2026-02-21",
-      "endDate": "2026-02-22",
-      "time": "Day 1: 9:30 AM - 5:00 PM | Day 2: 10:00 AM - 7:00 PM",
-      "venue": "Ted Rogers School of Management",
+      "clubName": "Slalom",
+      "eventName": "Stalom Office Tour",
+      "date": "2026-02-17",
+      "endDate": "",
+      "time": "10:30 - 2:30",
+      "venue": "Stalom Office",
       "types": [
-        "Conferences",
-        "Workshops"
+        "Networking", "Office Tours"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "MDSA's DataDash Conference makes its third annual return, dedicated to the intersection of data visualization and analytics within the film and entertainment industry. DataDash will include hands-on workshops covering data visualization and analytics tools, the art of pitching solutions and foundational project management skills.",
-      "expectedAttendance": 70
+      "lumaLink": ""
     },
     {
       "id": 3,
       "clubName": "TMU STEM Fellowship",
       "eventName": "Python Workshop",
       "date": "2026-02-17",
-      "time": "3:00 PM - 5:00 PM",
+      "endDate": "",
+      "time": "3:00 - 5:00",
       "venue": "TBD",
       "types": [
-        "Workshops"
+        "Workshops", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Python Workshop aims to teach students regardless of program the general basics of python with tips and tricks so that they can add it to their skillset.",
-      "expectedAttendance": 30
+      "lumaLink": ""
     },
     {
       "id": 4,
       "clubName": "AWS Cloud Club",
       "eventName": "Getting Started with AWS Lambda",
       "date": "2026-02-17",
-      "time": "6:00 PM - 8:30 PM",
+      "endDate": "",
+      "time": "06:00 - 8:30",
       "venue": "DCC First Floor Lecture Hall",
       "types": [
-        "Workshops",
-        "Networking"
+        "Workshops", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "A workshop on the popular service, AWS Lambda known for its capabilities in supporting serverless computation. The workshop will walk attendees through how they can setup a Lambda function via the AWS Management Console, how Lambda works, use cases, and more. After the workshop, we plan to cater food from Scotty Bons Caribbean Grill and allow some time for networking.",
-      "expectedAttendance": 35
+      "lumaLink": ""
     },
     {
       "id": 5,
+      "clubName": "TMU AIMLA",
+      "eventName": "Coding competition",
+      "date": "2026-02-17",
+      "endDate": "",
+      "time": "6:00 - 8:00",
+      "venue": "ENG",
+      "types": [
+        "Hackathons"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 6,
       "clubName": "TMU Blueprint",
       "eventName": "Resume Roast",
       "date": "2026-02-18",
-      "time": "2:00 PM - 3:00 PM",
-      "venue": "SLC 4th Floor",
+      "endDate": "",
+      "time": "2:00 - 3:00",
+      "venue": "SLC 6TH FLOOR",
+      "types": ["Networking", "Resume Reviews"],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 7,
+      "clubName": "IBM Z",
+      "eventName": "Mini-Hackathon",
+      "date": "2026-02-18",
+      "endDate": "2026-02-19",
+      "time": "3:00 - 5:00",
+      "venue": "SLC",
       "types": [
-        "Panels",
-        "Networking"
+        "Hackathons"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Resume Roast - People submit their resumes via google form before the event. Introductions have a panel at the start explaining how to write a good resume, followed by a 'resume roast' with Q&A. Speakers include industry professionals in tech HR and co-op advisors.",
-      "expectedAttendance": 30
+      "lumaLink": ""
+    },
+    {
+      "id": 8,
+      "clubName": "ECEC",
+      "eventName": "TBA",
+      "date": "2026-02-19",
+      "endDate": "",
+      "time": "5:00 - 7:00",
+      "venue": "SLO",
+      "types": [
+        "Showcases"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 9,
+      "clubName": "TCSA",
+      "eventName": "TBA",
+      "date": "2026-02-19",
+      "endDate": "",
+      "time": "8:00 - 10:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 10,
+      "clubName": "Take-off",
+      "eventName": "TBA",
+      "date": "2026-02-20",
+      "endDate": "",
+      "time": "2:00 - 4:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 11,
+      "clubName": "Tetrax BYTE",
+      "eventName": "TBA",
+      "date": "2026-02-20",
+      "endDate": "",
+      "time": "4:00 - 6:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 12,
+      "clubName": "OSEC",
+      "eventName": "TBA",
+      "date": "2026-02-20",
+      "endDate": "",
+      "time": "7:00 - 8:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 13,
+      "clubName": "MDSA",
+      "eventName": "Data Dash",
+      "date": "2026-02-21",
+      "endDate": "2026-02-22",
+      "time": "9:00 - 8:00",
+      "venue": "TRSM",
+      "types": [
+        "Conferences"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 14,
+      "clubName": "TMAV",
+      "eventName": "TBA",
+      "date": "2026-02-21",
+      "endDate": "",
+      "time": "3:00 - 5:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 15,
+      "clubName": "FRONTIER",
+      "eventName": "TBA",
+      "date": "2026-02-21",
+      "endDate": "",
+      "time": "5:00 - 7:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 16,
+      "clubName": "BYTE",
+      "eventName": "Closing Ceremony",
+      "date": "2026-02-22",
+      "endDate": "",
+      "time": "12:30 - 4:00",
+      "venue": "SLC 8TH FLOOR",
+      "types": [
+        "Showcases"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
     }
   ]
 }
