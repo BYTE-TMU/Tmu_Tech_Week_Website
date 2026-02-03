@@ -6,7 +6,7 @@ const About = () => {
         {/* Left: Door to Success Image */}
         <div className="flex items-center justify-center order-1">
           <img
-            src="/src/assets/images/door-to-success.png"
+            src="/images/door-to-success.png"
             alt="Door to Success"
             className="w-full max-w-2xl md:max-w-lg h-auto"
           />

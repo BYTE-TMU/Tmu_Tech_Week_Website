@@ -53,7 +53,7 @@ const Header = () => {
               className="flex-shrink-0"
             >
               <img
-                src="/src/assets/images/logo-white.png"
+                src="/images/logo-white.png"
                 alt="TMU Tech Week"
                 className="h-8 md:h-10 w-auto"
               />

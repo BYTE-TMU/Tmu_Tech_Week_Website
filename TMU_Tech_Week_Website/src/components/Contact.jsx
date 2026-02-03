@@ -31,7 +31,7 @@ const Contact = () => {
       <div
         className="absolute inset-0 bg-cover opacity-70"
         style={{
-          backgroundImage: "url('/src/assets/images/lets_connect.png')",
+          backgroundImage: "url('/images/lets_connect.png')",
           backgroundPosition: "center",
         }}
       />
