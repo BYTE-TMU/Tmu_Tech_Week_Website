@@ -3,7 +3,7 @@ import { FaChevronRight, FaClock } from 'react-icons/fa';
 import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
-  const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Conferences', 'Showcases'];
+  const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Office Tours', 'Resume Reviews', 'Conferences', 'Showcases'];
 
   const days = [
     { label: 'All Days', value: 'all' },
@@ -117,6 +117,8 @@ const EventCalendar = () => {
       'Workshops': 'bg-ttw-fuchsia/20 text-ttw-fuchsia border-ttw-fuchsia/40',
       'Panels': 'bg-ttw-pink/20 text-ttw-pink border-ttw-pink/40',
       'Networking': 'bg-ttw-orange/20 text-ttw-orange border-ttw-orange/40',
+      'Office Tours': 'bg-ttw-blue/20 text-ttw-blue border-ttw-blue/40',
+      'Resume Reviews': 'bg-ttw-orange/20 text-ttw-orange border-ttw-orange/40',
       'Conferences': 'bg-ttw-blue/20 text-ttw-blue border-ttw-blue/40',
       'Showcases': 'bg-ttw-fuchsia/20 text-ttw-fuchsia border-ttw-fuchsia/40',
     };
