@@ -2,296 +2,225 @@
   "events": [
     {
       "id": 1,
-      "clubName": "",
-      "eventName": "",
-      "date": "",
+      "clubName": "BYTE",
+      "eventName": "Opening Ceremony",
+      "date": "2026-02-15",
       "endDate": "",
-      "time": "Start",
-      "venue": "",
-      "types": [],
+      "time": "12:30 - 4:00",
+      "venue": "SLC 8TH FLOOR",
+      "types": [
+        "Showcases", "Panels", "Networking"
+      ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
+      "lumaLink": ""
     },
     {
       "id": 2,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-15",
+      "clubName": "Slalom",
+      "eventName": "Stalom Office Tour",
+      "date": "2026-02-17",
       "endDate": "",
-      "time": "SLC 8TH FLOOR (12:30 - 8:00)",
-      "venue": "",
-      "types": [],
+      "time": "10:30 - 2:30",
+      "venue": "Stalom Office",
+      "types": [
+        "Networking"
+      ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
+      "lumaLink": ""
     },
     {
       "id": 3,
-      "clubName": "BYTE",
-      "eventName": "Set up",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "12:30:00",
-      "venue": "SLC",
-      "types": [
-        "Opening Ceremony"
-      ],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Opening Ceremony brings together innovators,\ncreators, and industry leaders through keynote, panels, and networking to\nshowcase the future of tech at Toronto\nMetropolitan University.",
-      "expectedAttendance": 250
-    },
-    {
-      "id": 4,
-      "clubName": "",
-      "eventName": "Registration & Lunch",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "01:00:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 5,
-      "clubName": "",
-      "eventName": "Welcome/Opening Remarks",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "01:30:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 6,
-      "clubName": "",
-      "eventName": "Overview of TMU Tech Week",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "01:40:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 7,
-      "clubName": "",
-      "eventName": "Dean's Speech",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "02:00:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 8,
-      "clubName": "",
-      "eventName": "Panel Discussion",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "02:10:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 9,
-      "clubName": "",
-      "eventName": "Company/Club Fair",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "02:45:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 10,
-      "clubName": "",
-      "eventName": "Soft Close & Clean Up",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "03:45:00",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 11,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-17",
-      "endDate": "",
-      "time": "SLC 6TH FLOOR (2:00 - 10:00)",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 12,
-      "clubName": "Slalom",
-      "eventName": "Slalom Office Tour",
-      "date": "2026-02-17",
-      "endDate": "",
-      "time": "10:30:00",
-      "venue": "Slalom Office",
-      "types": [
-        "Office tour"
-      ],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Attendee's will gain access and tour Slalom's Office, a tech consulting firm, to help connect industry professionals with students.",
-      "expectedAttendance": 60
-    },
-    {
-      "id": 13,
       "clubName": "TMU STEM Fellowship",
       "eventName": "Python Workshop",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "03:00:00",
+      "time": "3:00 - 5:00",
       "venue": "TBD",
       "types": [
-        "Workshop"
+        "Workshops"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Python Workshop aims to teach students regardless of program the general basics of python with tips and tricks so that they can add it to their skillset",
-      "expectedAttendance": 60
+      "lumaLink": ""
     },
     {
-      "id": 14,
-      "clubName": "AWS cloud club",
+      "id": 4,
+      "clubName": "AWS Cloud Club",
       "eventName": "Getting Started with AWS Lambda",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "06:00:00",
+      "time": "06:00 - 8:30",
       "venue": "DCC First Floor Lecture Hall",
       "types": [
-        "Workshop"
+        "Workshops"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Getting Started with AWS Lambda is the title of our event. We plan to host a workshop on the popular service, AWS Lambda known for it's capabilities in supporting serverless computation. The workshop will walk attendees through how they can setup a Lambda function via the AWS Management Console, how Lambda works, use cases, and more. After the workshop, we plan to cater food from Scotty Bons Caribbean Grill and allow some time for networking to take place.",
-      "expectedAttendance": 50
+      "lumaLink": ""
     },
     {
-      "id": 15,
+      "id": 5,
       "clubName": "TMU AIMLA",
       "eventName": "Coding competition",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "06:00:00",
+      "time": "6:00 - 8:00",
       "venue": "ENG",
       "types": [
-        "Competition"
+        "Hackathons"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "A coding competition to help new coders understand the complexities of coding.",
-      "expectedAttendance": 50
+      "lumaLink": ""
     },
     {
-      "id": 16,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-18",
-      "endDate": "",
-      "time": "SLC 6TH FLOOR (2:00 - 10:00)",
-      "venue": "",
-      "types": [],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
-    },
-    {
-      "id": 17,
+      "id": 6,
       "clubName": "TMU Blueprint",
       "eventName": "Resume Roast",
       "date": "2026-02-18",
       "endDate": "",
-      "time": "14:00:00",
-      "venue": "SLC 4th Floor",
+      "time": "2:00 - 3:00",
+      "venue": "SLC 6TH FLOOR",
+      "types": [],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 7,
+      "clubName": "IBM Z",
+      "eventName": "Mini-Hackathon",
+      "date": "2026-02-18",
+      "endDate": "2026-02-19",
+      "time": "3:00 - 5:00",
+      "venue": "SLC",
       "types": [
-        "Panels",
-        "Networking"
+        "Hackathons"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "Resume Roast - People submit their resumes via google form before the event. Introductions have a panel at the start explaining how to write a good resume, followed by a 'resume roast' with Q&A. Speakers include industry professionals in tech HR and co-op advisors.",
-      "expectedAttendance": 30
+      "lumaLink": ""
     },
     {
-      "id": 18,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-18",
+      "id": 8,
+      "clubName": "ECEC",
+      "eventName": "TBA",
+      "date": "2026-02-19",
       "endDate": "",
-      "time": "SLC 7TH FLOOR (2:00 - 10:00)",
-      "venue": "",
-      "types": [],
+      "time": "5:00 - 7:00",
+      "venue": "SLO",
+      "types": [
+        "Showcases"
+      ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
+      "lumaLink": ""
     },
     {
-      "id": 19,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-18",
+      "id": 9,
+      "clubName": "TCSA",
+      "eventName": "TBA",
+      "date": "2026-02-19",
       "endDate": "",
-      "time": "",
-      "venue": "",
-      "types": [],
+      "time": "8:00 - 10:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
+      "lumaLink": ""
     },
     {
-      "id": 20,
-      "clubName": "",
-      "eventName": "",
-      "date": "2026-02-18",
+      "id": 10,
+      "clubName": "Take-off",
+      "eventName": "TBA",
+      "date": "2026-02-20",
       "endDate": "",
-      "time": "12:00:00",
-      "venue": "ENG Building",
-      "types": [],
+      "time": "2:00 - 4:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": "",
-      "description": "",
-      "expectedAttendance": null
+      "lumaLink": ""
+    },
+    {
+      "id": 11,
+      "clubName": "Tetrax BYTE",
+      "eventName": "TBA",
+      "date": "2026-02-20",
+      "endDate": "",
+      "time": "4:00 - 6:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 12,
+      "clubName": "OSEC",
+      "eventName": "TBA",
+      "date": "2026-02-20",
+      "endDate": "",
+      "time": "7:00 - 8:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 13,
+      "clubName": "MDSA",
+      "eventName": "Data Dash",
+      "date": "2026-02-21",
+      "endDate": "2026-02-22",
+      "time": "9:00 - 8:00",
+      "venue": "TRSM",
+      "types": [
+        "Conferences"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 14,
+      "clubName": "TMAV",
+      "eventName": "TBA",
+      "date": "2026-02-21",
+      "endDate": "",
+      "time": "3:00 - 5:00",
+      "venue": "SLC",
+      "types": [
+        "Panels"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 15,
+      "clubName": "FRONTIER",
+      "eventName": "TBA",
+      "date": "2026-02-21",
+      "endDate": "",
+      "time": "5:00 - 7:00",
+      "venue": "SLC",
+      "types": [
+        "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 16,
+      "clubName": "BYTE",
+      "eventName": "Closing Ceremony",
+      "date": "2026-02-22",
+      "endDate": "",
+      "time": "12:30 - 4:00",
+      "venue": "SLC 8TH FLOOR",
+      "types": [
+        "Showcases"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
     }
   ]
 }
