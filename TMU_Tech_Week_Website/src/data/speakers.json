@@ -1,6 +1,6 @@
 [
   {
-    "organization": "Faculty of Engineering & Architectural Science",
+    "organization": "TMU - FEAS",
     "role": "Keynote Speaker",
     "speaker_name": "Dr. Sri Krishnan",
     "title": "Dean of Engineering",
@@ -54,5 +54,13 @@
     "title": "Full Stack Engineer",
     "linkedin_url": "https://www.linkedin.com/in/asher-andargachew/",
     "image": "/images/asher.jpg"
+  },
+  {
+    "organization": "TCS & Enbridge",
+    "role": "Panel Speaker",
+    "speaker_name": "Husain Maudiwala",
+    "title": "Gen-AI Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/husain-maudiwala/",
+    "image": "/images/husain.jpg"
   }
 ]
