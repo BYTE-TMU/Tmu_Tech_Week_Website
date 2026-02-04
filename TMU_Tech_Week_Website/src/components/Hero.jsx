@@ -59,7 +59,7 @@ const Hero = () => {
     <section className="relative h-[180vh] md:h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
       <div className="absolute top-[-29%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[200vw] h-[200vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-60 md:opacity-40 rotate-180">
         <img
-          src="/images/circular-gradient.png"
+          src={`${import.meta.env.BASE_URL}images/circular-gradient.png`}
           alt=""
           className="w-full h-full object-contain"
         />
@@ -73,7 +73,7 @@ const Hero = () => {
       >
         <div className="flex items-center justify-center gap-3 md:gap-4">
           <img
-            src="/images/logo-transparent.png"
+            src={`${import.meta.env.BASE_URL}images/logo-transparent.png`}
             alt="TMU Tech Week Logo"
             className="h-40 md:h-40 lg:h-48 w-auto"
           />
@@ -105,7 +105,7 @@ const Hero = () => {
         {/* Star image */}
         <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[36rem] md:min-h-80">
           <img
-            src="/images/star-beam.png"
+            src={`${import.meta.env.BASE_URL}images/star-beam.png`}
             alt=""
             className="w-full h-full object-contain opacity-80 scale-[1.75] md:scale-100"
           />

@@ -46,7 +46,7 @@ const Footer = () => {
           {/* Left: Logo + Text side by side */}
           <div className="flex items-center gap-8 justify-center md:justify-start">
             <img
-              src="/images/logo-transparent.png"
+              src={`${import.meta.env.BASE_URL}images/logo-transparent.png`}
               alt="TMU Tech Week Logo"
               className="h-20 md:h-20 lg:h-24 w-auto flex-shrink-0"
             />

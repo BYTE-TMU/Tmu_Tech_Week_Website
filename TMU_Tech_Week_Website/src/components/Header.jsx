@@ -54,7 +54,7 @@ const Header = () => {
               className="flex-shrink-0"
             >
               <img
-                src="/images/logo-white.png"
+                src={`${import.meta.env.BASE_URL}images/logo-white.png`}
                 alt="TMU Tech Week"
                 className="h-8 md:h-10 w-auto"
               />

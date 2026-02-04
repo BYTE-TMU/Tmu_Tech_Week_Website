@@ -82,7 +82,7 @@ const FAQ = () => {
                 {/* Gradient Star Bullet */}
                 <div className="flex-shrink-0 mt-1">
                   <img
-                    src={`/images/${item.bullet}.png`}
+                    src={`${import.meta.env.BASE_URL}images/${item.bullet}.png`}
                     alt="star"
                     width="28"
                     height="28"

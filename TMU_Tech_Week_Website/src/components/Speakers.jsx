@@ -74,10 +74,10 @@ const Speakers = () => {
                       <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0 bg-[#1f1f1f]">
                         {sp.linkedin_url ? (
                           <a href={sp.linkedin_url} target="_blank" rel="noreferrer">
-                            <img src={sp.image || defaultAvatar} alt={sp.speaker_name} className="w-full h-full object-cover" />
+                            <img src={sp.image ? `${import.meta.env.BASE_URL}${sp.image.replace(/^\//, '')}` : defaultAvatar} alt={sp.speaker_name} className="w-full h-full object-cover" />
                           </a>
                         ) : (
-                          <img src={sp.image || defaultAvatar} alt={sp.speaker_name} className="w-full h-full object-cover" />
+                          <img src={sp.image ? `${import.meta.env.BASE_URL}${sp.image.replace(/^\//, '')}` : defaultAvatar} alt={sp.speaker_name} className="w-full h-full object-cover" />
                         )}
                       </div>
 
