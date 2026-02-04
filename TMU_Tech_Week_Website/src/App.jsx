@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
 import EventCalendar from './components/EventCalendar'
+import Speakers from './components/Speakers'
 import Partners from './components/Partners'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
@@ -15,6 +16,7 @@ function App() {
         <Hero />
         <About />
         <EventCalendar />
+        <Speakers />
         <Partners />
         <FAQ />
         <Contact />

@@ -17,10 +17,10 @@
     {
       "id": 2,
       "clubName": "Slalom",
-      "eventName": "Stalom Office Tour",
+      "eventName": "Slalom Office Tour",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "10:30 - 2:30",
+      "time": "10:30PM - 2:30PM",
       "venue": "Stalom Office",
       "types": [
         "Networking", "Office Tours"
@@ -31,10 +31,10 @@
     {
       "id": 3,
       "clubName": "TMU STEM Fellowship",
-      "eventName": "Python Workshop",
+      "eventName": "STEM Fellowship - Python Workshop",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "3:00 - 5:00",
+      "time": "3:00PM - 5:00PM",
       "venue": "TBD",
       "types": [
         "Workshops", "Networking"
@@ -48,7 +48,7 @@
       "eventName": "Getting Started with AWS Lambda",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "06:00 - 8:30",
+      "time": "06:00PM - 8:30PM",
       "venue": "DCC First Floor Lecture Hall",
       "types": [
         "Workshops", "Networking"
@@ -59,10 +59,10 @@
     {
       "id": 5,
       "clubName": "TMU AIMLA",
-      "eventName": "Coding competition",
+      "eventName": "TMU AIMLA - Coding competition",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "6:00 - 8:00",
+      "time": "6:00PM - 8:00PM",
       "venue": "ENG",
       "types": [
         "Hackathons"
@@ -76,8 +76,8 @@
       "eventName": "Resume Roast",
       "date": "2026-02-18",
       "endDate": "",
-      "time": "2:00 - 3:00",
-      "venue": "SLC 6TH FLOOR",
+      "time": "2:00PM - 3:00PM",
+      "venue": "SLC",
       "types": ["Networking", "Resume Reviews"],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -88,7 +88,7 @@
       "eventName": "Mini-Hackathon",
       "date": "2026-02-18",
       "endDate": "2026-02-19",
-      "time": "3:00 - 5:00",
+      "time": "5:00PM - 5:00PM",
       "venue": "SLC",
       "types": [
         "Hackathons"
@@ -102,8 +102,8 @@
       "eventName": "TBA",
       "date": "2026-02-19",
       "endDate": "",
-      "time": "5:00 - 7:00",
-      "venue": "SLO",
+      "time": "6:00PM - 7:00PM",
+      "venue": "SLC",
       "types": [
         "Showcases"
       ],
@@ -116,7 +116,7 @@
       "eventName": "TBA",
       "date": "2026-02-19",
       "endDate": "",
-      "time": "8:00 - 10:00",
+      "time": "8:00PM - 9:00PM",
       "venue": "SLC",
       "types": [
         "Workshops"
@@ -130,7 +130,7 @@
       "eventName": "TBA",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "2:00 - 4:00",
+      "time": "2:00PM - 3:00PM",
       "venue": "SLC",
       "types": [
         "Panels"
@@ -140,11 +140,11 @@
     },
     {
       "id": 11,
-      "clubName": "Tetrax BYTE",
+      "clubName": "Tetra X BYTE",
       "eventName": "TBA",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "4:00 - 6:00",
+      "time": "4:00PM - 6:00PM",
       "venue": "SLC",
       "types": [
         "Workshops"
@@ -154,11 +154,11 @@
     },
     {
       "id": 12,
-      "clubName": "OSEC",
+      "clubName": "QSEC",
       "eventName": "TBA",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "7:00 - 8:00",
+      "time": "7:00PM - 8:00PM",
       "venue": "SLC",
       "types": [
         "Panels"
@@ -172,7 +172,7 @@
       "eventName": "Data Dash",
       "date": "2026-02-21",
       "endDate": "2026-02-22",
-      "time": "9:00 - 8:00",
+      "time": "9:30AM - 5:00PM",
       "venue": "TRSM",
       "types": [
         "Conferences"
@@ -186,7 +186,7 @@
       "eventName": "TBA",
       "date": "2026-02-21",
       "endDate": "",
-      "time": "3:00 - 5:00",
+      "time": "3:00PM - 4:00PM",
       "venue": "SLC",
       "types": [
         "Panels"
@@ -200,7 +200,7 @@
       "eventName": "TBA",
       "date": "2026-02-21",
       "endDate": "",
-      "time": "5:00 - 7:00",
+      "time": "5:00PM - 6:00PM",
       "venue": "SLC",
       "types": [
         "Workshops"
@@ -214,7 +214,7 @@
       "eventName": "Closing Ceremony",
       "date": "2026-02-22",
       "endDate": "",
-      "time": "12:30 - 4:00",
+      "time": "12:30PM - 4:00PM",
       "venue": "SLC 8TH FLOOR",
       "types": [
         "Showcases"
