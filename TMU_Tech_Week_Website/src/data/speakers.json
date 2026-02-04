@@ -1,0 +1,58 @@
+[
+  {
+    "organization": "Faculty of Engineering & Architectural Science",
+    "role": "Keynote Speaker",
+    "speaker_name": "Dr. Sri Krishnan",
+    "title": "Dean of Engineering",
+    "linkedin_url": null,
+    "image": "/images/krishnan.jpg"
+  },
+  {
+    "organization": "Microsoft",
+    "role": "Panel Speaker",
+    "speaker_name": "Ashar Azmat",
+    "title": "Senior strategic partnerships, Cloud & AI platform (Americas)",
+    "linkedin_url": "https://www.linkedin.com/in/ashar-azmat/",
+    "image": "/images/ashar.jpg"
+  },
+  {
+    "organization": "IBM",
+    "role": "Panel Speaker",
+    "speaker_name": "Ashwin Chhabria",
+    "title": "Senior Technical Consultant",
+    "linkedin_url": "https://www.linkedin.com/in/ashwin-chhabria/",
+    "image": "/images/ashwin.jpg"
+  },
+  {
+    "organization": "Wealthsimple",
+    "role": "Panel Speaker",
+    "speaker_name": "Enos Odigie",
+    "title": "Software Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/enosodigie/",
+    "image": "/images/enosie.jpg"
+  },
+  {
+    "organization": "AMD",
+    "role": "Panel Speaker",
+    "speaker_name": "Sonia Sharma",
+    "title": "Analytics Developer Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/sonia-sharma-3343421b6/",
+    "image": "/images/sonia.jpg"
+  },
+  {
+    "organization": "Pfizer",
+    "role": "Panel Speaker",
+    "speaker_name": "Karan Balaji",
+    "title": "AI Developer",
+    "linkedin_url": "https://www.linkedin.com/in/karanbalaji/",
+    "image": "/images/karan.jpg"
+  },
+  {
+    "organization": "Manulife",
+    "role": "Panel Speaker",
+    "speaker_name": "Asher Andargachew",
+    "title": "Full Stack Engineer",
+    "linkedin_url": "https://www.linkedin.com/in/asher-andargachew/",
+    "image": "/images/asher.jpg"
+  }
+]
