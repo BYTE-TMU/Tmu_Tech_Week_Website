@@ -37,9 +37,8 @@ const Header = () => {
     <>
       <header
         className={`
-          fixed top-0 left-0 right-0 z-50 transition-colors duration-300
-          bg-black
-          ${!isScrolled ? 'md:bg-transparent' : ''}
+          fixed top-0 left-0 right-0 z-50 transition-all duration-500
+          ${isScrolled ? 'bg-black' : 'bg-black/40 backdrop-blur-sm'}
         `}
       >
         <nav className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">

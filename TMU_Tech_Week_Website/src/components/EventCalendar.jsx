@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaChevronRight, FaClock } from 'react-icons/fa';
+import { FaChevronRight, FaClock, FaFilter, FaCalendarAlt } from 'react-icons/fa';
 import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
@@ -172,24 +172,26 @@ const EventCalendar = () => {
           {/* Mobile Dropdown */}
           <div className="md:hidden">
             <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue">
-              <select
-                value={selectedType}
-                onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl font-text text-base bg-black text-white border-none focus:outline-none appearance-none cursor-pointer font-medium"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'right 1rem center',
-                  backgroundSize: '1.5rem',
-                  paddingRight: '3rem'
-                }}
-              >
-                {eventTypes.map((type) => (
-                  <option key={type} value={type} className="bg-black text-white py-2">
-                    {type === 'All' ? '🎯 All Events' : type}
-                  </option>
-                ))}
-              </select>
+              <div className="relative bg-black rounded-xl">
+                <FaFilter className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white z-10" />
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full pl-10 pr-12 py-3 rounded-xl font-text text-base bg-black text-white border-none focus:outline-none appearance-none cursor-pointer font-medium"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 1rem center',
+                    backgroundSize: '1.5rem'
+                  }}
+                >
+                  {eventTypes.map((type) => (
+                    <option key={type} value={type} className="bg-black text-white py-2">
+                      {type === 'All' ? 'All Events' : type}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
 
@@ -219,24 +221,26 @@ const EventCalendar = () => {
           {/* Mobile Dropdown */}
           <div className="md:hidden">
             <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-ttw-blue via-ttw-fuchsia to-ttw-orange">
-              <select
-                value={selectedDay}
-                onChange={(e) => setSelectedDay(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl font-text text-base bg-black text-white border-none focus:outline-none appearance-none cursor-pointer font-medium"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'right 1rem center',
-                  backgroundSize: '1.5rem',
-                  paddingRight: '3rem'
-                }}
-              >
-                {days.map((day) => (
-                  <option key={day.value} value={day.value} className="bg-black text-white py-2">
-                    {day.label === 'All Days' ? '📅 All Days' : day.label}
-                  </option>
-                ))}
-              </select>
+              <div className="relative bg-black rounded-xl">
+                <FaCalendarAlt className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white z-10" />
+                <select
+                  value={selectedDay}
+                  onChange={(e) => setSelectedDay(e.target.value)}
+                  className="w-full pl-10 pr-12 py-3 rounded-xl font-text text-base bg-black text-white border-none focus:outline-none appearance-none cursor-pointer font-medium"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 1rem center',
+                    backgroundSize: '1.5rem'
+                  }}
+                >
+                  {days.map((day) => (
+                    <option key={day.value} value={day.value} className="bg-black text-white py-2">
+                      {day.label === 'All Days' ? 'All Days' : day.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
           </div>
 
