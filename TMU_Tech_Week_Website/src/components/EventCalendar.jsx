@@ -3,6 +3,9 @@ import { FaChevronRight, FaClock, FaFilter, FaCalendarAlt } from 'react-icons/fa
 import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
+  // Toggle this to show/hide event images
+  const showEventImages = false; // Set to true when event posters are ready
+
   const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Office Tours', 'Resume Reviews', 'Conferences', 'Showcases'];
 
   const days = [
@@ -283,9 +286,11 @@ const EventCalendar = () => {
                 >
                   <div className="bg-black rounded-xl p-4 md:p-6 flex flex-row items-center gap-4 md:gap-6 transition-all duration-300">
                     {/* Event Poster/Logo */}
-                    <div className="flex-shrink-0 w-20 h-20 md:w-48 md:h-32 bg-white/10 rounded-lg flex items-center justify-center">
-                      <span className="text-white/40 font-text text-[10px] md:text-sm text-center">Event<br className="md:hidden" /> Poster</span>
-                    </div>
+                    {showEventImages && (
+                      <div className="flex-shrink-0 w-20 h-20 md:w-48 md:h-32 bg-white/10 rounded-lg flex items-center justify-center">
+                        <span className="text-white/40 font-text text-[10px] md:text-sm text-center">Event<br className="md:hidden" /> Poster</span>
+                      </div>
+                    )}
 
                     {/* Event Details */}
                     <div className="flex-grow min-w-0">
