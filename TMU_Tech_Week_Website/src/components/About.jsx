@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <section id="about" className="relative bg-black flex items-center px-6 md:px-12 py-16 md:py-20 md:min-h-screen">
+    <section id="about" className="relative bg-black flex items-center px-6 md:px-12 py-12 md:py-14 md:min-h-screen">
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Left: Door to Success Image */}
         <div className="flex items-center justify-center order-1">
           <img
@@ -19,7 +19,7 @@ const About = () => {
             {/* Gradient underline */}
             <div className="h-1 w-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full mt-2" />
           </div>
-          <p className="font-text text-xl md:text-xl lg:text-2xl text-white/70 leading-relaxed mt-6">
+          <p className="font-text text-xl md:text-xl lg:text-2xl text-white/70 leading-relaxed mt-4">
             A campus-wide celebration of technology, innovation, and creativity where <span className="font-bold text-white">student groups</span>, <span className="font-bold text-white">startups</span>, and <span className="font-bold text-white">industry leaders</span> come together to connect, collaborate, and create.
           </p>
         </div>

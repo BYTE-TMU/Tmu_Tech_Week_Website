@@ -352,7 +352,7 @@ const EventCalendar = () => {
       {/* Event Details Modal */}
       {modalOpen && selectedEvent && (
         <div 
-          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-start justify-center p-4 pt-24 pb-24"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-start justify-center p-4 pt-20 pb-20"
           onClick={() => setModalOpen(false)}
         >
           <div 
@@ -368,9 +368,9 @@ const EventCalendar = () => {
             </button>
 
             {/* Fixed Header */}
-            <div className="p-4 md:p-8 pb-0 flex-shrink-0">
+            <div className="p-4 md:p-6 pb-0 flex-shrink-0">
               {/* Event Type Tags */}
-              <div className="flex flex-wrap gap-2 mb-3 md:mb-4">
+              <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
                 {selectedEvent.types.map((type) => (
                   <span
                     key={type}
@@ -382,15 +382,15 @@ const EventCalendar = () => {
               </div>
 
               {/* Event Title and Club */}
-              <p className="text-sm font-text text-ttw-fuchsia mb-1 md:mb-2">
+              <p className="text-sm font-text text-ttw-fuchsia mb-1 md:mb-1.5">
                 {selectedEvent.clubName}
               </p>
-              <h2 className="text-2xl md:text-4xl font-bold font-headline text-white mb-4 md:mb-6">
+              <h2 className="text-2xl md:text-4xl font-bold font-headline text-white mb-3 md:mb-4">
                 {selectedEvent.name}
               </h2>
 
               {/* Event Info */}
-              <div className="space-y-2 md:space-y-3 mb-4 md:mb-6">
+              <div className="space-y-1.5 md:space-y-2 mb-3 md:mb-4">
                 <div className="flex items-start gap-3 text-white/80">
                   <FaClock className="w-5 h-5 flex-shrink-0 mt-0.5" />
                   <div>
@@ -416,14 +416,14 @@ const EventCalendar = () => {
             {/* Scrollable Description */}
             {selectedEvent.description && (
               <div 
-                className="event-modal flex-1 overflow-y-auto px-6 md:px-8 py-4"
+                className="event-modal flex-1 overflow-y-auto px-6 md:px-8 py-3"
                 style={{
                   scrollbarWidth: 'thin',
                   scrollbarColor: 'rgba(244, 114, 182, 0.6) rgba(0, 0, 0, 0.2)'
                 }}
               >
                 <div>
-                  <h3 className="text-lg font-bold font-headline text-white mb-3">About</h3>
+                  <h3 className="text-lg font-bold font-headline text-white mb-2">About</h3>
                   <p className="text-white/80 font-text leading-relaxed whitespace-pre-wrap">
                     {selectedEvent.description}
                   </p>

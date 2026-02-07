@@ -41,7 +41,7 @@ const Header = () => {
           ${isScrolled || isMobileMenuOpen ? 'bg-black' : 'bg-black/40 backdrop-blur-sm'}
         `}
       >
-        <nav className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
+        <nav className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4">
           <div className="flex items-center justify-between">
             {/* Logo - Left side */}
             <a
@@ -117,8 +117,8 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu - Dropdown from header, left-aligned links */}
-        <div className={`md:hidden bg-black border-t border-white/10 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 border-t-0'}`}>
-          <nav className="px-4 py-6">
+        <div className={`md:hidden bg-black border-t border-white/10 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-[420px] opacity-100' : 'max-h-0 opacity-0 border-t-0'}`}>
+          <nav className="px-4 py-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -127,14 +127,14 @@ const Header = () => {
                   e.preventDefault();
                   handleNavClick(link.href);
                 }}
-                className="block py-3 text-lg text-white/80 hover:text-white transition-colors"
+                className="block py-2 text-lg text-white/80 hover:text-white transition-colors"
               >
                 {link.name}
               </a>
             ))}
 
             {/* Social Media Links in Mobile Menu */}
-            <div className="flex items-center gap-6 pt-6 mt-6 border-t border-white/10">
+            <div className="flex items-center gap-6 pt-4 mt-4 border-t border-white/10">
               <a
                 href="https://www.instagram.com/tmutechweek/"
                 target="_blank"
