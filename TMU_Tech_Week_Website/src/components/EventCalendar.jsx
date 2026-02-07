@@ -4,7 +4,7 @@ import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
   // Toggle this to show/hide event images
-  const showEventImages = false; // Set to true when event posters are ready
+  const showEventImages = true; // Set to false if you want to hide posters
 
   const eventTypes = ['All', 'Hackathons', 'Workshops', 'Panels', 'Networking', 'Office Tours', 'Resume Reviews', 'Conferences', 'Showcases'];
 
@@ -30,6 +30,10 @@ const EventCalendar = () => {
     venue: event.venue,
     types: event.types,
     poster: event.poster,
+    posterClass: event.posterClass || '',
+    posterObjectPosition: event.posterObjectPosition || '',
+    posterFit: event.posterFit || 'cover',
+    posterWrapperClass: event.posterWrapperClass || '',
     lumaLink: event.lumaLink || '',
     googleFormLink: event.googleFormLink || '',
     description: event.description || ''
@@ -176,7 +180,7 @@ const EventCalendar = () => {
           }`}>
           {/* Mobile Dropdown */}
           <div className="md:hidden">
-            <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue">
+            <div className="relative p-[1.5px] rounded-xl bg-white/20">
               <div className="relative bg-black rounded-xl">
                 <FaFilter className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white z-10" />
                 <select
@@ -225,7 +229,7 @@ const EventCalendar = () => {
           }`}>
           {/* Mobile Dropdown */}
           <div className="md:hidden">
-            <div className="relative p-[1.5px] rounded-xl bg-gradient-to-r from-ttw-blue via-ttw-fuchsia to-ttw-orange">
+            <div className="relative p-[1.5px] rounded-xl bg-white/20">
               <div className="relative bg-black rounded-xl">
                 <FaCalendarAlt className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-white z-10" />
                 <select
@@ -290,8 +294,22 @@ const EventCalendar = () => {
                   <div className="bg-black rounded-xl p-4 md:p-6 flex flex-row items-center gap-4 md:gap-6 transition-all duration-300">
                     {/* Event Poster/Logo */}
                     {showEventImages && (
-                      <div className="flex-shrink-0 w-20 h-20 md:w-48 md:h-32 bg-white/10 rounded-lg flex items-center justify-center">
-                        <span className="text-white/40 font-text text-[10px] md:text-sm text-center">Event<br className="md:hidden" /> Poster</span>
+                      <div className={`flex-shrink-0 w-20 h-20 md:w-48 md:h-32 rounded-lg overflow-hidden ${event.posterWrapperClass}`}>
+                        {event.poster === '/images/event-placeholder.png' ? (
+                          <div className="w-full h-full bg-black flex items-center justify-center">
+                            <span className="text-white/50 font-text text-[10px] md:text-sm text-center">Poster<br className="md:hidden" /> coming soon</span>
+                          </div>
+                        ) : (
+                          <img
+                            src={`${import.meta.env.BASE_URL}${event.poster.replace(/^\//, '')}`}
+                            alt={`${event.name} poster`}
+                            className={`w-full h-full ${event.posterFit === 'contain' ? 'object-contain' : 'object-cover'} grayscale ${event.posterClass}`}
+                            style={event.posterObjectPosition ? { objectPosition: event.posterObjectPosition } : undefined}
+                            onError={(event) => {
+                              event.currentTarget.src = `${import.meta.env.BASE_URL}images/event-placeholder.png`;
+                            }}
+                          />
+                        )}
                       </div>
                     )}
 
@@ -432,8 +450,8 @@ const EventCalendar = () => {
             )}
 
             {/* Fixed Footer - Register Button */}
-            {selectedEvent.googleFormLink && (
-              <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
+            <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
+              {selectedEvent.googleFormLink ? (
                 <a
                   href={selectedEvent.googleFormLink}
                   target="_blank"
@@ -442,8 +460,12 @@ const EventCalendar = () => {
                 >
                   Register Now
                 </a>
-              </div>
-            )}
+              ) : (
+                <div className="w-full px-6 py-3 rounded-lg bg-white/10 text-white/80 font-text font-semibold text-center">
+                  Registration coming soon
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}

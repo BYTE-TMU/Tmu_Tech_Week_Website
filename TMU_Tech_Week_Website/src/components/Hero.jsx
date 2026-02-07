@@ -103,11 +103,11 @@ const Hero = () => {
           }`}
       >
         {/* Star image */}
-        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[36rem] md:min-h-80">
+        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[28rem] md:min-h-80">
           <img
             src={`${import.meta.env.BASE_URL}images/star-beam.png`}
             alt=""
-            className="w-full h-full object-contain opacity-80 scale-[1.75] md:scale-100"
+            className="w-full h-full object-contain opacity-80 scale-[1.4] md:scale-100"
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}

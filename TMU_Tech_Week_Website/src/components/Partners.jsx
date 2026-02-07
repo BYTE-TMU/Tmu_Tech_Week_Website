@@ -52,13 +52,13 @@ const Partners = () => {
     { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
     { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png` },
     { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
-    { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg` },
-    { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg` },
-    { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20' },
-    { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg` },
+    { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
+    { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
+    { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'Poulet Rouge', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Poulet Rouge.png`, logoClass: 'w-36 h-24' },
       { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
-      { name: 'Avznailz', tier: 'Bronze' },
+      { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl' },
   ];
 
   const goldPartners = placeholderPartners.filter((partner) => partner.tier === 'Gold');
@@ -152,11 +152,13 @@ const Partners = () => {
                   <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
                   <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
                     {partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
-                      />
+                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                     ) : (
                       <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
                         <span className="font-headline text-lg text-white/80">
@@ -188,11 +190,13 @@ const Partners = () => {
                   <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
                   <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
                     {partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
-                      />
+                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                     ) : (
                       <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
                         <span className="font-headline text-lg text-white/80">
@@ -224,11 +228,13 @@ const Partners = () => {
                   <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
                   <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
                     {partner.logo ? (
-                      <img
-                        src={partner.logo}
-                        alt={partner.name}
-                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
-                      />
+                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
                     ) : (
                       <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
                         <span className="font-headline text-lg text-white/80">
