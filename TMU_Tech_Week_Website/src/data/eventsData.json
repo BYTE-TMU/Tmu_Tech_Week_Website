@@ -1,32 +1,29 @@
 {
   "events": [
     {
-      "id": 1,
-      "clubName": "BYTE",
-      "eventName": "Opening Ceremony",
-      "date": "2026-02-15",
-      "endDate": "",
-      "time": "12:30 - 4:00",
-      "venue": "SLC 8TH FLOOR",
-      "types": [
-        "Showcases", "Panels", "Networking"
-      ],
-      "poster": "/images/event-placeholder.png",
-      "lumaLink": ""
-    },
+  "id": 1,
+  "clubName": "BYTE",
+  "eventName": "Opening Ceremony",
+  "date": "2026-02-15",
+  "time": "12:30 PM - 4:00 PM",
+  "venue": "Toronto Metropolitan University",
+  "types": ["Showcases", "Panels", "Networking"],
+  "poster": "/images/event-placeholder.png",
+  "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScv75xNqFjMklOYduk4VGfvjlfh-CO_eOh30OvOV2KjS_1SXA/viewform",
+  "description": "TMU BYTE is excited to announce TMU Tech Week, happening during Reading Week (February 15th to 22nd) this semester! Inspired by Toronto Tech Week, this campus wide initiative brings together TMU's tech community for a full week of workshops, hackathons, panels, and collaborative events that celebrate innovation, learning, and creativity in technology.\n\nJoin us for the official launch of TMU Tech Week 2026, a week long celebration of technology, innovation, and student leadership across Toronto Metropolitan University.\n\n✨ Opening Ceremony highlights include:\n• A keynote address from our Dean of Engineering\n• An overview of TMU Tech Week events and participating clubs\n• Networking with students, clubs, and industry representatives (Microsoft, Wealthsimple, IBM, BMO...etc)\n• Complimentary food and refreshments\n\n\n\nFor updates and more information, check out our Instagram!"
+},
     {
       "id": 2,
       "clubName": "Slalom",
-      "eventName": "Slalom Office Tour",
+      "eventName": "Slalom Panel Office Tour",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "10:30PM - 2:30PM",
-      "venue": "Stalom Office",
-      "types": [
-        "Networking", "Office Tours"
-      ],
+      "time": "12:00 PM - 2:00 PM",
+      "venue": "Slalom Toronto Office: 85 Richmond St W #500, Toronto, ON M5H 2C9",
+      "types": ["Panels", "Networking"],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": ""
+      "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLSfox2UZ0Gm35Zl67ERpCTx9FXc4uSJbhp5qyz8XCFXSoNYGUA/viewform",
+      "description": "As part of TMU Tech Week, we're excited to host a paneling at Slalom, a global tech consulting company.\n\nThis is a great opportunity to explore Slalom's workspace, learn more about careers in tech consulting, and connect with professionals in the industry.\n\n🍽 Lunch will be provided\n\n⚠️ Important Notes:\n• Spots are limited, so please sign up as soon as possible to secure your place.\n• By signing up, you are committing to attend this event. If you are no longer able to attend, please notify us via email as soon as possible so we can offer your spot to another student."
     },
     {
       "id": 3,
@@ -217,10 +214,11 @@
       "time": "12:30PM - 4:00PM",
       "venue": "SLC 8TH FLOOR",
       "types": [
-        "Showcases"
+        "Showcases", "Networking"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": ""
+      "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScg6LHrPGdKHyQ0eusKKTgkGBPftimG4zAye6DUwnEK5zH_7g/viewform",
+      "description": "🎉 Join us for the TTW Closing Ceremony on the 8th Floor of the Student Learning Centre (SLC) from 12:30 PM – 4:00 PM!\n\nCome celebrate the conclusion of TTW with an afternoon filled with lunch, awards & recognition, an inspiring guest speaker, and networking. This is a special opportunity to reflect on the journey, recognize achievements, and connect with fellow participants one last time.\n\nPlease fill out the RSVP form to confirm your attendance and help us plan for seating, catering, and accessibility needs. We can’t wait to celebrate with you and end TTW on a high note! 🌟"
     }
   ]
 }
