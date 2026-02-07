@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaChevronRight, FaClock, FaFilter, FaCalendarAlt } from 'react-icons/fa';
+import { FaChevronRight, FaClock, FaFilter, FaCalendarAlt, FaMapMarkerAlt, FaTimes } from 'react-icons/fa';
 import eventsData from '../data/eventsData.json';
 
 const EventCalendar = () => {
@@ -11,7 +11,6 @@ const EventCalendar = () => {
   const days = [
     { label: 'All Days', value: 'all' },
     { label: 'Feb 15', value: '2026-02-15' },
-    { label: 'Feb 16', value: '2026-02-16' },
     { label: 'Feb 17', value: '2026-02-17' },
     { label: 'Feb 18', value: '2026-02-18' },
     { label: 'Feb 19', value: '2026-02-19' },
@@ -32,7 +31,8 @@ const EventCalendar = () => {
     types: event.types,
     poster: event.poster,
     lumaLink: event.lumaLink || '',
-    description: event.description
+    googleFormLink: event.googleFormLink || '',
+    description: event.description || ''
   }));
 
   const [selectedType, setSelectedType] = useState('All');
@@ -41,6 +41,8 @@ const EventCalendar = () => {
   const [animationKey, setAnimationKey] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [justExpanded, setJustExpanded] = useState(false);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const sectionRef = useRef(null);
 
@@ -274,11 +276,12 @@ const EventCalendar = () => {
                 : index * 80;
 
               return (
-                <a
+                <div
                   key={event.id}
-                  href={event.lumaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  onClick={() => {
+                    setSelectedEvent(event);
+                    setModalOpen(true);
+                  }}
                   className="group relative p-[2px] rounded-xl bg-gradient-to-r from-ttw-fuchsia via-ttw-blue to-ttw-orange hover:shadow-2xl hover:shadow-ttw-fuchsia/20 block cursor-pointer"
                   style={{
                     animation: `fadeSlideIn 0.5s ease-out ${animationDelay}ms both`
@@ -323,7 +326,7 @@ const EventCalendar = () => {
                       <FaChevronRight className="w-6 h-6 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all duration-300" />
                     </div>
                   </div>
-                </a>
+                </div>
               );
             })
           ) : (
@@ -345,6 +348,105 @@ const EventCalendar = () => {
           )}
         </div>
       </div>
+
+      {/* Event Details Modal */}
+      {modalOpen && selectedEvent && (
+        <div 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-start justify-center p-4 pt-20 pb-20"
+          onClick={() => setModalOpen(false)}
+        >
+          <div 
+            className="bg-black/80 border border-white/20 rounded-2xl max-w-2xl w-full max-h-[80vh] backdrop-blur-md flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-4 right-4 md:top-6 md:right-6 z-50 p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+            >
+              <FaTimes className="w-6 h-6 text-white" />
+            </button>
+
+            {/* Fixed Header */}
+            <div className="p-4 md:p-6 pb-0 flex-shrink-0">
+              {/* Event Type Tags */}
+              <div className="flex flex-wrap gap-2 mb-2 md:mb-3">
+                {selectedEvent.types.map((type) => (
+                  <span
+                    key={type}
+                    className={`px-3 py-1 rounded-md text-sm font-text border ${getTagColor(type)}`}
+                  >
+                    {type}
+                  </span>
+                ))}
+              </div>
+
+              {/* Event Title and Club */}
+              <p className="text-sm font-text text-ttw-fuchsia mb-1 md:mb-1.5">
+                {selectedEvent.clubName}
+              </p>
+              <h2 className="text-2xl md:text-4xl font-bold font-headline text-white mb-3 md:mb-4">
+                {selectedEvent.name}
+              </h2>
+
+              {/* Event Info */}
+              <div className="space-y-1.5 md:space-y-2 mb-3 md:mb-4">
+                <div className="flex items-start gap-3 text-white/80">
+                  <FaClock className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-text font-semibold">Date & Time</p>
+                    <p className="font-text text-sm">
+                      {selectedEvent.endDate ? formatDateRange(selectedEvent.date, selectedEvent.endDate) : formatDate(selectedEvent.date)}, {selectedEvent.time}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 text-white/80">
+                  <FaMapMarkerAlt className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-text font-semibold">Venue</p>
+                    <p className="font-text text-sm">
+                      {selectedEvent.venue}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Scrollable Description */}
+            {selectedEvent.description && (
+              <div 
+                className="event-modal flex-1 overflow-y-auto px-6 md:px-8 py-3"
+                style={{
+                  scrollbarWidth: 'thin',
+                  scrollbarColor: 'rgba(244, 114, 182, 0.6) rgba(0, 0, 0, 0.2)'
+                }}
+              >
+                <div>
+                  <h3 className="text-lg font-bold font-headline text-white mb-2">About</h3>
+                  <p className="text-white/80 font-text leading-relaxed whitespace-pre-wrap">
+                    {selectedEvent.description}
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* Fixed Footer - Register Button */}
+            {selectedEvent.googleFormLink && (
+              <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
+                <a
+                  href={selectedEvent.googleFormLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-ttw-orange/30 via-ttw-fuchsia/30 to-ttw-blue/30 text-white font-text font-semibold text-center block hover:from-ttw-orange/50 hover:via-ttw-fuchsia/50 hover:to-ttw-blue/50 transition-all duration-300"
+                >
+                  Register Now
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 };

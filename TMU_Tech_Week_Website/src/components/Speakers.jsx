@@ -55,7 +55,7 @@ const Speakers = () => {
               }
 
               .animate-scroll {
-                animation: scroll 175s linear infinite;
+                animation: scroll 600s linear infinite;
                 will-change: transform;
               }
 
