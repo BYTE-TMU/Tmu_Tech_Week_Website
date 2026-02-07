@@ -29,7 +29,7 @@ const FAQ = () => {
   const faqItems = [
     {
       question: "Who can attend TMU Tech Week?",
-      answer: "All TMU students are welcome – regardless of program or experience level.",
+      answer: "All post-secondary students and Alumni in Canada are welcome – regardless of program or experience level.",
       bullet: "faq_bullet_one"
     },
     {
@@ -39,7 +39,7 @@ const FAQ = () => {
     },
     {
       question: "Is TMU Tech Week free to attend?",
-      answer: "Yes! All events are completely free for TMU students.",
+      answer: "Yes! All events except the MDSA Data Dash are completely free for TMU students and Alumni.",
       bullet: "faq_bullet_three"
     },
     {
