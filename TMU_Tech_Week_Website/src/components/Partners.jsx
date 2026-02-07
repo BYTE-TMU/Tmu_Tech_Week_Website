@@ -14,6 +14,11 @@ const Partners = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsVisible(true);
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
