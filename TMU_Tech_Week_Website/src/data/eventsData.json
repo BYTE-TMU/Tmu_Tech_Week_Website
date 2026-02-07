@@ -96,7 +96,7 @@
     {
       "id": 8,
       "clubName": "ECEC",
-      "eventName": "TBA",
+      "eventName": "Coming soon",
       "date": "2026-02-19",
       "endDate": "",
       "time": "6:00PM - 7:00PM",
@@ -110,7 +110,7 @@
     {
       "id": 10,
       "clubName": "Take-off",
-      "eventName": "TBA",
+      "eventName": "Coming soon",
       "date": "2026-02-20",
       "endDate": "",
       "time": "2:00PM - 3:00PM",
@@ -124,13 +124,28 @@
     {
       "id": 11,
       "clubName": "Tetra X BYTE",
-      "eventName": "TBA",
+      "eventName": "Coming soon",
       "date": "2026-02-20",
       "endDate": "",
       "time": "4:00PM - 6:00PM",
       "venue": "SLC",
       "types": [
         "Workshops"
+      ],
+      "poster": "/images/event-placeholder.png",
+      "lumaLink": ""
+    },
+    {
+      "id": 17,
+      "clubName": "BYTE",
+      "eventName": "Coming soon",
+      "date": "2026-02-21",
+      "endDate": "",
+      "time": "2:00PM - 4:00PM",
+      "venue": "TBA",
+      "types": [
+        "Showcases",
+        "Networking"
       ],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -152,7 +167,7 @@
     {
       "id": 14,
       "clubName": "TMAV",
-      "eventName": "TBA",
+      "eventName": "Coming soon",
       "date": "2026-02-20",
       "endDate": "",
       "time": "3:00PM - 4:00PM",
@@ -166,7 +181,7 @@
     {
       "id": 15,
       "clubName": "FRONTIER",
-      "eventName": "TBA",
+      "eventName": "Coming soon",
       "date": "2026-02-21",
       "endDate": "",
       "time": "5:00PM - 6:00PM",
