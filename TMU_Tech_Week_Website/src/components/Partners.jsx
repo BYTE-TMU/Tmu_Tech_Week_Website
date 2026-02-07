@@ -43,6 +43,30 @@ const Partners = () => {
     { id: 5, src: partnerLogo5, alt: 'Partner 5' },
   ];
 
+  const placeholderPartners = [
+    { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
+    { name: 'Slalom', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/Slalom_Consulting_OG_image.jpg` },
+    { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
+    { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg` },
+    { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg` },
+    { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20' },
+    { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg` },
+    { name: 'Poulet Rouge', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Poulet Rouge.png`, logoClass: 'w-36 h-24' },
+      { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
+      { name: 'Avznailz', tier: 'Bronze' },
+  ];
+
+  const goldPartners = placeholderPartners.filter((partner) => partner.tier === 'Gold');
+  const silverPartners = placeholderPartners.filter((partner) => partner.tier === 'Silver');
+  const otherPartners = placeholderPartners.filter((partner) => !['Gold', 'Silver'].includes(partner.tier));
+
+  const getTierColor = (tier) => {
+    if (tier === 'Gold') return 'text-[#D4AF37]';
+    if (tier === 'Silver') return 'text-[#C0C0C0]';
+    if (tier === 'Bronze') return 'text-[#B87333]';
+    return 'text-white/70';
+  };
+
   return (
     <section id="partners" className="bg-black py-24 overflow-hidden">
       <style>
@@ -112,17 +136,114 @@ const Partners = () => {
             </div>
           </div>
         ) : (
-          /* Coming Soon Message */
-          <div className="flex items-center justify-center py-16">
-            <div className="relative p-[2px] rounded-2xl bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue">
-              <div className="bg-black rounded-2xl px-12 py-8">
-                <p className="font-headline text-2xl md:text-4xl font-bold text-white text-center">
-                  Coming Soon
-                </p>
-                <p className="font-text text-base md:text-lg text-white/70 text-center mt-3">
-                  Stay tuned for our amazing partners!
-                </p>
-              </div>
+          /* Placeholder Partners */
+          <div className="space-y-10 md:space-y-14">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {goldPartners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                >
+                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                    {partner.logo ? (
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                        <span className="font-headline text-lg text-white/80">
+                          {partner.name
+                            .split(' ')
+                            .map((word) => word[0])
+                            .join('')
+                            .slice(0, 2)}
+                        </span>
+                      </div>
+                    )}
+                    <p className="font-headline text-xl md:text-2xl text-white">
+                      {partner.name}
+                    </p>
+                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                      {partner.tier}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {silverPartners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                >
+                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                    {partner.logo ? (
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                        <span className="font-headline text-lg text-white/80">
+                          {partner.name
+                            .split(' ')
+                            .map((word) => word[0])
+                            .join('')
+                            .slice(0, 2)}
+                        </span>
+                      </div>
+                    )}
+                    <p className="font-headline text-xl md:text-2xl text-white">
+                      {partner.name}
+                    </p>
+                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                      {partner.tier}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {otherPartners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                >
+                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                    {partner.logo ? (
+                      <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        className={`${partner.logoClass || 'w-28 h-16'} object-contain mb-4`}
+                      />
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                        <span className="font-headline text-lg text-white/80">
+                          {partner.name
+                            .split(' ')
+                            .map((word) => word[0])
+                            .join('')
+                            .slice(0, 2)}
+                        </span>
+                      </div>
+                    )}
+                    <p className="font-headline text-xl md:text-2xl text-white">
+                      {partner.name}
+                    </p>
+                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                      {partner.tier}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
