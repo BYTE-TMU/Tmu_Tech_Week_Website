@@ -28,7 +28,7 @@ const Speakers = () => {
 
 
   return (
-    <section id="speakers" className="bg-black py-24 overflow-hidden">
+    <section id="speakers" className="bg-black py-12 md:py-24 overflow-hidden">
 
       <div
         ref={sectionRef}
@@ -53,20 +53,19 @@ const Speakers = () => {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(calc(-100% / 2)); }
               }
-
-              .animate-scroll {
-                animation: scroll 600s linear infinite;
-                will-change: transform;
-              }
-
-              .animate-scroll.paused {
-                animation-play-state: paused;
-              }
             `}
           </style>
 
           <div className="flex">
-            <div className={`flex gap-6 md:gap-10 py-2 ${isPaused ? 'animate-scroll paused' : 'animate-scroll'}`}>
+            <div
+              ref={trackRef}
+              className="flex gap-6 md:gap-10 py-2"
+              style={{
+                animation: 'scroll 100s linear infinite',
+                willChange: 'transform',
+                animationPlayState: isPaused ? 'paused' : 'running',
+              }}
+            >
               {[...Array(6)].map((_, setIndex) =>
                 speakers.map((sp, i) => (
                   <div key={`set-${setIndex}-${i}`} className="flex-shrink-0 transition-all duration-300 hover:scale-105">
