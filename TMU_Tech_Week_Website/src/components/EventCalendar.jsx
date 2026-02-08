@@ -303,7 +303,7 @@ const EventCalendar = () => {
                           <img
                             src={`${import.meta.env.BASE_URL}${event.poster.replace(/^\//, '')}`}
                             alt={`${event.name} poster`}
-                            className={`w-full h-full ${event.posterFit === 'contain' ? 'object-contain' : 'object-cover'} grayscale ${event.posterClass}`}
+                            className={`w-full h-full ${event.posterFit === 'contain' ? 'object-contain' : 'object-cover'} ${event.posterClass}`}
                             style={event.posterObjectPosition ? { objectPosition: event.posterObjectPosition } : undefined}
                             onError={(event) => {
                               event.currentTarget.src = `${import.meta.env.BASE_URL}images/event-placeholder.png`;

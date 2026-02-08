@@ -51,8 +51,9 @@
         "Workshops", "Networking"
       ],
       "poster": "/images/poster/aws (1).png",
-      "posterWrapperClass": "bg-white/10 p-2",
       "posterFit": "contain",
+      "posterClass": "rounded-lg",
+      "posterWrapperClass": "bg-ttw-aws p-2 rounded-lg",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLSdyouLC3-6GuWvLnd9iwTIQ636lHsvYvybP6jBWAs-lIMgO8g/viewform",
       "description": "Interested in better understanding the architecture of modern day websites?\n\nLearn more about serverless computing and event-driven architecture through a beginner's seminar on AWS Lambda. Topics explored will involve details on Lambda itself, its applications across microservices and other business websites, integration across many programming languages (Python 🐍/Java ☕) and the importance of Lambda across its applications.\n\nEvent will take place in DCC103/104 on February 18 from 6-8:30 PM. Register now to secure your spot in the event!"
     },

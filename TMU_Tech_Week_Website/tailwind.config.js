@@ -4,6 +4,10 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  safelist: [
+    "bg-blue-600",
+    "bg-ttw-aws",
+  ],
   theme: {
     extend: {
       colors: {
@@ -13,6 +17,7 @@ export default {
           navy: '#072b39',
           fuchsia: '#e70059',
           pink: '#ff69c7',
+          aws: '#094F66',
         },
       },
       fontFamily: {
