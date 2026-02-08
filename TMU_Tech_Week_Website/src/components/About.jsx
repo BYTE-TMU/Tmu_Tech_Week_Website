@@ -15,7 +15,7 @@ const About = () => {
         {/* Right: Text Content */}
         <div className="flex flex-col items-end text-right order-2">
           <div className="relative">
-            <h2 className="text-6xl sm:text-6xl md:text-4xl lg:text-6xl font-bold text-white mb-2 md:whitespace-nowrap">What is TMU Tech Week?</h2>
+            <h2 className="text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-2 md:whitespace-nowrap">What is TMU Tech Week?</h2>
             {/* Gradient underline */}
             <div className="h-1 w-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full mt-2" />
           </div>

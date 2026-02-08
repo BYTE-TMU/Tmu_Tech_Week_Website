@@ -101,7 +101,7 @@ const Partners = () => {
           }`}
       >
         {/* Title */}
-        <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white relative inline-block w-full">
+        <h2 className="font-headline text-2xl md:text-5xl font-bold text-center mb-12 text-white relative inline-block w-full">
           <span className="relative inline-block">
             Partners
             <span className="absolute left-0 right-0 bottom-[-8px] h-1 bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue"></span>

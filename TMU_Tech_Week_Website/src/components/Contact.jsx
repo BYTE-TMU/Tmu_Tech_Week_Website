@@ -48,7 +48,7 @@ const Contact = () => {
         className={`relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-12 py-20 text-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
           }`}
       >
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+        <h2 className="text-2xl md:text-5xl font-bold text-white mb-8">
           Let's connect.
         </h2>
 

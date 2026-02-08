@@ -34,7 +34,7 @@ const Speakers = () => {
         ref={sectionRef}
         className={`max-w-7xl mx-auto px-6 transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
       >
-        <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12 text-white relative w-full leading-tight">
+        <h2 className="font-headline text-2xl md:text-5xl font-bold text-center mb-12 text-white relative w-full leading-tight">
           <span className="relative inline-block max-w-xl mx-auto text-center whitespace-normal">
             Speakers
             <span className="absolute left-0 right-0 bottom-[-8px] h-1 bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue"></span>

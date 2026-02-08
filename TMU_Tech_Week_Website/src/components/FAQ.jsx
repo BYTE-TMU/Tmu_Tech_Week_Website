@@ -58,7 +58,7 @@ const FAQ = () => {
       >
         {/* Title with gradient underline */}
         <div className="relative mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold text-white mb-4">
             Frequently Asked Questions
           </h2>
           {/* Gradient underline */}
