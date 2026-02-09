@@ -39,7 +39,7 @@ const FAQ = () => {
     },
     {
       question: "Is TMU Tech Week free to attend?",
-      answer: "Yes! All events except the MDSA Data Dash are completely free for students and Alumni.",
+      answer: "Yes! All events are completely free for students and Alumni.",
       bullet: "faq_bullet_three"
     },
     {
