@@ -82,10 +82,15 @@ const BoardyForm = () => {
                                     and where you shine. Share your details below and let's start a
                                     conversation.
                                 </p>
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/boardy.png`}
+                                    alt="Boardy AI"
+                                    className="mt-8 w-32 md:w-40 object-contain hidden lg:block"
+                                />
                             </div>
 
                             {/* ── Right Column: Form ── */}
-                            <div className="lg:col-span-3">
+                            <div className="lg:col-span-3 flex flex-col justify-center">
                                 {submitted ? (
                                     <div className="flex flex-col items-center justify-center h-full py-16 gap-4">
                                         <div className="w-16 h-16 rounded-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue flex items-center justify-center">
