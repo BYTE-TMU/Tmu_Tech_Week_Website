@@ -1,20 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaUpload, FaCheck, FaArrowRight } from 'react-icons/fa';
+import { FaCheck, FaArrowRight } from 'react-icons/fa';
 
 const BoardyForm = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [submitted, setSubmitted] = useState(false);
-    const [fileName, setFileName] = useState('');
-    const [dragOver, setDragOver] = useState(false);
     const sectionRef = useRef(null);
-    const fileInputRef = useRef(null);
 
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         linkedin: '',
-        resume: null,
         about: '',
     });
 
@@ -44,23 +40,7 @@ const BoardyForm = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleFileChange = (e) => {
-        const file = e.target.files?.[0];
-        if (file) {
-            setFormData((prev) => ({ ...prev, resume: file }));
-            setFileName(file.name);
-        }
-    };
 
-    const handleDrop = (e) => {
-        e.preventDefault();
-        setDragOver(false);
-        const file = e.dataTransfer.files?.[0];
-        if (file && (file.name.endsWith('.pdf') || file.name.endsWith('.docx'))) {
-            setFormData((prev) => ({ ...prev, resume: file }));
-            setFileName(file.name);
-        }
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -82,8 +62,8 @@ const BoardyForm = () => {
                 {/* Outer gradient border wrapper */}
                 <div
                     className={`p-[2px] rounded-2xl bg-gradient-to-r from-ttw-fuchsia via-ttw-blue to-ttw-orange transition-all duration-1000 ${isVisible
-                            ? 'opacity-100 translate-y-0'
-                            : 'opacity-0 translate-y-8'
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-8'
                         }`}
                 >
                     <div className="bg-black rounded-2xl p-6 md:p-12">
@@ -189,56 +169,7 @@ const BoardyForm = () => {
                                             </div>
                                         </div>
 
-                                        {/* Row 3: Resume Upload */}
-                                        <div>
-                                            <label className="block text-white font-text font-semibold text-sm mb-1.5">
-                                                Your Resume/CV
-                                            </label>
-                                            <p className="text-white/50 font-text text-xs mb-2">
-                                                Feel free to share your resume, though we're most
-                                                interested in learning about you through our
-                                                conversation.
-                                            </p>
-                                            <div
-                                                onClick={() => fileInputRef.current?.click()}
-                                                onDragOver={(e) => {
-                                                    e.preventDefault();
-                                                    setDragOver(true);
-                                                }}
-                                                onDragLeave={() => setDragOver(false)}
-                                                onDrop={handleDrop}
-                                                className={`w-full px-6 py-6 rounded-lg border-2 border-dashed cursor-pointer text-center transition-all duration-300 ${dragOver
-                                                        ? 'border-ttw-fuchsia bg-ttw-fuchsia/10'
-                                                        : 'border-white/20 bg-white/5 hover:border-white/40'
-                                                    }`}
-                                            >
-                                                {fileName ? (
-                                                    <p className="text-white font-text text-sm">
-                                                        <FaCheck className="inline mr-2 text-green-400" />
-                                                        {fileName}
-                                                    </p>
-                                                ) : (
-                                                    <>
-                                                        <FaUpload className="mx-auto mb-2 w-5 h-5 text-white/50" />
-                                                        <p className="text-white/60 font-text text-sm">
-                                                            Click to choose a file or drag here
-                                                        </p>
-                                                        <p className="text-white/40 font-text text-xs mt-1">
-                                                            Accepts .pdf, .docx files
-                                                        </p>
-                                                    </>
-                                                )}
-                                                <input
-                                                    ref={fileInputRef}
-                                                    type="file"
-                                                    accept=".pdf,.docx"
-                                                    onChange={handleFileChange}
-                                                    className="hidden"
-                                                />
-                                            </div>
-                                        </div>
-
-                                        {/* Row 4: About Yourself */}
+                                        {/* Row 3: About Yourself */}
                                         <div>
                                             <label className="block text-white font-text font-semibold text-sm mb-1.5">
                                                 Tell us a bit about yourself and why you're interested{' '}
