@@ -1,17 +1,21 @@
 {
   "events": [
     {
-  "id": 1,
-  "clubName": "BYTE",
-  "eventName": "Opening Ceremony",
-  "date": "2026-02-15",
-  "time": "12:30 PM - 4:00 PM",
-  "venue": "SLC, Toronto Metropolitan University",
-  "types": ["Showcases", "Panels", "Networking"],
-  "poster": "/images/poster/BYTE.jpg",
-  "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScv75xNqFjMklOYduk4VGfvjlfh-CO_eOh30OvOV2KjS_1SXA/viewform",
-  "description": "TMU BYTE is excited to announce TMU Tech Week, happening during Reading Week (February 15th to 22nd) this semester! Inspired by Toronto Tech Week, this campus wide initiative brings together TMU's tech community for a full week of workshops, hackathons, panels, and collaborative events that celebrate innovation, learning, and creativity in technology.\n\nJoin us for the official launch of TMU Tech Week 2026, a week long celebration of technology, innovation, and student leadership across Toronto Metropolitan University.\n\n✨ Opening Ceremony highlights include:\n• A keynote address from our Dean of Engineering\n• An overview of TMU Tech Week events and participating clubs\n• Networking with students, clubs, and industry representatives (Microsoft, Wealthsimple, IBM, BMO...etc)\n• Complimentary food and refreshments\n\n\n\nFor updates and more information, check out our Instagram!"
-},
+      "id": 1,
+      "clubName": "BYTE",
+      "eventName": "Opening Ceremony",
+      "date": "2026-02-15",
+      "time": "12:30 PM - 4:00 PM",
+      "venue": "SLC, Toronto Metropolitan University",
+      "types": [
+        "Showcases",
+        "Panels",
+        "Networking"
+      ],
+      "poster": "/images/poster/BYTE.jpg",
+      "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScv75xNqFjMklOYduk4VGfvjlfh-CO_eOh30OvOV2KjS_1SXA/viewform",
+      "description": "TMU BYTE is excited to announce TMU Tech Week, happening during Reading Week (February 15th to 22nd) this semester! Inspired by Toronto Tech Week, this campus wide initiative brings together TMU's tech community for a full week of workshops, hackathons, panels, and collaborative events that celebrate innovation, learning, and creativity in technology.\n\nJoin us for the official launch of TMU Tech Week 2026, a week long celebration of technology, innovation, and student leadership across Toronto Metropolitan University.\n\n✨ Opening Ceremony highlights include:\n• A keynote address from our Dean of Engineering\n• An overview of TMU Tech Week events and participating clubs\n• Networking with students, clubs, and industry representatives (Microsoft, Wealthsimple, IBM, BMO...etc)\n• Complimentary food and refreshments\n\n\n\nFor updates and more information, check out our Instagram!"
+    },
     {
       "id": 2,
       "clubName": "Slalom",
@@ -20,7 +24,11 @@
       "endDate": "",
       "time": "12:00 PM - 2:00 PM",
       "venue": "Slalom Toronto Office: 85 Richmond St W #500, Toronto, ON M5H 2C9",
-      "types": ["Panels", "Networking", "Office Tours"],
+      "types": [
+        "Panels",
+        "Networking",
+        "Office Tours"
+      ],
       "poster": "/images/poster/Slalom_Consulting_OG_image.jpg",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLSfox2UZ0Gm35Zl67ERpCTx9FXc4uSJbhp5qyz8XCFXSoNYGUA/viewform",
       "description": "As part of TMU Tech Week, we're excited to host a paneling at Slalom, a global tech consulting company.\n\nThis is a great opportunity to explore Slalom's workspace, learn more about careers in tech consulting, and connect with professionals in the industry.\n\n🍽 Lunch will be provided\n\n⚠️ Important Notes:\n• Spots are limited, so please sign up as soon as possible to secure your place.\n• By signing up, you are committing to attend this event. If you are no longer able to attend, please notify us via email as soon as possible so we can offer your spot to another student."
@@ -34,10 +42,11 @@
       "time": "3:00PM - 5:00PM",
       "venue": "TBD",
       "types": [
-        "Workshops", "Networking"
+        "Workshops",
+        "Networking"
       ],
       "poster": "/images/poster/STEMfellowship.jpg",
-      "lumaLink": ""
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSdUxr5R8w7i_zKs6WtGp_psEjvPy-zFZ8xbqYt8ynGys6IarA/viewform"
     },
     {
       "id": 4,
@@ -48,7 +57,8 @@
       "time": "6:00PM - 8:30PM",
       "venue": "DCC 103-104, Toronto Metropolitan University",
       "types": [
-        "Workshops", "Networking"
+        "Workshops",
+        "Networking"
       ],
       "poster": "/images/poster/aws (1).png",
       "posterFit": "contain",
@@ -69,7 +79,7 @@
         "Hackathons"
       ],
       "poster": "/images/poster/aimla.jpg",
-      "lumaLink": ""
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSe6Xyx99hv2bi0RkZTYCQ3poDLtj6fBlRWQJIXc7rf_BgV22Q/viewform"
     },
     {
       "id": 6,
@@ -79,9 +89,12 @@
       "endDate": "",
       "time": "2:00PM - 3:00PM",
       "venue": "SLC",
-      "types": ["Networking", "Resume Reviews"],
+      "types": [
+        "Networking",
+        "Resume Reviews"
+      ],
       "poster": "/images/poster/tmu_blueprint.jpg",
-      "lumaLink": ""
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSciCr007Kklk90O7_4yYFg7Ef5KfjuJW0dnzUdGDs9O1Xq-fA/viewform"
     },
     {
       "id": 7,
@@ -113,7 +126,7 @@
       "lumaLink": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "clubName": "Take-off",
       "eventName": "Coming soon",
       "date": "2026-02-20",
@@ -127,7 +140,7 @@
       "lumaLink": ""
     },
     {
-      "id": 11,
+      "id": 10,
       "clubName": "Tetra X BYTE",
       "eventName": "Coming soon",
       "date": "2026-02-20",
@@ -141,36 +154,7 @@
       "lumaLink": ""
     },
     {
-      "id": 17,
-      "clubName": "BYTE",
-      "eventName": "Coming soon",
-      "date": "2026-02-21",
-      "endDate": "",
-      "time": "2:00PM - 4:00PM",
-      "venue": "TBA",
-      "types": [
-        "Showcases",
-        "Networking"
-      ],
-      "poster": "/images/poster/BYTE.jpg",
-      "lumaLink": ""
-    },
-    {
-      "id": 13,
-      "clubName": "MDSA",
-      "eventName": "Data Dash",
-      "date": "2026-02-21",
-      "endDate": "2026-02-22",
-      "time": "9:30AM - 5:00PM",
-      "venue": "TRSM",
-      "types": [
-        "Conferences"
-      ],
-      "poster": "/images/poster/mdsa.jpg",
-      "lumaLink": ""
-    },
-    {
-      "id": 14,
+      "id": 11,
       "clubName": "TMAV",
       "eventName": "Coming soon",
       "date": "2026-02-20",
@@ -185,7 +169,7 @@
       "lumaLink": ""
     },
     {
-      "id": 15,
+      "id": 12,
       "clubName": "FRONTIER",
       "eventName": "Coming soon",
       "date": "2026-02-21",
@@ -199,7 +183,7 @@
       "lumaLink": ""
     },
     {
-      "id": 16,
+      "id": 13,
       "clubName": "BYTE",
       "eventName": "Closing Ceremony",
       "date": "2026-02-22",
@@ -207,7 +191,8 @@
       "time": "12:30PM - 4:00PM",
       "venue": "SLC 8TH FLOOR",
       "types": [
-        "Showcases", "Networking"
+        "Showcases",
+        "Networking"
       ],
       "poster": "/images/poster/BYTE.jpg",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScg6LHrPGdKHyQ0eusKKTgkGBPftimG4zAye6DUwnEK5zH_7g/viewform",

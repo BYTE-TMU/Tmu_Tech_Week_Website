@@ -369,11 +369,11 @@ const EventCalendar = () => {
 
       {/* Event Details Modal */}
       {modalOpen && selectedEvent && (
-        <div 
+        <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-start justify-center p-4 pt-20 pb-20"
           onClick={() => setModalOpen(false)}
         >
-          <div 
+          <div
             className="bg-black/80 border border-white/20 rounded-2xl max-w-2xl w-full max-h-[80vh] backdrop-blur-md flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
@@ -433,7 +433,7 @@ const EventCalendar = () => {
 
             {/* Scrollable Description */}
             {selectedEvent.description && (
-              <div 
+              <div
                 className="event-modal flex-1 overflow-y-auto px-6 md:px-8 py-3"
                 style={{
                   scrollbarWidth: 'thin',
@@ -451,9 +451,9 @@ const EventCalendar = () => {
 
             {/* Fixed Footer - Register Button */}
             <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
-              {selectedEvent.googleFormLink ? (
+              {(selectedEvent.googleFormLink || selectedEvent.lumaLink) ? (
                 <a
-                  href={selectedEvent.googleFormLink}
+                  href={selectedEvent.googleFormLink || selectedEvent.lumaLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-ttw-orange/30 via-ttw-fuchsia/30 to-ttw-blue/30 text-white font-text font-semibold text-center block hover:from-ttw-orange/50 hover:via-ttw-fuchsia/50 hover:to-ttw-blue/50 transition-all duration-300"
