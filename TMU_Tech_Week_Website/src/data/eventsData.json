@@ -85,9 +85,9 @@
       "id": 6,
       "clubName": "TMU Blueprint",
       "eventName": "Resume Roast",
-      "date": "2026-02-18",
+      "date": "2026-02-21",
       "endDate": "",
-      "time": "2:00PM - 3:00PM",
+      "time": "5:30 PM - 7:30 PM",
       "venue": "SLC",
       "types": [
         "Networking",
@@ -114,11 +114,11 @@
     {
       "id": 8,
       "clubName": "ECEC",
-      "eventName": "Coming soon",
-      "date": "2026-02-19",
+      "eventName": "The Co-op Blueprint",
+      "date": "2026-02-21",
       "endDate": "",
-      "time": "6:00PM - 7:00PM",
-      "venue": "SLC",
+      "time": "3:00PM - 4:00PM",
+      "venue": "Virtual",
       "types": [
         "Showcases"
       ],
