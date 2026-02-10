@@ -171,11 +171,11 @@
     {
       "id": 12,
       "clubName": "FRONTIER",
-      "eventName": "Coming soon",
-      "date": "2026-02-21",
+      "eventName": "Intro to Satellites Workshop",
+      "date": "2026-02-20",
       "endDate": "",
-      "time": "5:00PM - 6:00PM",
-      "venue": "SLC",
+      "time": "2:30PM - 6:30PM",
+      "venue": "KHE 118",
       "types": [
         "Workshops"
       ],
