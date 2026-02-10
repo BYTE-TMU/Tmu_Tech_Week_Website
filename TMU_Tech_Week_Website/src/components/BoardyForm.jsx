@@ -87,13 +87,13 @@ const BoardyForm = () => {
                                         Boardy
                                     </a>, an
                                     AI superconnector that gets to know you beyond a resume.
-                                    Share your details for a quick, casual chat—no interview, just
-                                    a conversation about your interests and where you shine.
+                                    Share your details for a casual chat about your interests—no interview, just conversation—and Boardy will connect you with relevant startup opportunities.
+                                    (FYI Boardy talks to hundreds of cool founders every day).
                                 </p>
                                 <img
                                     src={`${import.meta.env.BASE_URL}images/boardy.png`}
                                     alt="Boardy AI"
-                                    className="mt-8 w-32 md:w-40 object-contain hidden lg:block"
+                                    className="mt-8 w-32 md:w-40 lg:w-48 object-contain mx-auto lg:mx-0"
                                 />
                             </div>
 
@@ -214,7 +214,7 @@ const BoardyForm = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
