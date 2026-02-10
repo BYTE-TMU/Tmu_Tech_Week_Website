@@ -86,10 +86,9 @@ const BoardyForm = () => {
                                     >
                                         Boardy
                                     </a>, an
-                                    AI superconnecter, to get to know you beyond a resume. As a first step,
-                                    Boardy will give you a quick call to learn about your interest and
-                                    where you shine the most. Share your details to start a conversation
-                                    and don't worry it's not an interview, just a casual chat with AI.
+                                    AI superconnector that gets to know you beyond a resume.
+                                    Share your details for a quick, casual chat—no interview, just
+                                    a conversation about your interests and where you shine.
                                 </p>
                                 <img
                                     src={`${import.meta.env.BASE_URL}images/boardy.png`}
