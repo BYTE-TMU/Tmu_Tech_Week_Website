@@ -71,16 +71,25 @@ const BoardyForm = () => {
                             {/* ── Left Column: Boardy Explanation ── */}
                             <div className="lg:col-span-2 flex flex-col justify-center">
                                 <h2 className="text-2xl md:text-4xl font-bold font-headline text-white mb-4">
-                                    Feel Free To Reach Out
+                                    Want to find cool startup opportunities?
+                                    <br />
+                                    Talk to Boardy!
                                 </h2>
-                                <div className="h-1 w-24 bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue rounded-full mb-6" />
+                                <div className="h-1 w-24 bg-gradient-to-r from-ttw-blue via-ttw-blue-500 to-ttw-blue rounded-full mb-6" />
                                 <p className="text-white/70 font-text text-base md:text-lg leading-relaxed">
                                     We've partnered with{' '}
-                                    <span className="text-white font-semibold">Boardy</span>, an
-                                    AI agent, to get to know you beyond a resume. As a first step,
-                                    Boardy will schedule a quick call to learn what you're best at
-                                    and where you shine. Share your details below and let's start a
-                                    conversation.
+                                    <a
+                                        href="https://www.boardy.ai"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative text-white font-semibold hover:text-ttw-blue-500 transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-ttw-orange after:via-ttw-fuchsia after:to-ttw-blue after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+                                    >
+                                        Boardy
+                                    </a>, an
+                                    AI superconnecter, to get to know you beyond a resume. As a first step,
+                                    Boardy will give you a quick call to learn about your interest and
+                                    where you shine the most. Share your details to start a conversation
+                                    and don't worry it's not an interview, just a casual chat with AI.
                                 </p>
                                 <img
                                     src={`${import.meta.env.BASE_URL}images/boardy.png`}
