@@ -294,7 +294,7 @@ const EventCalendar = () => {
                   <div className="bg-black rounded-xl p-4 md:p-6 flex flex-row items-center gap-4 md:gap-6 transition-all duration-300">
                     {/* Event Poster/Logo */}
                     {showEventImages && (
-                      <div className={`flex-shrink-0 w-16 h-16 md:w-32 md:h-24 rounded-lg overflow-hidden ${event.posterWrapperClass}`}>
+                      <div className={`flex-shrink-0 w-16 h-16 md:w-32 md:h-24 rounded-lg overflow-hidden bg-black ${event.posterWrapperClass}`}>
                         {event.poster === '/images/event-placeholder.png' ? (
                           <div className="w-full h-full bg-black flex items-center justify-center">
                             <span className="text-white/50 font-text text-[10px] md:text-sm text-center">Poster<br className="md:hidden" /> coming soon</span>
