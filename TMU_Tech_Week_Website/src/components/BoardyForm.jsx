@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaCheck, FaArrowRight, FaPhone } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const COUNTRY_CODES = [
     { code: '+1', label: '🇨🇦 +1', country: 'CA' },
@@ -136,7 +137,7 @@ const BoardyForm = () => {
                             {/* ── Left Column: Boardy Explanation ── */}
                             <div className="lg:col-span-2 flex flex-col justify-center">
                                 <h2 className="text-2xl md:text-4xl font-bold font-headline text-white mb-4">
-                                    Want to find cool startup opportunities?
+                                    Want to find cool startup job opportunities?
                                     <br />
                                     Talk to Boardy!
                                 </h2>
@@ -165,19 +166,52 @@ const BoardyForm = () => {
                             {/* ── Right Column: Form ── */}
                             <div className="lg:col-span-3 flex flex-col justify-center">
                                 {submitted ? (
-                                    <div className="flex flex-col items-center justify-center h-full py-16 gap-5">
-                                        <div className="w-16 h-16 rounded-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue flex items-center justify-center">
-                                            <FaCheck className="w-7 h-7 text-white" />
-                                        </div>
-                                        <h3 className="text-2xl font-bold font-headline text-white text-center">
+                                    <div className="flex flex-col items-center justify-center h-full py-16 gap-6">
+                                        {/* Animated Checkmark */}
+                                        <motion.div
+                                            initial={{ scale: 0, opacity: 0 }}
+                                            animate={{ scale: 1, opacity: 1 }}
+                                            transition={{ type: 'spring', stiffness: 200, damping: 12, duration: 0.6 }}
+                                            className="w-20 h-20 rounded-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue flex items-center justify-center"
+                                        >
+                                            <motion.div
+                                                initial={{ pathLength: 0, opacity: 0 }}
+                                                animate={{ pathLength: 1, opacity: 1 }}
+                                                transition={{ delay: 0.3, duration: 0.4 }}
+                                            >
+                                                <FaCheck className="w-9 h-9 text-white" />
+                                            </motion.div>
+                                        </motion.div>
+
+                                        {/* Thank you text */}
+                                        <motion.h3
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.4, duration: 0.5 }}
+                                            className="text-3xl font-bold font-headline text-white text-center"
+                                        >
                                             Thank you!
-                                        </h3>
-                                        <p className="text-white/70 font-text text-center max-w-md leading-relaxed">
+                                        </motion.h3>
+
+                                        {/* Description */}
+                                        <motion.p
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.6, duration: 0.5 }}
+                                            className="text-white/70 font-text text-lg text-center max-w-md leading-relaxed"
+                                        >
                                             Boardy will set up a call with you — please check your phone!
-                                        </p>
-                                        <div className="flex items-center gap-2 mt-2 px-5 py-3 rounded-lg bg-white/5 border border-white/10">
-                                            <FaPhone className="w-4 h-4 text-ttw-fuchsia" />
-                                            <p className="text-white/60 font-text text-sm">
+                                        </motion.p>
+
+                                        {/* WhatsApp Fallback */}
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.8, duration: 0.5 }}
+                                            className="flex items-center gap-3 mt-3 px-6 py-4 rounded-lg bg-white/5 border border-white/10"
+                                        >
+                                            <FaPhone className="w-5 h-5 text-ttw-fuchsia shrink-0" />
+                                            <p className="text-white font-text text-base">
                                                 Didn't get the call scheduled with Boardy?{' '}
                                                 <a
                                                     href="https://whatsapp.boardy.ai/tmutechweek"
@@ -188,7 +222,7 @@ const BoardyForm = () => {
                                                     Chat via WhatsApp
                                                 </a>
                                             </p>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="space-y-5">
@@ -234,22 +268,32 @@ const BoardyForm = () => {
                                                     <span className="text-ttw-fuchsia">•</span>
                                                 </label>
                                                 <div className="flex gap-2">
-                                                    <select
-                                                        name="countryCode"
-                                                        value={formData.countryCode}
-                                                        onChange={handleChange}
-                                                        className="w-[110px] shrink-0 px-2 py-3 rounded-lg bg-white/5 border border-white/20 text-white font-text text-sm focus:outline-none focus:border-ttw-fuchsia focus:ring-1 focus:ring-ttw-fuchsia/50 transition-all duration-300 appearance-none cursor-pointer"
-                                                    >
-                                                        {COUNTRY_CODES.map((c) => (
-                                                            <option
-                                                                key={`${c.country}-${c.code}`}
-                                                                value={c.code}
-                                                                className="bg-neutral-900 text-white"
-                                                            >
-                                                                {c.label}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                    <div className="relative shrink-0 w-[110px]">
+                                                        <select
+                                                            name="countryCode"
+                                                            value={formData.countryCode}
+                                                            onChange={handleChange}
+                                                            className="w-full px-2 pr-7 py-3 rounded-lg bg-white/5 border border-white/20 text-white font-text text-sm focus:outline-none focus:border-ttw-fuchsia focus:ring-1 focus:ring-ttw-fuchsia/50 transition-all duration-300 appearance-none cursor-pointer"
+                                                        >
+                                                            {COUNTRY_CODES.map((c) => (
+                                                                <option
+                                                                    key={`${c.country}-${c.code}`}
+                                                                    value={c.code}
+                                                                    className="bg-neutral-900 text-white"
+                                                                >
+                                                                    {c.label}
+                                                                </option>
+                                                            ))}
+                                                        </select>
+                                                        <svg
+                                                            className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-white/60"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            viewBox="0 0 20 20"
+                                                            fill="currentColor"
+                                                        >
+                                                            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                                                        </svg>
+                                                    </div>
                                                     <input
                                                         type="tel"
                                                         name="phone"
