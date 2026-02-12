@@ -1,9 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { FaCheck, FaArrowRight } from 'react-icons/fa';
 
+const ZAPIER_WEBHOOK_URL = import.meta.env.VITE_ZAPIER_WEBHOOK_URL;
+
 const BoardyForm = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState('');
     const sectionRef = useRef(null);
 
     const [formData, setFormData] = useState({
@@ -40,13 +44,39 @@ const BoardyForm = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 4000);
+        setError('');
+        setIsSubmitting(true);
+
+        try {
+            if (!ZAPIER_WEBHOOK_URL) {
+                throw new Error('Webhook endpoint is not configured.');
+            }
+
+            const response = await fetch(ZAPIER_WEBHOOK_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone,
+                    linkedin: formData.linkedin,
+                    about: formData.about,
+                }),
+            });
+
+            // With no-cors mode, response.type is 'opaque' and status is 0,
+            // but the request still reaches Zapier successfully.
+            setSubmitted(true);
+            setFormData({ name: '', email: '', phone: '', linkedin: '', about: '' });
+        } catch (err) {
+            console.error('Form submission error:', err);
+            setError('Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const inputClasses =
@@ -199,13 +229,52 @@ const BoardyForm = () => {
                                             />
                                         </div>
 
+                                        {/* Error Message */}
+                                        {error && (
+                                            <p className="text-red-400 font-text text-sm">
+                                                {error}
+                                            </p>
+                                        )}
+
                                         {/* Submit Button */}
                                         <button
                                             type="submit"
-                                            className="group inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-white text-black font-text font-bold text-base hover:bg-white/90 transition-all duration-300"
+                                            disabled={isSubmitting}
+                                            className={`group inline-flex items-center gap-2 px-8 py-3 rounded-lg font-text font-bold text-base transition-all duration-300 ${isSubmitting
+                                                    ? 'bg-white/60 text-black/60 cursor-not-allowed'
+                                                    : 'bg-white text-black hover:bg-white/90'
+                                                }`}
                                         >
-                                            Chat with Boardy
-                                            <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                            {isSubmitting ? (
+                                                <>
+                                                    <svg
+                                                        className="animate-spin w-4 h-4"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                    >
+                                                        <circle
+                                                            className="opacity-25"
+                                                            cx="12"
+                                                            cy="12"
+                                                            r="10"
+                                                            stroke="currentColor"
+                                                            strokeWidth="4"
+                                                        />
+                                                        <path
+                                                            className="opacity-75"
+                                                            fill="currentColor"
+                                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                                                        />
+                                                    </svg>
+                                                    Sending...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Chat with Boardy
+                                                    <FaArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                                                </>
+                                            )}
                                         </button>
                                     </form>
                                 )}
