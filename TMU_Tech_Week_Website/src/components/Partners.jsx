@@ -57,8 +57,10 @@ const Partners = () => {
     { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl' },
     { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'Poulet Rouge', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Poulet Rouge.png`, logoClass: 'w-36 h-24' },
-      { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
-      { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
+    { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Zone Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/ZL.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Ametros Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl' },
   ];
 
   const goldPartners = placeholderPartners.filter((partner) => partner.tier === 'Gold');
