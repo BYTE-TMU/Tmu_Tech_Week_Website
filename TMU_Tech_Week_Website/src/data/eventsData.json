@@ -56,8 +56,8 @@
       "eventName": "Getting Started with AWS Lambda",
       "date": "2026-02-18",
       "endDate": "",
-      "time": "6:00PM - 8:30PM",
-      "venue": "288 Church Street - Room No. 103-104, Toronto Metropolitan University",
+      "time": "6:00 PM - 8:00 PM",
+      "venue": "DCC 1st Floor Lecture Hall, Toronto Metropolitan University",
       "types": [
         "Workshops",
         "Networking"
@@ -72,11 +72,11 @@
     {
       "id": 5,
       "clubName": "TMU AIMLA",
-      "eventName": "TMU AIMLA - Coding competition",
+      "eventName": "Code Blitz",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "5:30PM - 8:30PM",
-      "venue": "245 Church Street, Toronto Metropolitan University",
+      "time": "6:00 PM - 8:00 PM",
+      "venue": "ENG Building, Toronto Metropolitan University",
       "types": [
         "Hackathons"
       ],
@@ -90,8 +90,8 @@
       "eventName": "Resume Roast",
       "date": "2026-02-21",
       "endDate": "",
-      "time": "5:30PM - 7:30PM",
-      "venue": "341 Yonge Street, Toronto Metropolitan University",
+      "time": "6:00 PM - 7:00 PM",
+      "venue": "SLC 8th Floor, Toronto Metropolitan University",
       "types": [
         "Networking",
         "Resume Reviews"
@@ -106,8 +106,8 @@
       "eventName": "Mini-Hackathon",
       "date": "2026-02-18",
       "endDate": "2026-02-19",
-      "time": "5:00PM - 9:00PM",
-      "venue": "341 Yonge Street, Toronto Metropolitan University",
+      "time": "5:00 PM - 9:00 PM",
+      "venue": "SLC 6th Floor, Toronto Metropolitan University",
       "types": [
         "Hackathons"
       ],
@@ -122,13 +122,15 @@
       "eventName": "The Co-op Blueprint",
       "date": "2026-02-21",
       "endDate": "",
-      "time": "3:00PM - 4:00PM",
+      "time": "3:00 PM - 4:00 PM",
       "venue": "Virtual",
       "types": [
-        "Showcases", "Online Events"
+        "Showcases",
+        "Online Events"
       ],
       "poster": "/images/event-placeholder.png",
-      "lumaLink": ""
+      "lumaLink": "",
+      "description": "Panel with co-op students answering questions and giving advice for resumes, interviews, & general co-op applications."
     },
     {
       "id": 9,
@@ -165,8 +167,8 @@
       "eventName": "Intro to Satellites Workshop",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "2:30PM - 6:30PM",
-      "venue": "340 Church Street - Room No. 118, Toronto Metropolitan University",
+      "time": "3:00 PM - 6:00 PM",
+      "venue": "KHE 118, Toronto Metropolitan University",
       "types": [
         "Workshops"
       ],
