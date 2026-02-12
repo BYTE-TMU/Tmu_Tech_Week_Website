@@ -1,5 +1,40 @@
 import { useState, useEffect, useRef } from 'react';
-import { FaCheck, FaArrowRight } from 'react-icons/fa';
+import { FaCheck, FaArrowRight, FaPhone } from 'react-icons/fa';
+
+const COUNTRY_CODES = [
+    { code: '+1', label: '🇨🇦 +1', country: 'CA' },
+    { code: '+1', label: '🇺🇸 +1', country: 'US' },
+    { code: '+44', label: '🇬🇧 +44', country: 'GB' },
+    { code: '+91', label: '🇮🇳 +91', country: 'IN' },
+    { code: '+61', label: '🇦🇺 +61', country: 'AU' },
+    { code: '+33', label: '🇫🇷 +33', country: 'FR' },
+    { code: '+49', label: '🇩🇪 +49', country: 'DE' },
+    { code: '+81', label: '🇯🇵 +81', country: 'JP' },
+    { code: '+82', label: '🇰🇷 +82', country: 'KR' },
+    { code: '+86', label: '🇨🇳 +86', country: 'CN' },
+    { code: '+55', label: '🇧🇷 +55', country: 'BR' },
+    { code: '+52', label: '🇲🇽 +52', country: 'MX' },
+    { code: '+234', label: '🇳🇬 +234', country: 'NG' },
+    { code: '+971', label: '🇦🇪 +971', country: 'AE' },
+    { code: '+966', label: '🇸🇦 +966', country: 'SA' },
+    { code: '+92', label: '🇵🇰 +92', country: 'PK' },
+    { code: '+880', label: '🇧🇩 +880', country: 'BD' },
+    { code: '+63', label: '🇵🇭 +63', country: 'PH' },
+    { code: '+39', label: '🇮🇹 +39', country: 'IT' },
+    { code: '+34', label: '🇪🇸 +34', country: 'ES' },
+    { code: '+31', label: '🇳🇱 +31', country: 'NL' },
+    { code: '+90', label: '🇹🇷 +90', country: 'TR' },
+    { code: '+65', label: '🇸🇬 +65', country: 'SG' },
+    { code: '+60', label: '🇲🇾 +60', country: 'MY' },
+    { code: '+254', label: '🇰🇪 +254', country: 'KE' },
+    { code: '+27', label: '🇿🇦 +27', country: 'ZA' },
+    { code: '+48', label: '🇵🇱 +48', country: 'PL' },
+    { code: '+46', label: '🇸🇪 +46', country: 'SE' },
+    { code: '+47', label: '🇳🇴 +47', country: 'NO' },
+    { code: '+45', label: '🇩🇰 +45', country: 'DK' },
+    { code: '+353', label: '🇮🇪 +353', country: 'IE' },
+    { code: '+64', label: '🇳🇿 +64', country: 'NZ' },
+];
 
 const ZAPIER_WEBHOOK_URL = import.meta.env.VITE_ZAPIER_WEBHOOK_URL;
 
@@ -13,9 +48,10 @@ const BoardyForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
+        countryCode: '+1',
         phone: '',
         linkedin: '',
-        about: '',
+        consentCall: false,
     });
 
     useEffect(() => {
@@ -61,16 +97,15 @@ const BoardyForm = () => {
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
-                    phone: formData.phone,
+                    phone: `${formData.countryCode} ${formData.phone}`,
                     linkedin: formData.linkedin,
-                    about: formData.about,
                 }),
             });
 
             // With no-cors mode, response.type is 'opaque' and status is 0,
             // but the request still reaches Zapier successfully.
             setSubmitted(true);
-            setFormData({ name: '', email: '', phone: '', linkedin: '', about: '' });
+            setFormData({ name: '', email: '', countryCode: '+1', phone: '', linkedin: '', consentCall: false });
         } catch (err) {
             console.error('Form submission error:', err);
             setError('Something went wrong. Please try again.');
@@ -130,17 +165,30 @@ const BoardyForm = () => {
                             {/* ── Right Column: Form ── */}
                             <div className="lg:col-span-3 flex flex-col justify-center">
                                 {submitted ? (
-                                    <div className="flex flex-col items-center justify-center h-full py-16 gap-4">
+                                    <div className="flex flex-col items-center justify-center h-full py-16 gap-5">
                                         <div className="w-16 h-16 rounded-full bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue flex items-center justify-center">
                                             <FaCheck className="w-7 h-7 text-white" />
                                         </div>
-                                        <h3 className="text-2xl font-bold font-headline text-white">
+                                        <h3 className="text-2xl font-bold font-headline text-white text-center">
                                             Thank you!
                                         </h3>
-                                        <p className="text-white/70 font-text text-center max-w-sm">
-                                            We've received your details. Boardy will be in touch soon
-                                            to schedule your introductory call.
+                                        <p className="text-white/70 font-text text-center max-w-md leading-relaxed">
+                                            Boardy will set up a call with you — please check your phone!
                                         </p>
+                                        <div className="flex items-center gap-2 mt-2 px-5 py-3 rounded-lg bg-white/5 border border-white/10">
+                                            <FaPhone className="w-4 h-4 text-ttw-fuchsia" />
+                                            <p className="text-white/60 font-text text-sm">
+                                                Didn't get the call scheduled with Boardy?{' '}
+                                                <a
+                                                    href="https://whatsapp.boardy.ai/tmutechweek"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-ttw-blue-500 font-semibold hover:text-ttw-blue transition-colors duration-300 underline underline-offset-2"
+                                                >
+                                                    Chat via WhatsApp
+                                                </a>
+                                            </p>
+                                        </div>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="space-y-5">
@@ -185,15 +233,33 @@ const BoardyForm = () => {
                                                     What's your number to reach you?{' '}
                                                     <span className="text-ttw-fuchsia">•</span>
                                                 </label>
-                                                <input
-                                                    type="tel"
-                                                    name="phone"
-                                                    required
-                                                    value={formData.phone}
-                                                    onChange={handleChange}
-                                                    className={inputClasses}
-                                                    placeholder="(416) 555-0123"
-                                                />
+                                                <div className="flex gap-2">
+                                                    <select
+                                                        name="countryCode"
+                                                        value={formData.countryCode}
+                                                        onChange={handleChange}
+                                                        className="w-[110px] shrink-0 px-2 py-3 rounded-lg bg-white/5 border border-white/20 text-white font-text text-sm focus:outline-none focus:border-ttw-fuchsia focus:ring-1 focus:ring-ttw-fuchsia/50 transition-all duration-300 appearance-none cursor-pointer"
+                                                    >
+                                                        {COUNTRY_CODES.map((c) => (
+                                                            <option
+                                                                key={`${c.country}-${c.code}`}
+                                                                value={c.code}
+                                                                className="bg-neutral-900 text-white"
+                                                            >
+                                                                {c.label}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                    <input
+                                                        type="tel"
+                                                        name="phone"
+                                                        required
+                                                        value={formData.phone}
+                                                        onChange={handleChange}
+                                                        className={`${inputClasses} flex-1`}
+                                                        placeholder="555-0123"
+                                                    />
+                                                </div>
                                             </div>
                                             <div>
                                                 <label className="block text-white font-text font-semibold text-sm mb-1.5">
@@ -212,21 +278,29 @@ const BoardyForm = () => {
                                             </div>
                                         </div>
 
-                                        {/* Row 3: About Yourself */}
-                                        <div>
-                                            <label className="block text-white font-text font-semibold text-sm mb-1.5">
-                                                Tell us a bit about yourself and why you're interested{' '}
+                                        {/* Consent Checkbox */}
+                                        <div className="flex items-start gap-3">
+                                            <input
+                                                type="checkbox"
+                                                id="consentCall"
+                                                name="consentCall"
+                                                required
+                                                checked={formData.consentCall}
+                                                onChange={(e) =>
+                                                    setFormData((prev) => ({
+                                                        ...prev,
+                                                        consentCall: e.target.checked,
+                                                    }))
+                                                }
+                                                className="mt-1 w-4 h-4 shrink-0 rounded border-white/20 bg-white/5 text-ttw-fuchsia focus:ring-ttw-fuchsia/50 cursor-pointer accent-[#E040FB]"
+                                            />
+                                            <label
+                                                htmlFor="consentCall"
+                                                className="text-white/60 font-text text-sm leading-relaxed cursor-pointer"
+                                            >
+                                                I agree to let Boardy schedule a call with me to discuss startup opportunities.{' '}
                                                 <span className="text-ttw-fuchsia">•</span>
                                             </label>
-                                            <textarea
-                                                name="about"
-                                                required
-                                                rows={4}
-                                                value={formData.about}
-                                                onChange={handleChange}
-                                                className={`${inputClasses} resize-vertical`}
-                                                placeholder="Share a little about your background, interests, and what excites you about tech..."
-                                            />
                                         </div>
 
                                         {/* Error Message */}
@@ -241,8 +315,8 @@ const BoardyForm = () => {
                                             type="submit"
                                             disabled={isSubmitting}
                                             className={`group inline-flex items-center gap-2 px-8 py-3 rounded-lg font-text font-bold text-base transition-all duration-300 ${isSubmitting
-                                                    ? 'bg-white/60 text-black/60 cursor-not-allowed'
-                                                    : 'bg-white text-black hover:bg-white/90'
+                                                ? 'bg-white/60 text-black/60 cursor-not-allowed'
+                                                : 'bg-white text-black hover:bg-white/90'
                                                 }`}
                                         >
                                             {isSubmitting ? (
