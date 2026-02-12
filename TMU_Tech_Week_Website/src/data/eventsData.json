@@ -5,21 +5,22 @@
       "clubName": "BYTE",
       "eventName": "Opening Ceremony",
       "date": "2026-02-15",
-      "time": "12:30 PM - 4:00 PM",
-      "venue": "SLC, Toronto Metropolitan University",
+      "time": "1:00 PM - 4:00 PM",
+      "venue": "341 Yonge Street - 8th Floor, Toronto Metropolitan University",
       "types": [
         "Showcases",
         "Panels",
         "Networking"
       ],
-      "poster": "/images/poster/BYTE.jpg",
+      "poster": "/src/assets/images/hero_logo_graphic.png",
+      "posterFit": "contain",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScv75xNqFjMklOYduk4VGfvjlfh-CO_eOh30OvOV2KjS_1SXA/viewform",
-      "description": "TMU BYTE is excited to announce TMU Tech Week, happening during Reading Week (February 15th to 22nd) this semester! Inspired by Toronto Tech Week, this campus wide initiative brings together TMU's tech community for a full week of workshops, hackathons, panels, and collaborative events that celebrate innovation, learning, and creativity in technology.\n\nJoin us for the official launch of TMU Tech Week 2026, a week long celebration of technology, innovation, and student leadership across Toronto Metropolitan University.\n\n✨ Opening Ceremony highlights include:\n• A keynote address from our Dean of Engineering\n• An overview of TMU Tech Week events and participating clubs\n• Networking with students, clubs, and industry representatives (Microsoft, Wealthsimple, IBM, BMO...etc)\n• Complimentary food and refreshments\n\n\n\nFor updates and more information, check out our Instagram!"
+      "description": "TMU BYTE is excited to announce TMU Tech Week, happening during Reading Week (February 15th to 22nd) this semester! Inspired by Toronto Tech Week, this campus wide initiative brings together TMU's tech community for a full week of workshops, hackathons, panels, and collaborative events that celebrate innovation, learning, and creativity in technology.\n\nJoin us for the official launch of TMU Tech Week 2026, a week long celebration of technology, innovation, and student leadership across Toronto Metropolitan University.\n\n✨ Opening Ceremony highlights include:\n• A keynote address from our Dean of Engineering\n• An overview of TMU Tech Week events and participating clubs\n• Networking with students, clubs, and industry representatives (Microsoft, Wealthsimple, IBM, BMO...etc)\n• Complimentary food and refreshments\n\n   For updates and more information, check out our Instagram!"
     },
     {
       "id": 2,
       "clubName": "Slalom",
-      "eventName": "Slalom Panel Office Tour",
+      "eventName": "Slalom Panel Office Event",
       "date": "2026-02-17",
       "endDate": "",
       "time": "12:00 PM - 2:00 PM",
@@ -27,7 +28,7 @@
       "types": [
         "Panels",
         "Networking",
-        "Office Tours"
+        "Office Events"
       ],
       "poster": "/images/poster/Slalom_Consulting_OG_image.jpg",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLSfox2UZ0Gm35Zl67ERpCTx9FXc4uSJbhp5qyz8XCFXSoNYGUA/viewform",
@@ -40,13 +41,14 @@
       "date": "2026-02-17",
       "endDate": "",
       "time": "3:00PM - 5:00PM",
-      "venue": "KHE 127",
+      "venue": "340 Church Street - Room No. 127, Toronto Metropolitan University",
       "types": [
         "Workshops",
         "Networking"
       ],
       "poster": "/images/poster/STEMfellowship.jpg",
-      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSdUxr5R8w7i_zKs6WtGp_psEjvPy-zFZ8xbqYt8ynGys6IarA/viewform"
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSdUxr5R8w7i_zKs6WtGp_psEjvPy-zFZ8xbqYt8ynGys6IarA/viewform",
+      "description": "New to Python or want to strengthen your coding basics? Join our Python Workshop for a hands-on introduction to one of the most in-demand programming languages.\n\nYou'll learn core concepts, write your own code, and gain practical skills you can use in school, research, or future projects. No prior experience required—just bring your curiosity!\n\n Event Details:\n• Date: February 17, 2026\n• Time: 3:00 PM - 5:00 PM\n• Location: KHE 127, Toronto Metropolitan University\n• Registration Deadline: February 16, 2026\n\n⚠️ Spots are limited, so register today to secure your place!"
     },
     {
       "id": 4,
@@ -55,7 +57,7 @@
       "date": "2026-02-18",
       "endDate": "",
       "time": "6:00PM - 8:30PM",
-      "venue": "DCC 103-104, Toronto Metropolitan University",
+      "venue": "288 Church Street - Room No. 103-104, Toronto Metropolitan University",
       "types": [
         "Workshops",
         "Networking"
@@ -73,13 +75,14 @@
       "eventName": "TMU AIMLA - Coding competition",
       "date": "2026-02-17",
       "endDate": "",
-      "time": "6:00PM - 8:00PM",
-      "venue": "ENG",
+      "time": "5:30PM - 8:30PM",
+      "venue": "245 Church Street, Toronto Metropolitan University",
       "types": [
         "Hackathons"
       ],
       "poster": "/images/poster/aimla.jpg",
-      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSe6Xyx99hv2bi0RkZTYCQ3poDLtj6fBlRWQJIXc7rf_BgV22Q/viewform"
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSe6Xyx99hv2bi0RkZTYCQ3poDLtj6fBlRWQJIXc7rf_BgV22Q/viewform",
+      "description": "Join AIMLA for a beginner-friendly, fast-paced coding competition focused on speed, logic, and core problem-solving skills. Participants will compete individually in a 1.5-hour challenge featuring multiple easy-level coding questions.\n\nThe event runs from 5:30 PM to 8:30 PM and includes setup, competition time, results, and prizes for the top three performers. Participants must bring their own laptop with a coding environment installed in advance. A stable Wi-Fi connection, projector, and volunteers will be provided.\n\nThis event is open to students of all experience levels and is designed to be low-pressure, fun, and competitive. Food and refreshments will be provided. 😋\n\n⚠️ Spots are limited. Please register in advance!\n\nBest of luck to all!"
     },
     {
       "id": 6,
@@ -88,13 +91,14 @@
       "date": "2026-02-21",
       "endDate": "",
       "time": "5:30PM - 7:30PM",
-      "venue": "SLC",
+      "venue": "341 Yonge Street, Toronto Metropolitan University",
       "types": [
         "Networking",
         "Resume Reviews"
       ],
       "poster": "/images/poster/tmu_blueprint.jpg",
-      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSciCr007Kklk90O7_4yYFg7Ef5KfjuJW0dnzUdGDs9O1Xq-fA/viewform"
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSciCr007Kklk90O7_4yYFg7Ef5KfjuJW0dnzUdGDs9O1Xq-fA/viewform",
+      "description": "What Works. What Doesn't. Why You're Not Hearing Back.\n\nThink your resume is solid? Let's put it to the test!\n\nJoin us for a fast-paced, interactive session where hiring pros break down what a resume actually does, and why some get callbacks while others don't.\n\n📋 What you'll get:\n• What a resume is (and what it's not)\n• Common mistakes that get resumes skipped\n• What recruiters really look for in 10 seconds or less\n• Live, fireside-style \"roasts\" of sample resumes\n• Honest, actionable feedback from recruiters & hiring managers\n\nCome for the roast! 🔥"
     },
     {
       "id": 7,
@@ -103,13 +107,14 @@
       "date": "2026-02-18",
       "endDate": "2026-02-19",
       "time": "5:00PM - 9:00PM",
-      "venue": "SLC",
+      "venue": "341 Yonge Street, Toronto Metropolitan University",
       "types": [
         "Hackathons"
       ],
       "poster": "/images/poster/ibm_z.jpg",
       "posterFit": "contain",
-      "lumaLink": ""
+      "lumaLink": "https://www.eventbrite.ca/e/ibm-z-sheridan-byte-enterprise-computing-hackathon-workshops-tickets-1982602297843?aff=oddtdtcreator",
+      "description": "Explore enterprise computing with IBM Z through a hackathon, hands-on workshops, and industry insights. Open to all students.\n\nIBM Z Sheridan BYTE is a two-day interactive experience designed to introduce students to enterprise computing and mainframe technology.\n\nParticipants will engage in:\n• Hands-on workshops with IBM Z technologies\n• A beginner-friendly hackathon focused on enterprise problem-solving\n• Guest insights into careers, skills, and real-world enterprise systems\n\nWhether you're new to enterprise tech or looking to expand your skill set, this event offers a welcoming space to learn, build, and connect.\n\n📅 February 18 & 19, 2026\n⏰ 5:00 PM – 9:00 PM (EST)\n🎓 Open to all students"
     },
     {
       "id": 8,
@@ -120,7 +125,7 @@
       "time": "3:00PM - 4:00PM",
       "venue": "Virtual",
       "types": [
-        "Showcases"
+        "Showcases", "Online Events"
       ],
       "poster": "/images/event-placeholder.png",
       "lumaLink": ""
@@ -132,7 +137,7 @@
       "date": "2026-02-20",
       "endDate": "",
       "time": "2:00PM - 3:00PM",
-      "venue": "SLC",
+      "venue": "341 Yonge Street, Toronto Metropolitan University",
       "types": [
         "Panels"
       ],
@@ -140,27 +145,13 @@
       "lumaLink": ""
     },
     {
-      "id": 10,
-      "clubName": "Tetra X BYTE",
-      "eventName": "Coming soon",
-      "date": "2026-02-20",
-      "endDate": "",
-      "time": "4:00PM - 6:00PM",
-      "venue": "SLC",
-      "types": [
-        "Workshops"
-      ],
-      "poster": "/images/poster/tetratmu.jpg",
-      "lumaLink": ""
-    },
-    {
       "id": 11,
       "clubName": "TMAV",
-      "eventName": "Coming soon",
+      "eventName": "Introduction to Computer Vision",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "3:00PM - 4:00PM",
-      "venue": "SLC",
+      "time": "4:30PM - 7:00PM",
+      "venue": "EPH112, Toronto Metropolitan University",
       "types": [
         "Panels"
       ],
@@ -170,17 +161,18 @@
     },
     {
       "id": 12,
-      "clubName": "FRONTIER",
+      "clubName": "FRONTIER X CANSAT X AEROSPACE COURSE UNION",
       "eventName": "Intro to Satellites Workshop",
       "date": "2026-02-20",
       "endDate": "",
-      "time": "3:00PM - 6:00PM",
-      "venue": "KHE 118",
+      "time": "2:30PM - 6:30PM",
+      "venue": "340 Church Street - Room No. 118, Toronto Metropolitan University",
       "types": [
         "Workshops"
       ],
       "poster": "/images/poster/frontier.jpg",
-      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSeht5bxU9J1hrYi3PLaRIPhQgDfBE9OQIR08f-KIkqCl0ESuw/viewform"
+      "lumaLink": "https://docs.google.com/forms/d/e/1FAIpQLSeht5bxU9J1hrYi3PLaRIPhQgDfBE9OQIR08f-KIkqCl0ESuw/viewform",
+      "description": "Have you ever wondered how satellites actually work?\n\nCanSat, Frontier, and ACU are hosting a two-day Intro to Satellites workshop covering mechanical, electrical, and software basics, plus you'll get to see a CanSat prototype up close, interact with former Co-ops, and get hands-on with an activity as well!\n\n📋 Day 1:\n• Introductory Satellite Workshop featuring TMU CanSat's satellite prototype\n• Panel and Q&A Session with former Engineering Co-ops from the Aerospace Industry\n\n📋 Day 2:\n• Interactive, hands-on activity where you'll apply what you've learned and explore how satellite systems work in practice\n• Learn about CAD, coding, and assembling that goes on behind satellites\n\n📝 Sign Up: https://www.eventbrite.ca/e/from-earth-to-orbit-the-engineering-behind-satellites-workshop-tickets-1982237498719?aff=oddtdtcreator\n\n💻 Preparation:\n• Bring your own laptop and mouse\n• Recommended: Create an Onshape account and install the Arduino IDE ahead of time\n• Instructions: https://docs.google.com/document/d/1wCaO-QSubjolsdIphhc3X4C6iGqSF4D52bYslmhFtkA/edit?usp=sharing\n\n🚀 Free snacks included\n🚀 Any discipline welcome\n🚀 No prior experience needed, just curiosity!\n\nDM us on Instagram if you have any questions!\n@tmu_cansat | @frontier.tmu | @aerocu"
     },
     {
       "id": 13,
@@ -188,13 +180,14 @@
       "eventName": "Closing Ceremony",
       "date": "2026-02-22",
       "endDate": "",
-      "time": "12:30PM - 4:00PM",
-      "venue": "SLC 8TH FLOOR",
+      "time": "1:00PM - 4:00PM",
+      "venue": "341 Yonge Street - 8th Floor, Toronto Metropolitan University",
       "types": [
         "Showcases",
         "Networking"
       ],
-      "poster": "/images/poster/BYTE.jpg",
+      "poster": "/src/assets/images/hero_logo_graphic.png",
+      "posterFit": "contain",
       "googleFormLink": "https://docs.google.com/forms/d/e/1FAIpQLScg6LHrPGdKHyQ0eusKKTgkGBPftimG4zAye6DUwnEK5zH_7g/viewform",
       "description": "🎉 Join us for the TTW Closing Ceremony on the 8th Floor of the Student Learning Centre (SLC) from 12:30 PM – 4:00 PM!\n\nCome celebrate the conclusion of TTW with an afternoon filled with lunch, awards & recognition, an inspiring guest speaker, and networking. This is a special opportunity to reflect on the journey, recognize achievements, and connect with fellow participants one last time.\n\nPlease fill out the RSVP form to confirm your attendance and help us plan for seating, catering, and accessibility needs. We can’t wait to celebrate with you and end TTW on a high note! 🌟"
     }
