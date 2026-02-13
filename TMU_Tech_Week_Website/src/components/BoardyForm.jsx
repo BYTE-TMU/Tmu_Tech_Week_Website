@@ -154,7 +154,7 @@ const BoardyForm = () => {
                                         Boardy
                                     </a>, an
                                     AI superconnector that gets to know you beyond a resume.
-                                    Share your details for a casual chat about your interests—no interview, just conversation—and Boardy will connect you with relevant startup opportunities.
+                                    Share your details for a casual chat about your interests—no interview, just conversation—and Boardy will keep you in mind for relevant startup opportunities.
                                     (FYI Boardy talks to hundreds of cool founders every day).
                                 </p>
                                 <img
@@ -213,7 +213,7 @@ const BoardyForm = () => {
                                         >
                                             <FaPhone className="w-5 h-5 text-ttw-fuchsia shrink-0" />
                                             <p className="text-white font-text text-base">
-                                                Didn't get the call scheduled with Boardy?{' '}
+                                                Didn't get a call from Boardy?{' '}
                                                 <a
                                                     href="https://whatsapp.boardy.ai/tmutechweek"
                                                     target="_blank"

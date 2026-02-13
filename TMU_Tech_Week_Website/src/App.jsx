@@ -21,8 +21,8 @@ function App() {
         <Speakers />
         <Partners />
         <FAQ />
-        <Contact />
         <BoardyForm />
+        <Contact />
       </main>
       <Footer />
       <Analytics />

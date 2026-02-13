@@ -50,7 +50,7 @@ const Partners = () => {
 
   const placeholderPartners = [
     { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
-    { name: 'USSTM', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
+    { name: 'USSTM', tier: 'Title', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
     { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png` },
     { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
     { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
@@ -64,11 +64,13 @@ const Partners = () => {
     { name: 'Ametros Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl' },
   ];
 
+  const titlePartners = placeholderPartners.filter((partner) => partner.tier === 'Title');
   const goldPartners = placeholderPartners.filter((partner) => partner.tier === 'Gold');
   const silverPartners = placeholderPartners.filter((partner) => partner.tier === 'Silver');
-  const otherPartners = placeholderPartners.filter((partner) => !['Gold', 'Silver'].includes(partner.tier));
+  const otherPartners = placeholderPartners.filter((partner) => !['Title', 'Gold', 'Silver'].includes(partner.tier));
 
   const getTierColor = (tier) => {
+    if (tier === 'Title') return 'text-[#E5E4E2]'; // Platinum/white gold color
     if (tier === 'Gold') return 'text-[#D4AF37]';
     if (tier === 'Silver') return 'text-[#C0C0C0]';
     if (tier === 'Bronze') return 'text-[#B87333]';
@@ -146,6 +148,48 @@ const Partners = () => {
         ) : (
           /* Placeholder Partners */
           <div className="space-y-10 md:space-y-14">
+            {/* Title Sponsors */}
+            {titlePartners.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-16">
+                {titlePartners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="group relative p-[2px] rounded-2xl w-full max-w-md transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,255,255,0.35),0_0_24px_rgba(255,255,255,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                  >
+                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-white via-[#F5F5F5] to-white" />
+                    <div className="relative bg-black rounded-2xl px-8 py-12 h-full flex flex-col items-center justify-center text-center">
+                      {partner.logo ? (
+                        <div className={`${partner.logoClass || 'w-40 h-24 rounded-lg'} mb-6 overflow-hidden`}>
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                          <span className="font-headline text-2xl text-white/80">
+                            {partner.name
+                              .split(' ')
+                              .map((word) => word[0])
+                              .join('')
+                              .slice(0, 2)}
+                          </span>
+                        </div>
+                      )}
+                      <p className="font-headline text-2xl md:text-3xl text-white mb-2">
+                        {partner.name}
+                      </p>
+                      <p className={`font-text text-base md:text-lg font-semibold ${getTierColor(partner.tier)}`}>
+                        {partner.tier} Sponsor
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Gold Sponsors */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
               {goldPartners.map((partner) => (
                 <div
