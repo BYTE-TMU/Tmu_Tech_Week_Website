@@ -27,3 +27,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Boardy integration guide (private — do not push)
+partner-integration-guide-callfirst.md

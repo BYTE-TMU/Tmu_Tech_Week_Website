@@ -37,7 +37,6 @@ const COUNTRY_CODES = [
     { code: '+64', label: '🇳🇿 +64', country: 'NZ' },
 ];
 
-const ZAPIER_WEBHOOK_URL = import.meta.env.VITE_ZAPIER_WEBHOOK_URL;
 
 const BoardyForm = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -87,29 +86,31 @@ const BoardyForm = () => {
         setIsSubmitting(true);
 
         try {
-            if (!ZAPIER_WEBHOOK_URL) {
-                throw new Error('Webhook endpoint is not configured.');
-            }
+            // Format phone to E.164: strip non-digits from input, prepend country code
+            const digitsOnly = formData.phone.replace(/\D/g, '');
+            const phoneE164 = `${formData.countryCode}${digitsOnly}`;
 
-            const response = await fetch(ZAPIER_WEBHOOK_URL, {
+            const response = await fetch('/api/boardy', {
                 method: 'POST',
-                mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     name: formData.name,
                     email: formData.email,
-                    phone: `${formData.countryCode} ${formData.phone}`,
+                    phone: phoneE164,
                     linkedin: formData.linkedin,
                 }),
             });
 
-            // With no-cors mode, response.type is 'opaque' and status is 0,
-            // but the request still reaches Zapier successfully.
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Something went wrong. Please try again.');
+            }
+
             setSubmitted(true);
             setFormData({ name: '', email: '', countryCode: '+1', phone: '', linkedin: '', consentCall: false });
         } catch (err) {
             console.error('Form submission error:', err);
-            setError('Something went wrong. Please try again.');
+            setError(err.message || 'Something went wrong. Please try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -200,7 +201,7 @@ const BoardyForm = () => {
                                             transition={{ delay: 0.6, duration: 0.5 }}
                                             className="text-white/70 font-text text-lg text-center max-w-md leading-relaxed"
                                         >
-                                            Boardy will set up a call with you — please check your phone!
+                                            Thank you! Boardy will give you a call now – check your phone.
                                         </motion.p>
 
                                         {/* WhatsApp Fallback */}
@@ -342,7 +343,7 @@ const BoardyForm = () => {
                                                 htmlFor="consentCall"
                                                 className="text-white/60 font-text text-sm leading-relaxed cursor-pointer"
                                             >
-                                                I agree to let Boardy schedule a call with me to discuss startup opportunities.{' '}
+                                                I agree to receiving a call from Boardy to connect me with potential startup opportunities.{' '}
                                                 <span className="text-ttw-fuchsia">•</span>
                                             </label>
                                         </div>
