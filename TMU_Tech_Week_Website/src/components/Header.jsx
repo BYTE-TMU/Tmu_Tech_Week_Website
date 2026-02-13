@@ -13,8 +13,8 @@ const Header = () => {
     { name: 'Speakers', href: '#speakers' },
     { name: 'Partners', href: '#partners' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
     { name: 'Boardy', href: '#boardy-form' },
+    { name: 'Contact', href: '#contact' }
   ];
 
   useEffect(() => {
