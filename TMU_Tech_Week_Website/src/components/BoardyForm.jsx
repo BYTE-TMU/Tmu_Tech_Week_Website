@@ -201,7 +201,7 @@ const BoardyForm = () => {
                                             transition={{ delay: 0.6, duration: 0.5 }}
                                             className="text-white/70 font-text text-lg text-center max-w-md leading-relaxed"
                                         >
-                                            Thank you! Boardy will give you a call now – check your phone.
+                                            Boardy will give you a call now – check your phone.
                                         </motion.p>
 
                                         {/* WhatsApp Fallback */}
