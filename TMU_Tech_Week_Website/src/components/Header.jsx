@@ -14,6 +14,7 @@ const Header = () => {
     { name: 'Partners', href: '#partners' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Boardy', href: '#boardy-form' },
   ];
 
   useEffect(() => {

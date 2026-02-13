@@ -6,6 +6,7 @@ import Speakers from './components/Speakers'
 import Partners from './components/Partners'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
+import BoardyForm from './components/BoardyForm'
 import Footer from './components/Footer'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Partners />
         <FAQ />
         <Contact />
+        <BoardyForm />
       </main>
       <Footer />
     </div>
