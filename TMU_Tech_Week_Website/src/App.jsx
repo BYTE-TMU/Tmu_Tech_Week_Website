@@ -8,6 +8,7 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import BoardyForm from './components/BoardyForm'
 import Footer from './components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <BoardyForm />
       </main>
       <Footer />
+      <Analytics />
     </div>
   )
 }
