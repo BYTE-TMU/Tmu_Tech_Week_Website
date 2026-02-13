@@ -302,7 +302,7 @@ const BoardyForm = () => {
                                                         value={formData.phone}
                                                         onChange={handleChange}
                                                         className={`${inputClasses} flex-1`}
-                                                        placeholder="555-0123"
+                                                        placeholder="123-456-7890"
                                                     />
                                                 </div>
                                             </div>
