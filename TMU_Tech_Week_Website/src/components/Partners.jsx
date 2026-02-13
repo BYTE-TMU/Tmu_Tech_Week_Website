@@ -50,6 +50,7 @@ const Partners = () => {
 
   const placeholderPartners = [
     { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
+    { name: 'USSTM', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
     { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png` },
     { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
     { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
