@@ -111,7 +111,7 @@ const Hero = () => {
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}
-        <p className="absolute top-[55%] font-text text-4xl md:text-2.5xl lg:text-3xl text-white">
+        <p className="absolute top-[33%] font-text text-2xl md:text-xl lg:text-2xl text-white">
           Do you?
         </p>
       </div>
