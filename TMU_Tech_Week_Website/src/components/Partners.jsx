@@ -25,7 +25,7 @@ const Partners = () => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.45 }
+      { threshold: 0.1 }
     );
 
     if (sectionRef.current) {
@@ -50,10 +50,12 @@ const Partners = () => {
 
   const placeholderPartners = [
     { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
-    { name: 'USSTM', tier: 'Title', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
+    { name: "Toronto Metropolitan Students' Union", tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMSU.jpg`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Undergraduate Science Society of TMU', tier: 'Title', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
     { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png` },
     { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
     { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
+    { name: 'AI Collective', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/aicollective.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl' },
     { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
@@ -61,18 +63,24 @@ const Partners = () => {
     { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
     { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl' },
     { name: 'Zone Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
-    { name: 'Ametros Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Ametros Learning', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'ReShape', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/reshape.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: '18feet', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/18feet.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'Matcha Moments', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/matchamoments.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'MetPack', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/metpack.png`, logoClass: 'w-32 h-20 rounded-xl' },
   ];
 
   const titlePartners = placeholderPartners.filter((partner) => partner.tier === 'Title');
   const goldPartners = placeholderPartners.filter((partner) => partner.tier === 'Gold');
   const silverPartners = placeholderPartners.filter((partner) => partner.tier === 'Silver');
-  const otherPartners = placeholderPartners.filter((partner) => !['Title', 'Gold', 'Silver'].includes(partner.tier));
+  const bronzePlusPartners = placeholderPartners.filter((partner) => partner.tier === 'Bronze+');
+  const bronzePartners = placeholderPartners.filter((partner) => partner.tier === 'Bronze');
 
   const getTierColor = (tier) => {
     if (tier === 'Title') return 'text-[#E5E4E2]'; // Platinum/white gold color
     if (tier === 'Gold') return 'text-[#D4AF37]';
     if (tier === 'Silver') return 'text-[#C0C0C0]';
+    if (tier === 'Bronze+') return 'text-[#CD7F32]'; // Brighter bronze
     if (tier === 'Bronze') return 'text-[#B87333]';
     return 'text-white/70';
   };
@@ -228,7 +236,8 @@ const Partners = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {/* Silver Sponsors - 2x2 Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-8 max-w-4xl mx-auto">
               {silverPartners.map((partner) => (
                 <div
                   key={partner.name}
@@ -266,8 +275,48 @@ const Partners = () => {
               ))}
             </div>
 
+            {/* Bronze+ Sponsors */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {otherPartners.map((partner) => (
+              {bronzePlusPartners.map((partner) => (
+                <div
+                  key={partner.name}
+                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                >
+                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                    {partner.logo ? (
+                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                        <img
+                          src={partner.logo}
+                          alt={partner.name}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                        <span className="font-headline text-lg text-white/80">
+                          {partner.name
+                            .split(' ')
+                            .map((word) => word[0])
+                            .join('')
+                            .slice(0, 2)}
+                        </span>
+                      </div>
+                    )}
+                    <p className="font-headline text-xl md:text-2xl text-white">
+                      {partner.name}
+                    </p>
+                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                      {partner.tier}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bronze Sponsors */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {bronzePartners.map((partner) => (
                 <div
                   key={partner.name}
                   className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
