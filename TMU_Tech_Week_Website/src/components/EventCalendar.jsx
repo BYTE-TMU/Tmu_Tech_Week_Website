@@ -450,8 +450,8 @@ const EventCalendar = () => {
             )}
 
             {/* Fixed Footer - Register Button */}
-            <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
-              {(selectedEvent.googleFormLink || selectedEvent.lumaLink) ? (
+            {(selectedEvent.googleFormLink || selectedEvent.lumaLink) && (
+              <div className="p-6 md:p-8 pt-4 flex-shrink-0 border-t border-white/10">
                 <a
                   href={selectedEvent.googleFormLink || selectedEvent.lumaLink}
                   target="_blank"
@@ -460,12 +460,8 @@ const EventCalendar = () => {
                 >
                   Register Now
                 </a>
-              ) : (
-                <div className="w-full px-6 py-3 rounded-lg bg-white/10 text-white/80 font-text font-semibold text-center">
-                  Registration coming soon
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       )}

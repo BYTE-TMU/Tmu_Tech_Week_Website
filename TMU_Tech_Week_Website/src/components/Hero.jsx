@@ -56,7 +56,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-[180vh] md:h-[200vh] bg-black flex flex-col items-center justify-between px-4 py-8 overflow-hidden">
+    <section className="relative min-h-[200vh] md:min-h-[220vh] bg-black flex flex-col items-center justify-between px-4 py-8 pb-24 overflow-hidden">
       <div className="absolute top-[-29%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[200vw] h-[200vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-60 md:opacity-40 rotate-180">
         <img
           src={`${import.meta.env.BASE_URL}images/circular-gradient.png`}
@@ -103,11 +103,11 @@ const Hero = () => {
           }`}
       >
         {/* Star image */}
-        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[28rem] md:min-h-80">
+        <div className="w-full max-w-full md:max-w-7xl flex justify-center px-5 min-h-[24rem] md:min-h-72">
           <img
             src={`${import.meta.env.BASE_URL}images/star-beam.png`}
             alt=""
-            className="w-full h-full object-contain opacity-80 scale-[1.4] md:scale-100"
+            className="w-full h-full object-contain opacity-80 scale-[1.3] md:scale-95"
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}
@@ -119,7 +119,7 @@ const Hero = () => {
       {/* Dates and Location */}
       <div
         ref={datesRef}
-        className={`relative z-10 flex flex-col items-center gap-2 text-center mt-8 md:mt-0 mb-8 md:mb-0 transition-all duration-1000 ease-out ${isDatesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center gap-2 text-center mt-6 md:mt-4 mb-8 md:mb-8 transition-all duration-1000 ease-out ${isDatesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         <p className="font-text text-4xl md:text-3xl lg:text-4xl text-white font-medium">
@@ -134,7 +134,7 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-4 md:mt-1 mb-8 md:mb-8 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}

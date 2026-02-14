@@ -49,25 +49,25 @@ const Partners = () => {
   ];
 
   const placeholderPartners = [
-    { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
+    { name: 'Faculty of Science', tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png`, link: 'https://www.torontomu.ca/science/' },
     { name: "Toronto Metropolitan Students' Union", tier: 'Gold', logo: `${import.meta.env.BASE_URL}images/TMSU.jpg`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: 'Undergraduate Science Society of TMU', tier: 'Title', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg' },
-    { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png` },
+    { name: 'Undergraduate Science Society of TMU', tier: 'Title', logo: `${import.meta.env.BASE_URL}images/usstm logo.png`, logoClass: 'w-34 h-24 rounded-lg', link: 'https://usstm.ca/' },
+    { name: 'Slalom', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/slalom-logo-blue.png`, link: 'https://www.slalom.com/ca/en' },
     { name: 'Shopify', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/shopify.svg` },
     { name: 'Backboard.ai', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/backboard_io_logo.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'AI Collective', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/aicollective.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
-    { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
-    { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg`, logoClass: 'w-28 h-16 rounded-xl', link: 'https://www.instagram.com/dmzhq/' },
+    { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://nodalli.com' },
     { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'Poulet Rouge', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Poulet Rouge.png`, logoClass: 'w-36 h-24' },
-    { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24' },
-    { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: 'Zone Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png` },
-    { name: 'Ametros Learning', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: 'ReShape', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/reshape.png`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: '18feet', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/18feet.png`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: 'Matcha Moments', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/matchamoments.png`, logoClass: 'w-32 h-20 rounded-xl' },
-    { name: 'MetPack', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/metpack.png`, logoClass: 'w-32 h-20 rounded-xl' },
+    { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24', link: 'https://beaverkeys.ca' },
+    { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.instagram.com/avznailz' },
+    { name: 'Zone Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png`, link: 'https://www.torontomu.ca/zone-learning/' },
+    { name: 'Ametros Learning', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.ametroslearning.com/' },
+    { name: 'ReShape', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/reshape.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.reshapeapp.ai' },
+    { name: '18feet', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/18feet.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.18feet.ca' },
+    { name: 'Matcha Moments', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/matchamoments.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.popuppearl.ca/matchamoments' },
+    { name: 'MetPack', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/metpack.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.tmumetpack.com/' },
   ];
 
   const titlePartners = placeholderPartners.filter((partner) => partner.tier === 'Title');
@@ -159,15 +159,71 @@ const Partners = () => {
             {/* Title Sponsors */}
             {titlePartners.length > 0 && (
               <div className="flex flex-wrap justify-center gap-6 md:gap-8 mb-16">
-                {titlePartners.map((partner) => (
-                  <div
-                    key={partner.name}
-                    className="group relative p-[2px] rounded-2xl w-full max-w-md transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,255,255,0.35),0_0_24px_rgba(255,255,255,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
-                  >
-                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-white via-[#F5F5F5] to-white" />
-                    <div className="relative bg-black rounded-2xl px-8 py-12 h-full flex flex-col items-center justify-center text-center">
+                {titlePartners.map((partner) => {
+                  const CardContent = (
+                    <>
+                      <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-white via-[#F5F5F5] to-white" />
+                      <div className="relative bg-black rounded-2xl px-8 py-12 h-full flex flex-col items-center justify-center text-center">
+                        {partner.logo ? (
+                          <div className={`${partner.logoClass || 'w-40 h-24 rounded-lg'} mb-6 overflow-hidden`}>
+                            <img
+                              src={partner.logo}
+                              alt={partner.name}
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-6">
+                            <span className="font-headline text-2xl text-white/80">
+                              {partner.name
+                                .split(' ')
+                                .map((word) => word[0])
+                                .join('')
+                                .slice(0, 2)}
+                            </span>
+                          </div>
+                        )}
+                        <p className="font-headline text-2xl md:text-3xl text-white mb-2">
+                          {partner.name}
+                        </p>
+                        <p className={`font-text text-base md:text-lg font-semibold ${getTierColor(partner.tier)}`}>
+                          {partner.tier} Sponsor
+                        </p>
+                      </div>
+                    </>
+                  );
+                  
+                  return partner.link ? (
+                    <a
+                      key={partner.name}
+                      href={partner.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative p-[2px] rounded-2xl w-full max-w-md transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,255,255,0.35),0_0_24px_rgba(255,255,255,0.25),0_2px_0_rgba(255,255,255,0.04)_inset] cursor-pointer"
+                    >
+                      {CardContent}
+                    </a>
+                  ) : (
+                    <div
+                      key={partner.name}
+                      className="group relative p-[2px] rounded-2xl w-full max-w-md transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,255,255,0.35),0_0_24px_rgba(255,255,255,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                    >
+                      {CardContent}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+
+            {/* Gold Sponsors */}
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+              {goldPartners.map((partner) => {
+                const CardContent = (
+                  <>
+                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                    <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
                       {partner.logo ? (
-                        <div className={`${partner.logoClass || 'w-40 h-24 rounded-lg'} mb-6 overflow-hidden`}>
+                        <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
                           <img
                             src={partner.logo}
                             alt={partner.name}
@@ -175,8 +231,8 @@ const Partners = () => {
                           />
                         </div>
                       ) : (
-                        <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center mb-6">
-                          <span className="font-headline text-2xl text-white/80">
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                          <span className="font-headline text-lg text-white/80">
                             {partner.name
                               .split(' ')
                               .map((word) => word[0])
@@ -185,172 +241,206 @@ const Partners = () => {
                           </span>
                         </div>
                       )}
-                      <p className="font-headline text-2xl md:text-3xl text-white mb-2">
+                      <p className="font-headline text-xl md:text-2xl text-white">
                         {partner.name}
                       </p>
-                      <p className={`font-text text-base md:text-lg font-semibold ${getTierColor(partner.tier)}`}>
-                        {partner.tier} Sponsor
+                      <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                        {partner.tier}
                       </p>
                     </div>
+                  </>
+                );
+                
+                return partner.link ? (
+                  <a
+                    key={partner.name}
+                    href={partner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset] cursor-pointer"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div
+                    key={partner.name}
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                  >
+                    {CardContent}
                   </div>
-                ))}
-              </div>
-            )}
-
-            {/* Gold Sponsors */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {goldPartners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
-                >
-                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
-                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
-                    {partner.logo ? (
-                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
-                        <span className="font-headline text-lg text-white/80">
-                          {partner.name
-                            .split(' ')
-                            .map((word) => word[0])
-                            .join('')
-                            .slice(0, 2)}
-                        </span>
-                      </div>
-                    )}
-                    <p className="font-headline text-xl md:text-2xl text-white">
-                      {partner.name}
-                    </p>
-                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
-                      {partner.tier}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Silver Sponsors - 2x2 Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-8 max-w-4xl mx-auto">
-              {silverPartners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
-                >
-                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
-                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
-                    {partner.logo ? (
-                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
-                        <span className="font-headline text-lg text-white/80">
-                          {partner.name
-                            .split(' ')
-                            .map((word) => word[0])
-                            .join('')
-                            .slice(0, 2)}
-                        </span>
-                      </div>
-                    )}
-                    <p className="font-headline text-xl md:text-2xl text-white">
-                      {partner.name}
-                    </p>
-                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
-                      {partner.tier}
-                    </p>
+              {silverPartners.map((partner) => {
+                const CardContent = (
+                  <>
+                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                    <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                      {partner.logo ? (
+                        <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                          <span className="font-headline text-lg text-white/80">
+                            {partner.name
+                              .split(' ')
+                              .map((word) => word[0])
+                              .join('')
+                              .slice(0, 2)}
+                          </span>
+                        </div>
+                      )}
+                      <p className="font-headline text-xl md:text-2xl text-white">
+                        {partner.name}
+                      </p>
+                      <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                        {partner.tier}
+                      </p>
+                    </div>
+                  </>
+                );
+                
+                return partner.link ? (
+                  <a
+                    key={partner.name}
+                    href={partner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset] cursor-pointer"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div
+                    key={partner.name}
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                  >
+                    {CardContent}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Bronze+ Sponsors */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {bronzePlusPartners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
-                >
-                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
-                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
-                    {partner.logo ? (
-                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
-                        <span className="font-headline text-lg text-white/80">
-                          {partner.name
-                            .split(' ')
-                            .map((word) => word[0])
-                            .join('')
-                            .slice(0, 2)}
-                        </span>
-                      </div>
-                    )}
-                    <p className="font-headline text-xl md:text-2xl text-white">
-                      {partner.name}
-                    </p>
-                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
-                      {partner.tier}
-                    </p>
+              {bronzePlusPartners.map((partner) => {
+                const CardContent = (
+                  <>
+                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                    <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                      {partner.logo ? (
+                        <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                          <span className="font-headline text-lg text-white/80">
+                            {partner.name
+                              .split(' ')
+                              .map((word) => word[0])
+                              .join('')
+                              .slice(0, 2)}
+                          </span>
+                        </div>
+                      )}
+                      <p className="font-headline text-xl md:text-2xl text-white">
+                        {partner.name}
+                      </p>
+                      <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                        {partner.tier}
+                      </p>
+                    </div>
+                  </>
+                );
+                
+                return partner.link ? (
+                  <a
+                    key={partner.name}
+                    href={partner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset] cursor-pointer"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div
+                    key={partner.name}
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                  >
+                    {CardContent}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Bronze Sponsors */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-8">
-              {bronzePartners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
-                >
-                  <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
-                  <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
-                    {partner.logo ? (
-                      <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
-                        <img
-                          src={partner.logo}
-                          alt={partner.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-                    ) : (
-                      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
-                        <span className="font-headline text-lg text-white/80">
-                          {partner.name
-                            .split(' ')
-                            .map((word) => word[0])
-                            .join('')
-                            .slice(0, 2)}
-                        </span>
-                      </div>
-                    )}
-                    <p className="font-headline text-xl md:text-2xl text-white">
-                      {partner.name}
-                    </p>
-                    <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
-                      {partner.tier}
-                    </p>
+              {bronzePartners.map((partner) => {
+                const CardContent = (
+                  <>
+                    <div className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-r from-ttw-orange/70 via-ttw-fuchsia/70 to-ttw-blue/70" />
+                    <div className="relative bg-black rounded-2xl px-6 py-8 h-full flex flex-col items-center justify-center text-center">
+                      {partner.logo ? (
+                        <div className={`${partner.logoClass || 'w-28 h-16 rounded-lg'} mb-4 overflow-hidden`}>
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                          <span className="font-headline text-lg text-white/80">
+                            {partner.name
+                              .split(' ')
+                              .map((word) => word[0])
+                              .join('')
+                              .slice(0, 2)}
+                          </span>
+                        </div>
+                      )}
+                      <p className="font-headline text-xl md:text-2xl text-white">
+                        {partner.name}
+                      </p>
+                      <p className={`font-text text-sm md:text-base mt-2 ${getTierColor(partner.tier)}`}>
+                        {partner.tier}
+                      </p>
+                    </div>
+                  </>
+                );
+                
+                return partner.link ? (
+                  <a
+                    key={partner.name}
+                    href={partner.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset] cursor-pointer"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div
+                    key={partner.name}
+                    className="group relative p-[2px] rounded-2xl w-full max-w-xs transition-shadow duration-200 hover:shadow-[0_12px_28px_rgba(255,122,80,0.35),0_0_24px_rgba(217,70,239,0.25),0_2px_0_rgba(255,255,255,0.04)_inset]"
+                  >
+                    {CardContent}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         )}
