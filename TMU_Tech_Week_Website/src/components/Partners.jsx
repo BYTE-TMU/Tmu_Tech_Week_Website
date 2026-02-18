@@ -58,7 +58,6 @@ const Partners = () => {
     { name: 'AI Collective', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/aicollective.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'DMZ', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/DMZ.jpg`, logoClass: 'w-28 h-16 rounded-xl', link: 'https://www.instagram.com/dmzhq/' },
     { name: 'Nodalli', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/nodalli.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://nodalli.com' },
-    { name: 'Career and Co-op Office', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/career and co-op TMU.jpg`, logoClass: 'w-28 h-16 rounded-xl' },
     { name: 'Poulet Rouge', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Poulet Rouge.png`, logoClass: 'w-36 h-24' },
     { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24', link: 'https://beaverkeys.ca' },
     { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.instagram.com/avznailz' },
@@ -67,6 +66,7 @@ const Partners = () => {
     { name: 'ReShape', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/reshape.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.reshapeapp.ai' },
     { name: '18feet', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/18feet.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.18feet.ca' },
     { name: 'Matcha Moments', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/matchamoments.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.popuppearl.ca/matchamoments' },
+    { name: 'Meex', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/meex_logo.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://meex.co/' },
     { name: 'MetPack', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/metpack.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.tmumetpack.com/' },
   ];
 
@@ -330,7 +330,7 @@ const Partners = () => {
             </div>
 
             {/* Bronze+ Sponsors */}
-            <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-8 max-w-4xl mx-auto">
               {bronzePlusPartners.map((partner) => {
                 const CardContent = (
                   <>
