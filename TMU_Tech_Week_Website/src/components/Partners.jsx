@@ -62,7 +62,7 @@ const Partners = () => {
     { name: 'BeaverKeys', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/BeaverKey.jpg`, logoClass: 'w-36 h-24', link: 'https://beaverkeys.ca' },
     { name: 'Avznailz', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/Avz_nails.jpeg`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.instagram.com/avznailz' },
     { name: 'Zone Learning', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/TMU_logo.png`, link: 'https://www.torontomu.ca/zone-learning/' },
-    { name: 'Ametros Learning', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.ametroslearning.com/' },
+    { name: 'Ametros Learning', tier: 'Silver', logo: `${import.meta.env.BASE_URL}images/Ametros-Primary_Colour_Dark - James White.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.ametroslearning.com/' },
     { name: 'ReShape', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/reshape.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.reshapeapp.ai' },
     { name: '18feet', tier: 'Bronze', logo: `${import.meta.env.BASE_URL}images/18feet.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.18feet.ca' },
     { name: 'Matcha Moments', tier: 'Bronze+', logo: `${import.meta.env.BASE_URL}images/matchamoments.png`, logoClass: 'w-32 h-20 rounded-xl', link: 'https://www.popuppearl.ca/matchamoments' },
@@ -192,7 +192,7 @@ const Partners = () => {
                       </div>
                     </>
                   );
-                  
+
                   return partner.link ? (
                     <a
                       key={partner.name}
@@ -250,7 +250,7 @@ const Partners = () => {
                     </div>
                   </>
                 );
-                
+
                 return partner.link ? (
                   <a
                     key={partner.name}
@@ -273,7 +273,7 @@ const Partners = () => {
             </div>
 
             {/* Silver Sponsors - 2x2 Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-6 md:gap-8 max-w-5xl mx-auto">
               {silverPartners.map((partner) => {
                 const CardContent = (
                   <>
@@ -307,7 +307,7 @@ const Partners = () => {
                     </div>
                   </>
                 );
-                
+
                 return partner.link ? (
                   <a
                     key={partner.name}
@@ -330,7 +330,7 @@ const Partners = () => {
             </div>
 
             {/* Bronze+ Sponsors */}
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-6 md:gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 md:gap-8 max-w-5xl mx-auto">
               {bronzePlusPartners.map((partner) => {
                 const CardContent = (
                   <>
@@ -364,7 +364,7 @@ const Partners = () => {
                     </div>
                   </>
                 );
-                
+
                 return partner.link ? (
                   <a
                     key={partner.name}
@@ -421,7 +421,7 @@ const Partners = () => {
                     </div>
                   </>
                 );
-                
+
                 return partner.link ? (
                   <a
                     key={partner.name}
