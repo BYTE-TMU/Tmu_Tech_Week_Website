@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,36 +49,40 @@ const Contact = () => {
         className={`relative z-10 flex flex-col items-center justify-center min-h-screen px-6 md:px-12 py-20 text-center transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'
           }`}
       >
-        <h2 className="text-2xl md:text-5xl font-bold text-white mb-8">
-          Let's connect.
+        <h2 className="text-2xl md:text-5xl font-bold font-headline text-white mb-4 md:mb-8">
+          Stay in the loop.
         </h2>
 
-        <p className="max-w-2xl text-lg md:text-xl text-white/70 leading-relaxed mb-12">
-          Have a question, an idea, or want to get involved with TMU Tech Week? Wed love to hear from you. Whether you're a <span className="font-bold text-white">student</span>, <span className="font-bold text-white">organization</span>, or <span className="font-bold text-white">industry partner</span>, this is the place to start.
+        <p className="max-w-2xl text-lg md:text-xl font-text text-white/70 leading-relaxed mb-8 md:mb-12">
+          TMU Tech Week is just the beginning. Follow <span className="font-bold text-white">BYTE</span> to stay updated on upcoming events, workshops, hackathons, and more happening across campus.
         </p>
 
-        {/* Email Link */}
-        <a
-          href="mailto:tmutechweek@gmail.com"
-          className="inline-flex items-center gap-2 text-white hover:text-white transition-colors group relative text-lg md:text-xl"
-        >
-          <span className="relative">
-            tmutechweek@gmail.com
-            {/* Gradient underline */}
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-ttw-blue via-ttw-fuchsia to-ttw-orange transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </span>
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+        {/* Social Media Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-14">
+          <a
+            href="https://www.instagram.com/tmubyte/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white font-text font-semibold text-base md:text-lg hover:shadow-lg hover:shadow-[#E1306C]/30 hover:scale-[1.03] transition-all duration-300"
           >
-            <path d="M7 17L17 7M17 7H7M17 7V17" />
-          </svg>
-        </a>
+            <FaInstagram className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform duration-300" />
+            Follow on Instagram
+          </a>
+
+          <a
+            href="https://www.linkedin.com/company/tmu-byte/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-[#0A66C2] text-white font-text font-semibold text-base md:text-lg hover:shadow-lg hover:shadow-[#0A66C2]/30 hover:scale-[1.03] transition-all duration-300"
+          >
+            <FaLinkedinIn className="w-5 h-5 md:w-6 md:h-6 group-hover:rotate-12 transition-transform duration-300" />
+            Connect on LinkedIn
+          </a>
+        </div>
+
+        {/* Divider */}
+        <div className="w-16 h-px bg-white/20 mb-6 md:mb-8"></div>
+
       </div>
     </section>
   );

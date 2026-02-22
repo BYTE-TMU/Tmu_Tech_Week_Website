@@ -1,10 +1,10 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import EventCalendar from './components/EventCalendar'
+import ImpactReport from './components/ImpactReport'
 import Speakers from './components/Speakers'
 import Partners from './components/Partners'
-import FAQ from './components/FAQ'
+// import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import BoardyForm from './components/BoardyForm'
 import Footer from './components/Footer'
@@ -17,10 +17,10 @@ function App() {
       <main>
         <Hero />
         <About />
-        <EventCalendar />
+        <ImpactReport />
         <Speakers />
         <Partners />
-        <FAQ />
+        {/* <FAQ /> */}
         <BoardyForm />
         <Contact />
       </main>
