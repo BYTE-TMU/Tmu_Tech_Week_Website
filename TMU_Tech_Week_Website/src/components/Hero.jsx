@@ -133,11 +133,11 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* Calendar Button - Rounded rectangle with gradient border */}
+      {/* CTA Button - Rounded rectangle with gradient border */}
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-20 py-6 md:px-40 md:py-8 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-20 py-5 sm:px-28 sm:py-6 md:px-40 md:py-8 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}
@@ -145,8 +145,8 @@ const Hero = () => {
         {/* Gradient border */}
         <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 transition-opacity duration-300"></div>
         {/* Inner black rectangle */}
-        <div className="absolute inset-[2px] rounded-lg bg-black flex items-center justify-center">
-          <span className="font-headline text-white text-2xl md:text-2xl lg:text-3xl font-semibold whitespace-nowrap">
+        <div className="absolute inset-[2.5px] rounded-lg bg-black flex items-center justify-center px-8 py-4 md:px-0 md:py-0">
+          <span className="font-headline text-white text-base sm:text-lg md:text-2xl lg:text-2xl font-semibold whitespace-nowrap">
             View the Impact Report
           </span>
         </div>

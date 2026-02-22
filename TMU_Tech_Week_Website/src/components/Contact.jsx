@@ -60,7 +60,7 @@ const Contact = () => {
         {/* Social Media Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-10 md:mb-14">
           <a
-            href="https://www.instagram.com/tmubyte/"
+            href="https://www.instagram.com/tmu.byte/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#833AB4] via-[#E1306C] to-[#F77737] text-white font-text font-semibold text-base md:text-lg hover:shadow-lg hover:shadow-[#E1306C]/30 hover:scale-[1.03] transition-all duration-300"
@@ -70,7 +70,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/company/tmu-byte/"
+            href="https://www.linkedin.com/company/buildyourtechnicalexperience/posts/?feedView=all"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-xl bg-[#0A66C2] text-white font-text font-semibold text-base md:text-lg hover:shadow-lg hover:shadow-[#0A66C2]/30 hover:scale-[1.03] transition-all duration-300"
