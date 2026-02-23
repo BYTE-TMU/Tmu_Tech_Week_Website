@@ -56,7 +56,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[200vh] md:min-h-[220vh] bg-black flex flex-col items-center justify-between px-4 py-8 pb-24 overflow-hidden">
+    <section className="relative min-h-screen md:min-h-[220vh] bg-black flex flex-col items-center justify-between px-4 py-8 pb-12 md:pb-24 overflow-hidden">
       <div className="absolute top-[-29%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[200vw] h-[200vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-60 md:opacity-40 rotate-180">
         <img
           src={`${import.meta.env.BASE_URL}images/circular-gradient.png`}
@@ -99,7 +99,7 @@ const Hero = () => {
       {/* Star Beam Section with "Do you?" inside */}
       <div
         ref={starRef}
-        className={`relative z-10 flex flex-col items-center mt-4 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center mt-24 md:mt-4 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Star image */}
@@ -111,7 +111,7 @@ const Hero = () => {
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}
-        <p className="absolute top-[32%] md:top-[55%] font-text text-xl md:text-3xl lg:text-4xl text-white">
+        <p className="absolute top-[32%] md:top-[55%] font-text text-2xl md:text-3xl lg:text-4xl text-white">
           Do you?
         </p>
       </div>
@@ -123,28 +123,31 @@ const Hero = () => {
           }`}
       >
         <p className="font-text text-4xl md:text-3xl lg:text-4xl text-white font-medium">
-          February 15-22, 2026
+          February 15–22, 2026
         </p>
         <p className="font-text text-xl md:text-xl lg:text-2xl text-white/70">
           Toronto Metropolitan University
         </p>
+        <p className="font-text text-base md:text-lg text-ttw-fuchsia mt-2">
+          The week has wrapped — here's what happened.
+        </p>
       </div>
 
-      {/* Calendar Button - Rounded rectangle with gradient border */}
+      {/* CTA Button - Rounded rectangle with gradient border */}
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-32 py-8 md:px-32 md:py-6 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-28 py-5 sm:px-28 sm:py-6 md:px-40 md:py-8 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}
-        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-40 blur-xl group-hover:opacity-70 group-hover:blur-2xl transition-all duration-300"></div>
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-40 blur-xl group-hover:opacity-70 group-hover:blur-2xl transition-all duration-300"></div>
         {/* Gradient border */}
-        <div className="absolute inset-0 rounded-md bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-ttw-orange via-ttw-fuchsia to-ttw-blue opacity-100 transition-opacity duration-300"></div>
         {/* Inner black rectangle */}
-        <div className="absolute inset-[1.5px] rounded-md bg-black flex items-center justify-center">
-          <span className="font-text text-white text-2xl md:text-xl lg:text-2xl whitespace-nowrap">
-            View the Calendar
+        <div className="absolute inset-[2.5px] rounded-lg bg-black flex items-center justify-center px-8 py-4 md:px-0 md:py-0">
+          <span className="font-headline text-white text-base sm:text-lg md:text-2xl lg:text-2xl font-semibold whitespace-nowrap">
+            View the Impact Report
           </span>
         </div>
       </a>

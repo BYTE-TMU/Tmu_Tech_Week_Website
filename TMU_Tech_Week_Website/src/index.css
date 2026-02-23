@@ -88,6 +88,19 @@
   }
 }
 
+@keyframes scrollClubs {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-scroll-clubs {
+  animation: scrollClubs 20s linear infinite;
+}
+
 @keyframes fadeSlideIn {
   0% {
     opacity: 0;

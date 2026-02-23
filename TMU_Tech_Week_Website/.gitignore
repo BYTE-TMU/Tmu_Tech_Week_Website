@@ -31,3 +31,10 @@ dist-ssr
 
 # Boardy integration guide (private — do not push)
 partner-integration-guide-callfirst.md
+
+# Large video/media files - host separately or use Git LFS
+*.MOV
+*.mov
+*.mp4
+public/images/collage/Impact report images/
+public/images/collage/real/*.mp4

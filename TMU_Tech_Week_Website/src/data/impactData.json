@@ -1,0 +1,102 @@
+{
+    "headline": "TMU Tech Week 2026 — By the Numbers",
+    "stats": [
+        {
+            "value": "12",
+            "label": "Events Hosted",
+            "icon": "calendar"
+        },
+        {
+            "value": "10+",
+            "label": "Student Clubs",
+            "icon": "users"
+        },
+        {
+            "value": "750+",
+            "label": "Attendees",
+            "icon": "trending"
+        },
+        {
+            "value": "8",
+            "label": "Days of Innovation",
+            "icon": "zap"
+        }
+    ],
+    "highlights": [
+        {
+            "title": "Opening Ceremony",
+            "description": "Keynote, club showcases, and networking with industry reps from Microsoft, Wealthsimple, IBM, BMO, and more.",
+            "icon": "star"
+        },
+        {
+            "title": "Hands-On Workshops",
+            "description": "From Python fundamentals to AWS Lambda, CAD design, and satellite engineering — students built real skills.",
+            "icon": "code"
+        },
+        {
+            "title": "Hackathons & Competitions",
+            "description": "Code Blitz, IBM Z Mini-Hackathon, and Open Build Toronto with Cognition powered innovation across campus.",
+            "icon": "trophy"
+        },
+        {
+            "title": "Industry Connections",
+            "description": "Office tours at Slalom, resume roasts with hiring managers, and co-op blueprint panels brought real career value.",
+            "icon": "briefcase"
+        }
+    ],
+    "collageImages": [
+        "/images/collage/real/photo1.jpg",
+        "/images/collage/real/photo2.jpg",
+        "/images/collage/real/photo3.jpg",
+        "/images/collage/real/photo4.jpg",
+        "/images/collage/real/event_video.mp4",
+        "/images/collage/real/event_video2.mp4"
+    ],
+    "clubs": [
+        {
+            "name": "BYTE",
+            "logo": "/images/poster/BYTE.jpg"
+        },
+        {
+            "name": "STEM Fellowship",
+            "logo": "/images/poster/STEMfellowship.jpg"
+        },
+        {
+            "name": "AIMLA",
+            "logo": "/images/poster/aimla.jpg"
+        },
+        {
+            "name": "IBM Z",
+            "logo": "/images/poster/ibm_z.jpg"
+        },
+        {
+            "name": "AWS Cloud Club",
+            "logo": "/images/poster/aws (1).png"
+        },
+        {
+            "name": "Take-Off",
+            "logo": "/images/poster/takeoff.jpg"
+        },
+        {
+            "name": "Frontier x CanSat x ACU",
+            "logo": "/images/poster/frontier.jpg"
+        },
+        {
+            "name": "AI Collective",
+            "logo": "/images/aicollective.jpg"
+        },
+        {
+            "name": "ECEC",
+            "logo": "/images/ECEC.jpg"
+        },
+        {
+            "name": "TMAV",
+            "logo": "/images/poster/TMAV_Logo_White.png"
+        },
+        {
+            "name": "TMU Blueprint",
+            "logo": "/images/poster/tmu_blueprint.jpg"
+        }
+    ],
+    "closingMessage": "Thank you to every student, club, partner, and speaker who made TMU Tech Week 2026 unforgettable. See you next year!"
+}

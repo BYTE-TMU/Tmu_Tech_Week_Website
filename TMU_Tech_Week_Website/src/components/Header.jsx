@@ -9,10 +9,9 @@ const Header = () => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
-    { name: 'Calendar', href: '#calendar' },
+    { name: 'Impact', href: '#calendar' },
     { name: 'Speakers', href: '#speakers' },
     { name: 'Partners', href: '#partners' },
-    { name: 'FAQ', href: '#faq' },
     { name: 'Boardy', href: '#boardy-form' },
     { name: 'Contact', href: '#contact' }
   ];
