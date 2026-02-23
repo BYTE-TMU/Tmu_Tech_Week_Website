@@ -56,7 +56,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-[130vh] md:min-h-[220vh] bg-black flex flex-col items-center justify-between px-4 py-8 pb-12 md:pb-24 overflow-hidden">
+    <section className="relative min-h-screen md:min-h-[220vh] bg-black flex flex-col items-center justify-between px-4 py-8 pb-12 md:pb-24 overflow-hidden">
       <div className="absolute top-[-29%] md:top-[-43%] left-[49%] -translate-x-1/2 w-[200vw] h-[200vw] md:w-[100vw] md:h-[100vw] max-w-[1400px] max-h-[1400px] pointer-events-none opacity-60 md:opacity-40 rotate-180">
         <img
           src={`${import.meta.env.BASE_URL}images/circular-gradient.png`}
@@ -99,7 +99,7 @@ const Hero = () => {
       {/* Star Beam Section with "Do you?" inside */}
       <div
         ref={starRef}
-        className={`relative z-10 flex flex-col items-center mt-4 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 flex flex-col items-center mt-24 md:mt-4 transition-all duration-1000 ease-out ${isStarVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Star image */}
@@ -111,7 +111,7 @@ const Hero = () => {
           />
         </div>
         {/* "Do you?" text positioned on top of the beam */}
-        <p className="absolute top-[32%] md:top-[55%] font-text text-xl md:text-3xl lg:text-4xl text-white">
+        <p className="absolute top-[32%] md:top-[55%] font-text text-2xl md:text-3xl lg:text-4xl text-white">
           Do you?
         </p>
       </div>
@@ -137,7 +137,7 @@ const Hero = () => {
       <a
         ref={buttonRef}
         href="#calendar"
-        className={`relative z-10 group px-20 py-5 sm:px-28 sm:py-6 md:px-40 md:py-8 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+        className={`relative z-10 group px-28 py-5 sm:px-28 sm:py-6 md:px-40 md:py-8 mt-4 md:mt-2 mb-16 md:mb-20 transition-all duration-300 ease-out hover:scale-110 ${isButtonVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
           }`}
       >
         {/* Glow effect */}
