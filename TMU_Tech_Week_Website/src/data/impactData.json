@@ -45,10 +45,36 @@
         }
     ],
     "collageImages": [
-        "/images/collage/real/photo6.jpg",
-        "/images/collage/real/photo7.jpg",
-        "/images/collage/real/photo8.jpg",
-        "/images/collage/real/photo9.jpg"
+        {
+            "src": "/images/collage/real/dsc03984.jpg",
+            "desktopSize": "col-span-1 row-span-1",
+            "mobileSize": "col-span-1 row-span-1",
+            "objectPosition": "center"
+        },
+        {
+            "src": "/images/collage/real/impact_dsc03897.jpg",
+            "desktopSize": "col-span-1 row-span-1",
+            "mobileSize": "col-span-1 row-span-1",
+            "objectPosition": "center"
+        },
+        {
+            "src": "/images/collage/real/impact_dsc04031.jpg",
+            "desktopSize": "col-span-1 row-span-1",
+            "mobileSize": "col-span-1 row-span-1",
+            "objectPosition": "center"
+        },
+        {
+            "src": "/images/collage/real/impact_img1679.jpg",
+            "desktopSize": "col-span-1 row-span-1",
+            "mobileSize": "col-span-1 row-span-1",
+            "objectPosition": "center"
+        },
+        {
+            "src": "/images/collage/real/impact_portrait.png",
+            "desktopSize": "col-span-1 row-span-2",
+            "mobileSize": "col-span-2 row-span-1",
+            "objectPosition": "center"
+        }
     ],
     "clubs": [
         {

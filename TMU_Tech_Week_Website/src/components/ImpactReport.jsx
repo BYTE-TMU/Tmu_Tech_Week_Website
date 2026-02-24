@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaCalendarAlt, FaUsers, FaChartLine, FaBolt, FaStar, FaCode, FaTrophy, FaBriefcase } from 'react-icons/fa';
 import impactData from '../data/impactData.json';
 
@@ -14,41 +14,19 @@ const iconMap = {
     briefcase: FaBriefcase,
 };
 
-// Shuffle array using Fisher-Yates
-const shuffleArray = (arr) => {
-    const shuffled = [...arr];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-};
-
-// Size variants for the masonry collage (6 items, 3-col desktop grid)
-const sizeVariants = [
-    'col-span-2 row-span-2', // large feature
-    'col-span-1 row-span-1', // square
-    'col-span-1 row-span-1', // square
-    'col-span-1 row-span-2', // tall
-    'col-span-1 row-span-1', // square
-    'col-span-1 row-span-1', // square
-];
+// Collage items — order is locked to match the designed masonry grid (no shuffle)
+const collageItems = impactData.collageImages.map((item) => ({
+    src: item.src,
+    desktopSize: item.desktopSize,
+    mobileSize: item.mobileSize,
+    objectPosition: item.objectPosition || 'center',
+}));
 
 const ImpactReport = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [visibleImages, setVisibleImages] = useState({});
     const sectionRef = useRef(null);
     const imageRefs = useRef([]);
-
-    // Randomize collage image order on each mount
-    const collageItems = useMemo(() => {
-        const shuffled = shuffleArray(impactData.collageImages);
-        return shuffled.map((src, i) => ({
-            src,
-            sizeClass: sizeVariants[i % sizeVariants.length],
-            mobileSizeClass: i % 3 === 0 ? 'row-span-2' : 'row-span-1',
-        }));
-    }, []);
 
     // Section fade-in observer
     useEffect(() => {
@@ -226,80 +204,48 @@ const ImpactReport = () => {
                         Moments from the Week
                     </h3>
 
-                    {/* Desktop masonry grid */}
-                    <div className="hidden md:grid grid-cols-3 auto-rows-[160px] gap-3">
-                        {collageItems.map((item, index) => {
-                            const isVideo = item.src.endsWith('.mp4');
-                            const src = `${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`;
-                            return (
-                                <div
-                                    key={index}
-                                    ref={(el) => (imageRefs.current[index] = el)}
-                                    data-index={index}
-                                    className={`${item.sizeClass} rounded-xl overflow-hidden transition-all duration-700 ease-out ${visibleImages[index]
-                                        ? 'opacity-100 translate-y-0 scale-100'
-                                        : 'opacity-0 translate-y-6 scale-95'
-                                        }`}
-                                    style={{ transitionDelay: `${index * 80}ms` }}
-                                >
-                                    {isVideo ? (
-                                        <video
-                                            src={src}
-                                            autoPlay
-                                            loop
-                                            muted
-                                            playsInline
-                                            className="w-full h-full object-cover rounded-xl"
-                                        />
-                                    ) : (
-                                        <img
-                                            src={src}
-                                            alt="TMU Tech Week moment"
-                                            className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
-                                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                                        />
-                                    )}
-                                </div>
-                            );
-                        })}
-                    </div>
+                    {/* Collage: 2×2 landscapes on left + portrait on right */}
+                    <div className="flex flex-col md:flex-row gap-3">
+                        {/* Left: 2×2 grid of landscapes */}
+                        <div className="grid grid-cols-2 gap-3 flex-1">
+                            <div className="aspect-[3/2] rounded-xl overflow-hidden">
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/collage/real/dsc03984.jpg`}
+                                    alt="Event moment"
+                                    className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div className="aspect-[3/2] rounded-xl overflow-hidden">
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/collage/real/impact_dsc03897.jpg`}
+                                    alt="Event moment"
+                                    className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div className="aspect-[3/2] rounded-xl overflow-hidden">
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/collage/real/impact_dsc04031.jpg`}
+                                    alt="Event moment"
+                                    className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                            <div className="aspect-[3/2] rounded-xl overflow-hidden">
+                                <img
+                                    src={`${import.meta.env.BASE_URL}images/collage/real/impact_img1679.jpg`}
+                                    alt="Event moment"
+                                    className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
+                                />
+                            </div>
+                        </div>
 
-                    {/* Mobile 2-column grid */}
-                    <div className="md:hidden grid grid-cols-2 auto-rows-[140px] gap-2">
-                        {collageItems.map((item, index) => {
-                            const isVideo = item.src.endsWith('.mp4');
-                            const src = `${import.meta.env.BASE_URL}${item.src.replace(/^\//, '')}`;
-                            return (
-                                <div
-                                    key={index}
-                                    ref={(el) => (imageRefs.current[index + collageItems.length] = el)}
-                                    data-index={index + collageItems.length}
-                                    className={`${item.mobileSizeClass} rounded-lg overflow-hidden transition-all duration-700 ease-out ${visibleImages[index + collageItems.length]
-                                        ? 'opacity-100 translate-y-0 scale-100'
-                                        : 'opacity-0 translate-y-6 scale-95'
-                                        }`}
-                                    style={{ transitionDelay: `${index * 100}ms` }}
-                                >
-                                    {isVideo ? (
-                                        <video
-                                            src={src}
-                                            autoPlay
-                                            loop
-                                            muted
-                                            playsInline
-                                            className="w-full h-full object-cover rounded-lg"
-                                        />
-                                    ) : (
-                                        <img
-                                            src={src}
-                                            alt="TMU Tech Week moment"
-                                            className="w-full h-full object-cover rounded-lg"
-                                            onError={(e) => { e.currentTarget.style.display = 'none'; }}
-                                        />
-                                    )}
-                                </div>
-                            );
-                        })}
+                        {/* Right: portrait photo */}
+                        <div className="md:w-[33%] aspect-[2/3] md:aspect-auto rounded-xl overflow-hidden">
+                            <img
+                                src={`${import.meta.env.BASE_URL}images/collage/real/impact_portrait.png`}
+                                alt="Event portrait"
+                                className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
+                            />
+                        </div>
                     </div>
                 </div>
 
